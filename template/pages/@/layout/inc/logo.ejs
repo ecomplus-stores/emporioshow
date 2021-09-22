@@ -3,7 +3,7 @@
 const logo = _.settings.logo
   ? { url: _.settings.logo, alt: _.settings.name }
   : _.store.logo
-  
+  <%= _.settings.logo %>
 if (logo && logo.url) {
   const { width, height } = _.tryImageSize(logo.url)
   %>
