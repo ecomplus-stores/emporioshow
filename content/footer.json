@@ -1,7 +1,7 @@
 {
   "description": {
     "title": "",
-    "text": ""
+    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
   },
   "links_1": {
     "list_pages": true,
@@ -42,5 +42,5 @@
     "mais": false,
     "itau": true
   },
-  "credits": ""
+  "credits": "<b>Empório Gourmet Show</b><br>CNPJ:38.464.207/0001-90 Rua Capitão Féliz, 110 - CADEG Av. Central, Lojas 24 e 36, Benfica, RJ"
 }

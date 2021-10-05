@@ -1,6 +1,6 @@
 {
   "marketing_stripe": {
-    "text": "Aproveite nossos descontos de até 40%!",
+    "text": "<img src='/img/uploads/whatsapp_small.svg'/><b>ATENDIMENTO:</b> (21) 98143-6911",
     "link": "/promotion"
   },
   "contacts_stripe": {
@@ -19,7 +19,7 @@
   },
   "categories_list": {
     "featured": [],
-    "random": 6,
+    "random": 10,
     "full_width": false
   },
   "search_input": true

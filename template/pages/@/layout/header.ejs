@@ -48,80 +48,47 @@ if (header.categories_list) {
 <div id="overlay" class="fade"></div>
 
 <div class="top-bar">
-  <% if (header.marketing_stripe) { %>
-    <% if (header.marketing_stripe.text) { %>
-      <% if (header.marketing_stripe.link) { %>
-        <a
-          class="top-bar__countdown"
-          style="<%= marketingStripeStyle %>"
-          href="<%= header.marketing_stripe.link %>"
-        >
-          <%= header.marketing_stripe.text %>
-        </a>
-      <% } else { %>
-        <div class="top-bar__countdown" style="<%= marketingStripeStyle %>">
-          <%= header.marketing_stripe.text %>
-        </div>
-      <% } %>
-    <% } %>
-  <% } %>
-
-  <div class="top-bar__nav d-none d-md-block">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <nav class="top-bar__page-links">
-            <% if (header.contacts_stripe.pages) { %>
-              <% header.contacts_stripe.pages.forEach(({ link, title }) => { %>
-                <a href="<%= link %>"><%= title %></a>
-              <% }) %>
-            <% } %>
-          </nav>
-          <% if (header.contacts_stripe.phone_wpp) { %>
-            <% if (contacts.whatsapp) { %>
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        <ul>
+          <li>
+            <a href="/receitas">
+              <img src='/img/uploads/heart.svg'/>
+              Receitas
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-auto">
+        <% if (header.marketing_stripe) { %>
+          <% if (header.marketing_stripe.text) { %>
+            <% if (header.marketing_stripe.link) { %>
               <a
-                href="javascript:;"
-                target="_blank"
-                rel="noopener"
-                class="whatsapp-link"
-                data-tel="<%= contacts.whatsapp.replace(/\D/g, '') %>"
+                class="top-bar__countdown"
+                style="<%= marketingStripeStyle %>"
+                href="<%= header.marketing_stripe.link %>"
               >
-                <i class="fab fa-whatsapp"></i>
-                <%= contacts.whatsapp %>
+                <%- header.marketing_stripe.text %>
               </a>
-            <% } %>
-            <% if (contacts.phone) { %>
-              <a
-                href="tel:+<%= contacts.phone.replace(/\D/g, '') %>"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="fas fa-phone"></i>
-                <%= contacts.phone %>
-              </a>
+            <% } else { %>
+              <div class="top-bar__countdown" style="<%= marketingStripeStyle %>">
+                <%= header.marketing_stripe.text %>
+              </div>
             <% } %>
           <% } %>
-        </div>
-        <% if (header.contacts_stripe.socials) { %>
-          <div class="col-auto">
-            <% networks.forEach(network => { %>
-              <% if (contacts[network]) { %>
-                <a href="<%= contacts[network] %>" target="_blank" rel="noopener">
-                  <i class="fab fa-<%= network %>"></i>
-                </a>
-              <% } %>
-            <% }) %>
-          </div>
         <% } %>
       </div>
     </div>
+    </div>
   </div>
-</div>
+  
+
 
 <header class="header" id="header">
-  <div class="header__container container-fluid">
-    <div class="header__row row">
-      <div class="col-auto p-0">
+  <div class="header__container container-fluid container">
+    <div class="header__row row  align-items-center">
+      <div class="col-auto p-0 d-lg-none">
         <button
           class="btn header__toggler"
           type="button"
@@ -143,9 +110,9 @@ if (header.categories_list) {
         </a>
       </div>
 
-      <div class="order-lg-last col-auto p-0">
+      <div class="order-lg-last col-auto p-0 col-md-offset-1">
         <div
-          class="header__buttons"
+          class="header__buttons d-flex align-items-center"
           role="group"
           aria-label="<%= _.dictionary('myAccount') %>"
         >
@@ -162,6 +129,21 @@ if (header.categories_list) {
           >
             <i class="fas fa-search"></i>
           </button>
+          
+          <a
+            class="d-lg-inline d-none btn btn-lg"
+            id="free-shipping-btn"
+            type="button"           
+          >            
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.968 7.6087V7.21522C23.968 6.6419 23.5029 6.17676 22.9295 6.17676H2.42127C1.84796 6.17676 1.38281 6.6419 1.38281 7.21522V26.0157C1.38281 26.589 1.84796 27.0542 2.42127 27.0542H6.70611C7.16145 28.6474 8.61418 29.8234 10.3517 29.8234C12.0892 29.8234 13.542 28.6474 13.9973 27.0542H22.9295H24.6696C25.1249 28.6474 26.5777 29.8234 28.3152 29.8234C30.0527 29.8234 31.5055 28.6474 31.9608 27.0542H33.3371C33.3798 27.0542 33.4162 27.0348 33.4575 27.0298C33.4988 27.0348 33.5351 27.0542 33.5778 27.0542C34.1511 27.0542 34.6163 26.589 34.6163 26.0157V18.0684C34.6163 12.5902 29.9268 8.08348 23.968 7.6087ZM32.4994 17.3761H28.5992C27.604 17.1036 27.4025 15.3214 27.4025 12.5461V10.6133C30.2327 11.9254 32.2253 14.4391 32.4994 17.3761ZM26.0179 10.0931V12.5461C26.0179 15.556 26.1977 18.2948 28.3774 18.7465C28.4234 18.7559 28.4707 18.7607 28.518 18.7607H32.5394V24.9772H31.9608C31.5055 23.3841 30.0527 22.208 28.3152 22.208C26.5777 22.208 25.1249 23.3841 24.6696 24.9772H22.9295H13.9973C13.8433 24.4382 13.577 23.9515 13.2198 23.5385H22.9295C23.2083 23.5385 23.445 23.372 23.5547 23.1347C23.7999 22.9447 23.968 22.661 23.968 22.327V9.68959C24.6782 9.75686 25.3623 9.89715 26.0179 10.0931ZM21.8911 22.1539H3.45974V8.25368H21.8911V22.1539ZM3.45974 23.5385H7.48361C7.12638 23.9515 6.86017 24.4382 6.70611 24.9772H3.45974V23.5385ZM10.3517 27.7465C9.39709 27.7465 8.62094 26.9703 8.62094 26.0157C8.62094 25.0611 9.39709 24.2849 10.3517 24.2849C11.3052 24.2849 12.0799 25.0594 12.0818 26.0123C12.0818 26.0135 12.0811 26.0145 12.0811 26.0157C12.0811 26.0169 12.0818 26.0179 12.0818 26.0191C12.0799 26.972 11.3052 27.7465 10.3517 27.7465ZM28.3152 27.7465C27.3606 27.7465 26.5844 26.9703 26.5844 26.0157C26.5844 25.0611 27.3606 24.2849 28.3152 24.2849C29.2698 24.2849 30.046 25.0611 30.046 26.0157C30.046 26.9703 29.2698 27.7465 28.3152 27.7465Z" fill="#FECC16"/>
+            </svg>  
+            <span>
+              <b>Frete Grátis</b>
+              A partir de <b>R$100,00</b>
+            </span>
+          </a>
+        
 
           <a
             id="user-button"
@@ -169,8 +151,14 @@ if (header.categories_list) {
             role="button"
             href="/app/#/account/"
             title="<%= _.dictionary('myAccount') %>"
-          >
-            <i class="fas fa-user"></i>
+          >            
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28.3327 29.75V26.9167C28.3327 23.7871 25.7956 21.25 22.666 21.25H11.3327C8.20307 21.25 5.66602 23.7871 5.66602 26.9167V29.75M22.666 9.91667C22.666 13.0463 20.129 15.5833 16.9993 15.5833C13.8697 15.5833 11.3327 13.0463 11.3327 9.91667C11.3327 6.78705 13.8697 4.25 16.9993 4.25C20.129 4.25 22.666 6.78705 22.666 9.91667Z" stroke="#FECC16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>  
+            <span data-user-name>
+              <b>Entre</b> ou
+             <b>Cadastre-se</b>
+            </span>
           </a>
           <a
             id="cart-button"
@@ -178,8 +166,10 @@ if (header.categories_list) {
             role="button"
             href="/app/#/cart"
             title="<%= _.dictionary('openCart') %>"
-          >
-            <i class="fas fa-shopping-bag"></i>
+          >            
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24.083 24.0833C22.5182 24.0833 21.2497 25.3519 21.2497 26.9167C21.2497 28.4815 22.5182 29.75 24.083 29.75C25.6478 29.75 26.9163 28.4815 26.9163 26.9167C26.9163 25.3519 25.6478 24.0833 24.083 24.0833ZM24.083 24.0833H10.4367C9.73167 24.0833 9.13395 23.5649 9.03425 22.867L8.60087 19.8333M2.83301 4.25H6.37467L6.77944 7.08333M6.77944 7.08333H7.08301H29.7497L25.4997 19.8333H9.20801H8.60087M6.77944 7.08333L8.60087 19.8333M15.583 26.9167C15.583 28.4815 14.3145 29.75 12.7497 29.75C11.1849 29.75 9.91634 28.4815 9.91634 26.9167C9.91634 25.3519 11.1849 24.0833 12.7497 24.0833C14.3145 24.0833 15.583 25.3519 15.583 26.9167Z" stroke="#FECC16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>  
             <span id="cart-count" class="badge badge-primary"></span>
           </a>
         </div>
@@ -202,37 +192,42 @@ if (header.categories_list) {
         const searchColSize = !isCategoriesNavFull && categories.length ? '-3' : ''
         %>
         <div
-          class="d-none d-lg-block col-12 col-lg<%= searchColSize %> collapse show"
+          class="d-none d-lg-block col-12 col-lg-6 collapse show"
           id="search-bar"
         >
-          <form
-            class="header__search mt-2 mt-md-3 mt-lg-0"
-            id="search-form"
-            action="/search"
-            method="get"
-          >
-            <input
-              type="search"
-              name="term"
-              placeholder="<%= _.dictionary('searchProducts') %>"
-              aria-label="<%= _.dictionary('searchProducts') %>"
-              class="header__search-input form-control"
-              id="search-input"
-            >
-            <button
-              type="submit"
-              class="header__search-btn"
-              aria-label="<%= _.dictionary('searchProducts') %>"
-            >
-              <i class="fas fa-search"></i>
-            </button>
-            <div id="instant-search">
-              <!--
-                `InstantSearch` should be open on input focus:
-                https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/InstantSearch.html
-              -->
-            </div>
-          </form>
+        <form
+        class="header__search mt-2 mt-md-3 mt-lg-0"
+        id="search-form"
+        action="/search"
+        method="get"
+      >
+        <input
+          type="text"
+          name="term"
+          placeholder="<%= _.dictionary('searchProducts') %>"
+          aria-label="<%= _.dictionary('searchProducts') %>"
+          class="header__search-input form-control"
+          id="search-input"
+          autocomplete="off"
+        >
+        <button
+          type="submit"
+          class="header__search-btn"
+          aria-label="<%= _.dictionary('searchProducts') %>"
+        >
+          
+          <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.8863 22.197C23.1792 22.4899 23.6541 22.4899 23.947 22.197C24.2399 21.9041 24.2399 21.4292 23.947 21.1363L22.8863 22.197ZM20.5 11.375C20.5 15.4481 17.1981 18.75 13.125 18.75V20.25C18.0265 20.25 22 16.2765 22 11.375H20.5ZM13.125 18.75C9.0519 18.75 5.75 15.4481 5.75 11.375H4.25C4.25 16.2765 8.22347 20.25 13.125 20.25V18.75ZM5.75 11.375C5.75 7.3019 9.0519 4 13.125 4V2.5C8.22347 2.5 4.25 6.47347 4.25 11.375H5.75ZM13.125 4C17.1981 4 20.5 7.3019 20.5 11.375H22C22 6.47347 18.0265 2.5 13.125 2.5V4ZM23.947 21.1363L19.4105 16.5998L18.3498 17.6605L22.8863 22.197L23.947 21.1363Z" fill="#AD1817"/>
+            </svg>
+  
+        </button>
+        <div id="instant-search">
+          <!--
+            `InstantSearch` should be open on input focus:
+            https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/InstantSearch.html
+          -->
+        </div>
+      </form>
 
           <% if (_.settings.domain) { %>
             <script type="application/ld+json"><%-
@@ -249,16 +244,66 @@ if (header.categories_list) {
             %></script>
           <% } %>
         </div>
-      <% } %>
+      <% } %>     
+    </div>
 
+    <% 
+      const categoryParents = _.lodash.groupBy(_.categories, ({ parent }) => {
+        return !parent || !parent.slug ? '_' : parent.slug
+      })
+      const getSubmenuId = slug => `a-${slug.replace(/\//g, '_')}`
+    %>
+    <div class="row">
       <% if (categories && categories.length) { %>
         <div class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
           <nav class="header__nav<%= isCategoriesNavFull ? ' header__nav--full' : '' %>">
-            <% categories.forEach(({ slug, name }) => { %>
-              <a href="javascript:;" onclick="toggleSidenav('<%= slug %>')">
-                <%= ` ${name} ` %>
-              </a>
-            <% }) %>
+            <ul class="d-flex justify-content-between w-100 m-0">
+              <% categories.forEach(({ slug, name, _id }) => { %>
+                <li class="<%- categoryParents[slug] ? 'dropdown' : '' %>">
+                  <span>
+                    <a href="/<%= slug %>">
+                      <%= ` ${name} ` %> 
+                    </a>
+                    <%- categoryParents[slug] ? '<i class="dx-caret"></i>' : '' %>
+                  </span>
+                  <% if (categoryParents[slug]) { %>
+                    <ul class="dropdown-menu row mx-0">
+                      <li class="d-block d-md-none btn-back"><button type="button"><i class="fas fa-arrow-left mr-1"></i> Voltar</button></li>
+                    <% categoryParents[slug].forEach(subcategory => { %>
+                      <% const hasSubmenu = Array.isArray(categoryParents[subcategory.slug]) %>
+                      <li class="col-12 col-md-auto pr-5 mr-5">
+                        <a href="/<%= subcategory.slug %>">
+                          <%= subcategory.name %>
+                        </a>
+                        <% if (hasSubmenu) { %>
+                          <ul>
+                            <% categoryParents[subcategory.slug].forEach(subcategory_ => { %>
+                              <li>
+                                <a href="/<%= subcategory_.slug %>">
+                                  <%= subcategory_.name %>
+                                </a>
+                              </li>
+                            <% }) %>
+                          </ul>
+                        <% } %>
+                      </li>
+                    <% }) %>
+                      <%                      
+                        const itemMenu = categories.find( arr => arr._id === _id )                      
+                        if (itemMenu && itemMenu.icon) {
+                        %> 
+                        <li class="col-auto ml-auto d-none d-md-block">
+                          <img
+                            src="<%= itemMenu.icon.url %>"
+                            alt="<%= itemMenu.icon.alt || itemMenu.name %>"
+                          >
+                        </li>
+                      <% } %>  
+                    </ul>
+                  <% } %>
+                </li>
+              <% }) %>
+            </ul>
           </nav>
         </div>
       <% } %>
