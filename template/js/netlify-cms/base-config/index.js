@@ -51,7 +51,7 @@ export default options => {
       {
         label: 'Link do Botão',
         required: false,
-        name: 'btn_text',
+        name: 'btn_link',
         widget: 'string'
       }
     ]
