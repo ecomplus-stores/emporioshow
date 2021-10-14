@@ -1,6 +1,6 @@
-import '@ecomplus/storefront-template/template/js/lib/config'
+import '@ecomplus/storefront-template/template/js/lib/config.js'
 import EcomRouter from '@ecomplus/storefront-router'
-import initNetlifyCms from '@ecomplus/storefront-template/template/netlify-cms/init'
+import initNetlifyCms from '@ecomplus/storefront-template/template/netlify-cms/init.js'
 
 document.title = `Admin ~ ${document.title}`
 
