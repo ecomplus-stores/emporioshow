@@ -6,7 +6,7 @@ document.title = `Admin ~ ${document.title}`
 
 const state = {}
 
-console.log('test alpix');
+console.log('test alpix')
 
 new EcomRouter().list()
   .then(routes => {
