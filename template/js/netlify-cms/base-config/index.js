@@ -5,10 +5,57 @@ import getPages from '@ecomplus/storefront-template/template/js/netlify-cms/base
 import getBlogPosts from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/blog-posts'
 import getExtraPages from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/extra-pages'
 import getWidgets from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/widgets'
-import getRecipes from './collections/recipes-post'
 
 export default options => {
-  options.sections = getSections(options)
+  console.log('custom cms config')
+
+  options.sections = getSections(options).concat([{
+    label: 'Alpix Lista de Produtos',
+    name: 'apx_productList',
+    widget: 'object',
+    fields: [
+      {
+        label: 'Produtos',
+        name: 'products',
+        widget: 'list',
+        field: {
+          label: 'SKU do produto',
+          name: 'product_id',
+          widget: 'select',
+          options: options.state.routes
+            .filter(({ sku }) => typeof sku === 'string')
+            .map(({ _id, sku }) => ({
+              label: sku,
+              value: _id
+            }))
+        }
+      },
+      {
+        label: 'Título',
+        required: false,
+        name: 'title',
+        widget: 'string'
+      },
+      {
+        label: 'Descrição',
+        required: false,
+        name: 'description',
+        widget: 'text'
+      },
+      {
+        label: 'Texto do Botão',
+        required: false,
+        name: 'btn_text',
+        widget: 'string'
+      },
+      {
+        label: 'Link do Botão',
+        required: false,
+        name: 'btn_text',
+        widget: 'string'
+      }
+    ]
+  }])
 
   return {
     backend: {
