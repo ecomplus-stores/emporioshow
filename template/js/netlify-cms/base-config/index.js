@@ -3,7 +3,7 @@ import getSettings from '@ecomplus/storefront-template/template/js/netlify-cms/b
 import getLayout from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/layout'
 import getPages from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/pages'
 import getBlogPosts from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/blog-posts'
-import getRecipesPosts from './collections/recipes-posts.js'
+import getRecipesPosts from './collections/recipes-posts'
 import getExtraPages from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/extra-pages'
 import getWidgets from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/widgets'
 
