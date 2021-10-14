@@ -8,13 +8,13 @@ import getWidgets from '@ecomplus/storefront-template/template/js/netlify-cms/ba
 
 export default options => {
   options.sections = getSections(options).push({
-    label: 'Temporizador de ofertas',
-    name: 'offers-timer',
+    label: '[ALPIX] - Lista de Produtos',
+    name: 'apx_productList-A',
     widget: 'object',
     fields: [
       {
-        label: 'Ofertas',
-        name: 'offers',
+        label: 'Produtos',
+        name: 'products',
         widget: 'list',
         field: {
           label: 'SKU do produto',
@@ -29,33 +29,28 @@ export default options => {
         }
       },
       {
-        label: 'Data de início',
+        label: 'Título',
         required: false,
-        name: 'start',
-        widget: 'datetime',
-        dateFormat: 'DD/MM/YYYY',
-        timeFormat: 'HH:mm'
+        name: 'title',
+        widget: 'string'
       },
       {
-        label: 'Data de encerramento',
-        name: 'end',
-        widget: 'datetime',
-        dateFormat: 'DD/MM/YYYY',
-        timeFormat: 'HH:mm'
-      },
-      {
-        label: 'Notas',
+        label: 'Descrição',
         required: false,
-        name: 'notes',
-        hint: 'Descrição auxiliar sobre a promoção',
+        name: 'description',
         widget: 'text'
       },
       {
-        label: 'Máximo de horas',
-        name: 'max_hours',
-        hint: 'Tempo máximo exibido no contador',
-        widget: 'number',
-        default: 24
+        label: 'Texto do Botão',
+        required: false,
+        name: 'btn_text',
+        widget: 'string'
+      },
+      {
+        label: 'Link do Botão',
+        required: false,
+        name: 'btn_text',
+        widget: 'string'
       }
     ]
   })
