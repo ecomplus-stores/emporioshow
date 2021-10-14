@@ -9,7 +9,7 @@ import getWidgets from '@ecomplus/storefront-template/template/js/netlify-cms/ba
 export default options => {
   options.sections = getSections(options).push({
     label: 'Alpix Lista de Produtos',
-    name: 'recipes',
+    name: 'apx_productList',
     widget: 'object',
     fields: [
       {
