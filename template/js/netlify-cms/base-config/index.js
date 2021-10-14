@@ -3,12 +3,13 @@ import getSettings from '@ecomplus/storefront-template/template/js/netlify-cms/b
 import getLayout from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/layout'
 import getPages from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/pages'
 import getBlogPosts from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/blog-posts'
+import getRecipesPosts from './collections/recipes-posts'
 import getExtraPages from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/extra-pages'
 import getWidgets from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/widgets'
 
 export default options => {
   console.log('custom cms config')
-
+  
   options.sections = getSections(options).concat([{
     label: 'Alpix Lista de Produtos',
     name: 'apx_productList',
@@ -85,6 +86,7 @@ export default options => {
       getLayout(options),
       getPages(options),
       getBlogPosts(options),
+      getRecipesPosts(options),
       getExtraPages(options),
       getWidgets(options)
     ]

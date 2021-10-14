@@ -10,6 +10,7 @@
       "name": "receitas",
       "label": "Receitas",
       "folder": "content/receitas",
+      "extension": "json",
       "create": true,
       "fields": [
         {

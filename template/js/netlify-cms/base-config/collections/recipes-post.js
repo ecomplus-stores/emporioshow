@@ -1,6 +1,6 @@
 export default ({ baseDir, sections }) => ({
     name: 'recipe-posts',
-    label: 'Receitas',
+    label: 'Receitas - 2',
     description: 'Posts para o blog da loja com conteúdo atrativo para o seu público',
     folder: `${baseDir}content/recipes`,
     extension: 'json',
