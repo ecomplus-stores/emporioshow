@@ -4,5 +4,36 @@
     "branch": "master",
     "identity_url": "https://gotrue.ecomplus.biz/4053/.netlify/identity",
     "gateway_url": "https://gitgateway.ecomplus.biz/4053/.netlify/git"
-  }
+  },
+  "collections": [
+    {
+      "name": "receitas",
+      "label": "Receitas",
+      "folder": "content/receitas",
+      "create": true,
+      "fields": [
+        {
+          "label": "Produto",
+          "name": "title",
+          "widget": "string"
+        },       
+        {
+          "label": "ID do Produto",
+          "name": "id",
+          "widget": "string"
+        },          
+        {
+          "label": "Imagem em Destaque",
+          "name": "thumbnail",
+          "widget": "image"
+        },
+        {
+          "label": "Passo a Passo",
+          "name": "body",
+          "widget": "markdown"
+        }
+      ]
+    }
+  ]
 }
+  
