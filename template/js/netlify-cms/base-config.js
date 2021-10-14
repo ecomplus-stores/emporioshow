@@ -7,6 +7,8 @@ import getExtraPages from '@ecomplus/storefront-template/template/js/netlify-cms
 import getWidgets from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/widgets'
 
 export default options => {
+  console.log('custom cms config')
+
   options.sections = getSections(options).push({
     label: 'Alpix Lista de Produtos',
     name: 'apx_productList',
