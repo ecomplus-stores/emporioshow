@@ -23,7 +23,6 @@ const title = apx_content.title
 </div>
 <script>
   function apx_instafeedLoad (){
-    console.log('vesh')
     fetch('https://graph.instagram.com/me/media?access_token='+ InstagramToken +'&fields=media_url,media_type,caption,permalink')
     .then(function (response) {
         return response.json();

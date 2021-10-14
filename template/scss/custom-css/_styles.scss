@@ -41,7 +41,7 @@ p{
 .justify-content-between{justify-content: space-between;}
 .align-items-top{align-items: flex-start;}
 .align-items-center{align-items: center;}
-.align-items-bottom{align-items:baseline}
+.align-items-bottom{align-items:flex-end}
 
 .top-bar ul{
     list-style-type:none;
@@ -426,3 +426,114 @@ margin:0 0 15px 0;
     max-height:auto!important;
     --banner-aspect-ratio: unset!important;
 }
+
+.product-card__prices .prices__value + span{display:none;}
+
+#page-products #product .product__buy + .mb-3,
+#page-products #product .product__buy + .mb-3 + article{display:none;}
+
+#page-products #product #product-actions > div > .product__prices{}
+#page-products #product #product-actions > div > .product__buy{}
+
+@media(min-width:990px){
+    #page-products #product #product-actions > div > .product__prices{}
+    #page-products #product #product-actions > div > .product__buy{}
+}
+
+#page-products #product.product{}
+#page-products #product.product .product__name{font-size:25px;text-transform:uppercase;line-height:32px;color:var(--cor4);font-weight:bold;}
+#page-products #product.product .product__sku{color:var(--cor5);font-size:11px;line-height:24px;}
+#page-products #product.product .prices__installments > small:first-child,
+#page-products #product.product .prices__compare small{display:none;}
+#page-products #product.product .prices__compare s{font-size:20px;line-height:26px;color:var(--cor4)}
+#page-products #product.product .prices__value{font-size:35px;line-height:45px;color:var(--cor4)}
+#page-products #product.product .prices__installments,
+#page-products #product.product .prices__discount{font-size:12px;line-height:24px;font-family:'Montserrat';}
+#page-products #product.product .prices__discount:before{content:"ou "}
+#page-products #product.product .prices__discount > span{
+    color: #fff;
+    font-size: 18px;
+    background: var(--cor1);
+    padding: 3px 5px;
+    display: inline-block;
+    margin: 5px 3px;
+}
+#page-products #product.product .prices__discount-label{font-size:0;}
+#page-products #product.product .prices__discount-label:before{content:"via PIX ou boleto";font-size:12px;}
+
+#page-products #product.product .product__buy button{
+    background: #03A678;
+    border-radius: 3px;
+    padding:0 2rem;
+    border:0;
+    min-width:270px;
+}
+#page-products #product.product .product__buy button span{
+    font-size: 21px;
+    line-height: 50px;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+#page-products #product.product .product__buy button span i{display:none;}
+#page-products #product.product .shipping-calculator{border-top:1px solid #f8f8f8;margin-top:.5rem;padding-top:1rem;}
+#page-products #product.product .shipping-calculator [for=shipping-calculator-zip]{
+    font-family:'Montserrat';
+    font-weight:bold;
+    font-size:11px;
+    text-transform:uppercase;
+}
+#page-products #product.product .shipping-calculator #shipping-calculator-zip{
+    border:1px solid #f2f2f2;
+    border-radius:5px 0 0 5px;
+    font-size:12px;
+    font-family:'Montserrat';
+    height:36px;
+}
+#page-products #product.product .shipping-calculator button{background:#666;border:0;padding:0 1rem;;line-height:34px;}
+#page-products #product.product .shipping-calculator button i{display:none;}
+#page-products #product.product .shipping-calculator button:after{content:"Calcular";font-size:12px;text-transform:uppercase;color:#fff;font-weight:bold;}
+#page-products #product.product .product__info.lead{
+    color: #7b7b7b;
+    font-size: 14px;
+    font-family: Montserrat;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid #f8f8f8;
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+    line-height: 24px;
+}
+
+.breadcrumb{}
+.breadcrumb .breadcrumb-item{font-family:"Montserrat";font-size:12px;}
+.breadcrumb .breadcrumb-item a{font-family:"Montserrat";font-size:12px;}
+
+#product-description{
+    background:#f8f8f8;
+    padding:3rem 0;
+}
+
+.recommended-products .products-carousel__title > span,
+#product-specs > .container > .lead,
+#product-description > .container > .lead{
+    position: relative;
+    font-size: 31px;
+    line-height: 40px;
+    font-weight: bold;
+    color: var(--cor4);
+    text-transform: uppercase;
+    width: fit-content;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+.recommended-products .products-carousel__title > span:after,
+#product-specs > .container > .lead:after,
+#product-description > .container > .lead:after{
+    content: "";
+    width: 100vw;
+    height: 3px;
+    background: var(--cor1);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
