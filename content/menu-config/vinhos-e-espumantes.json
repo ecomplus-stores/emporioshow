@@ -1,0 +1,31 @@
+{
+  "title": "vinhos-e-espumantes",
+  "categories": [
+    {
+      "category": {
+        "slug": "vinhos-tintos",
+        "image": "/img/uploads/image-9.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "vinhos-brancos",
+        "image": "/img/uploads/image-7.png"
+      }
+    }
+  ],
+  "filters": [
+    {
+      "option": {
+        "title": "Compre por País",
+        "grid": "pais"
+      }
+    },
+    {
+      "option": {
+        "title": "Tipos de Uva",
+        "grid": "uvas"
+      }
+    }
+  ]
+}
