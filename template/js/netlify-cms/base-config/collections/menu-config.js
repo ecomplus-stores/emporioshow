@@ -33,7 +33,7 @@ export default ({ baseDir, sections }) => ({
                 label: 'Categoria',
                 name: 'slug',
                 widget: 'select',
-                options: state.grids
+                options: state.routes
                   .filter(({ resource, name }) => resource === 'categories')
                   .map(({ name, path }) => ({
                     label: name,
