@@ -1,4 +1,4 @@
-export default ({ baseDir, sections }) => ({
+export default ({ baseDir, sections, grids }) => ({
     name: 'gridIcons',
     label: 'Ícones de Características',
     folder: `${baseDir}content/gridIcons`,
@@ -10,7 +10,7 @@ export default ({ baseDir, sections }) => ({
         label: 'Identificação do grid',
         name: 'title',
         widget: 'select',
-        options: state.grids
+        options: grids
           .map(({ grid_id, title }) => ({
             label: title,
             value: grid_id
