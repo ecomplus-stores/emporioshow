@@ -8,7 +8,7 @@ export default ({ baseDir, sections, state }) => ({
     fields: [
       {
         label: 'Categoria Principal',
-        name: 'slug',
+        name: 'title',
         widget: 'select',
         options: state.routes
           .filter(({ resource, name }) => resource === 'categories')
@@ -67,6 +67,12 @@ export default ({ baseDir, sections, state }) => ({
             widget: 'object',
             required:false,
             fields: [
+              {
+                label: 'Nome para Exibição',
+                required:false,
+                name: 'title',
+                widget: 'string'          
+              },
               {
                 label: 'Item',
                 name: 'grid',
