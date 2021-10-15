@@ -1,55 +1,47 @@
 export default ({ baseDir, sections }) => ({
-    name: 'recipe-posts',
-    label: 'Receitas - 2',
-    description: 'Posts para o blog da loja com conteúdo atrativo para o seu público',
+    name: 'recipe-receitas',
+    label: 'Receitas',
     folder: `${baseDir}content/recipes`,
     extension: 'json',
     create: true,
     slug: '{{slug}}',
     fields: [
       {
-        label: 'Título',
+        label: 'Produto',
         name: 'title',
         widget: 'string'
+      },       
+      {
+        label: 'Imagem em Destaque',
+        name: 'imagem',
+        widget: 'image'
       },
       {
-        label: 'Data de publicação',
-        name: 'date',
-        widget: 'datetime',
-        required: false
+        label: 'Tempo de Preparo',
+        name: 'tempo_de_preparo',
+        widget: 'string'
+      }, 
+      {
+        label: 'Dificuldade',
+        name: 'dificuldade',
+        widget: 'select',
+        options : ['Fácil','Média','Difícil']
       },
       {
-        label: 'Imagem em destaque',
-        name: 'thumbnail',
-        widget: 'image',
-        required: false,
-        hint: 'Sugerimos 900px como largura máxima'
+        label: 'Serve Até',
+        name: 'serve_ate',
+        widget: 'select',
+        options : ["1 pessoa", "2 pessoas", "3 pessoas", "4 pessoas", "5 pessoas", "6 pessoas", "7 pessoas", "8 pessoas", "9 pessoas", "10 pessoas"]
       },
       {
-        label: 'Descrição curta',
-        name: 'description',
-        widget: 'text',
-        required: false
-      },
+        label: 'Ingredientes',
+        name: 'ingredientes',
+        widget: 'markdown'
+      },  
       {
-        label: 'Corpo',
-        name: 'body',
-        widget: 'markdown',
-        required: false
-      },
-      {
-        label: 'Meta title',
-        name: 'meta_title',
-        widget: 'string',
-        hint: 'Título exibido na aba do navegador e nos resultados de motores de busca, relevante para SEO',
-        required: false
-      },
-      {
-        label: 'Meta description',
-        name: 'meta_description',
-        widget: 'string',
-        hint: 'Descrição exibida nos resultados de motores de busca, relevante para SEO',
-        required: false
+        label: 'Modo de Preparo',
+        name: 'preparo',
+        widget: 'markdown'
       },
       {
         label: 'Seções',
