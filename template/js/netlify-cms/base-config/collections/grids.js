@@ -14,18 +14,25 @@ export default ({ baseDir, sections }) => ({
       {
         label: 'Opções',
         name: 'options',
-        widget: 'object',
+        widget: 'list',
         fields: [
           {
             label: 'Nome da Opção',
-            name: 'option_name',
-            widget: 'string'          
-          },
-          {
-            label: 'Ícone',
-            name: 'imagem',
-            widget: 'image'
-          }
+            name: 'option',
+            widget: 'object',
+            fields: [
+              {
+                label: 'Nome da Opção',
+                name: 'option_name',
+                widget: 'string'          
+              },
+              {
+                label: 'Ícone',
+                name: 'imagem',
+                widget: 'image'
+              }
+            ]
+          },          
         ]
       },
     ]
