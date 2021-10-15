@@ -4,59 +4,6 @@
     "branch": "master",
     "identity_url": "https://gotrue.ecomplus.biz/4053/.netlify/identity",
     "gateway_url": "https://gitgateway.ecomplus.biz/4053/.netlify/git"
-  },
-  "collections": [
-    {
-      "name": "receitas",
-      "label": "Receitas",
-      "folder": "content/receitas",
-      "extension": "json",
-      "create": true,
-      "fields": [
-        {
-          "label": "Produto",
-          "name": "title",
-          "widget": "string"
-        },       
-        {
-          "label": "ID do Produto Kit",
-          "name": "id",
-          "widget": "string"
-        },          
-        {
-          "label": "Imagem em Destaque",
-          "name": "imagem",
-          "widget": "image"
-        },
-        {
-          "label": "Tempo de Preparo",
-          "name": "tempo_de_preparo",
-          "widget": "string"
-        }, 
-        {
-          "label": "Dificuldade",
-          "name": "dificuldade",
-          "widget": "select",
-          "options" : ["Fácil","Média","Difícil"]
-        },
-        {
-          "label": "Serve Até",
-          "name": "serve_ate",
-          "widget": "select",
-          "options" : ["1 pessoa", "2 pessoas", "3 pessoas", "4 pessoas", "5 pessoas", "6 pessoas", "7 pessoas", "8 pessoas", "9 pessoas", "10 pessoas"]
-        },
-        {
-          "label": "Ingredientes",
-          "name": "ingredientes",
-          "widget": "markdown"
-        },  
-        {
-          "label": "Modo de Preparo",
-          "name": "preparo",
-          "widget": "markdown"
-        }
-      ]
-    }
-  ]
+  }
 }
   
