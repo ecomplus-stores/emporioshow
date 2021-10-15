@@ -1,0 +1,21 @@
+{
+  "imagem": "/img/uploads/header-moqueca-1260x709.webp",
+  "title": "Moqueca de Peixe",
+  "tempo_de_preparo": "70 min",
+  "dificuldade": "Média",
+  "serve_ate": "4 pessoas",
+  "ingredientes": "<!--StartFragment-->\n\n* 4 postas de cação ou garoupa (700 gramas)\n* suco de 1 limão\n* 1 cebola grande cortada em rodelas\n* 1 pimentão vermelho cortado em rodelas\n* 1 pimentão verde cortado em rodelas\n* 2 tomates maduros cortados em rodelas\n* 2 colheres (sopa) de coentro\n* 200 ml de leite de coco\n* 1 colher (sopa) de azeite de dendê\n* 2 tabletes de caldo de camarão\n\n<!--EndFragment-->",
+  "preparo": "<!--StartFragment-->\n\n1. Lave bem o peixe, regue com o suco de limão e deixe descansar por cerca de 1 hora.\n2. Em uma panela grande, coloque o peixe, a cebola, os pimentões, os tomates e polvilhe coentro.\n3. Esfarele os tabletes de caldo de camarão, misture-os ao leite de coco e regue o peixe.\n4. Leve ao fogo baixo, com a panela parcialmente tampada, por 20 minutos.\n5. Mexa algumas vezes até que esteja cozido.\n6. Junte o azeite de dendê e adicione sal.\n7. Retire do fogo e sirva.\n\n<!--EndFragment-->",
+  "sections": [
+    {
+      "type": "apx_buyTogether",
+      "products": [
+        "60d9d06909ca8f6dce740a68",
+        "60d9e1d109ca8f6dce742230",
+        "6148ea70bf447b5f0e014a64"
+      ],
+      "subtitle": "produtos usados nesta receita",
+      "title": "aproveite e compre os"
+    }
+  ]
+}
