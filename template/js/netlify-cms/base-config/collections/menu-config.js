@@ -1,7 +1,7 @@
-export default ({ baseDir, sections, grids, routes }) => ({
+export default state => ({
     name: 'menu-config',
     label: 'Configuração do Menu',
-    folder: `${baseDir}content/menu-config`,
+    folder: `${state.baseDir}content/menu-config`,
     extension: 'json',
     create: true,
     slug: '{{slug}}',
@@ -10,7 +10,7 @@ export default ({ baseDir, sections, grids, routes }) => ({
         label: 'Categoria Principal',
         name: 'slug',
         widget: 'select',
-        options: routes
+        options: state.routes
           .filter(({ resource, name }) => resource === 'categories')
           .map(({ name, path }) => ({
             label: name,
@@ -33,7 +33,7 @@ export default ({ baseDir, sections, grids, routes }) => ({
                 label: 'Categoria',
                 name: 'slug',
                 widget: 'select',
-                options: routes
+                options: state.routes
                   .filter(({ resource, name }) => resource === 'categories')
                   .map(({ name, path }) => ({
                     label: name,
@@ -71,7 +71,7 @@ export default ({ baseDir, sections, grids, routes }) => ({
                 label: 'Item',
                 name: 'grid',
                 widget: 'select',
-                options: grids
+                options: state.grids
                   .map(({ grid_id, title }) => ({
                     label: title,
                     value: grid_id
