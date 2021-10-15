@@ -7,7 +7,7 @@ import getExtraPages from '@ecomplus/storefront-template/template/js/netlify-cms
 import getWidgets from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/widgets'
 
 //ALPIX CUSTOM MODULES
-import getRecipesPosts from './collections/recipes-posts'
+import getReceitas from './collections/receitas-posts'
 import getGrids from './collections/grids'
 
 export default options => {
@@ -239,7 +239,7 @@ export default options => {
       getLayout(options),
       getPages(options),
       getBlogPosts(options),
-      getRecipesPosts(options),
+      getReceitas(options),
       getGrids(options),
       getExtraPages(options),
       getWidgets(options)

@@ -1,7 +1,7 @@
 export default ({ baseDir, sections }) => ({
-    name: 'receitas',
+    name: 'receitas-posts',
     label: 'Receitas',
-    folder: `${baseDir}content/receitas`,
+    folder: `${baseDir}content/receita`,
     extension: 'json',
     create: true,
     slug: '{{slug}}',

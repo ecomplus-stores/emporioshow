@@ -1,12 +1,41 @@
 <%
-const posts = _.cms('receitas')
+const posts = _.cms('receita')
 if (Array.isArray(posts) && posts.length) {
   %>
     <div class="blog my-4 my-lg-5">
       <div class="container">
         <div class="row">
           <% posts.forEach(slug => { %>
-            aaaaaa
+            <% const { title, imagem, tempo_de_preparo, dificuldade, serve_ate } = _.cms(`receita/${slug}`) %>
+            <div class="col col-md-6 col-lg-4">
+              <div class="card">
+                <% if (imagem) { %>
+                  <a href="/receitas/<%= slug %>">
+                    <img
+                      src="<%= imagem %>"
+                      class="card-img-top"
+                      alt="<%= title %>"
+                    >
+                  </a>
+                <% } %>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="/posts/<%= slug %>">
+                      <%= title %>
+                    </a>
+                  </h5>
+                  <p class="card-text">
+                    <%= tempo_de_preparo %>
+                  </p>
+                  <p class="card-text">
+                    <%= dificuldade %>
+                  </p>
+                  <p class="card-text">
+                    <%= serve_ate %>
+                  </p>
+                </div>
+              </div>
+            </div>
           <% }) %>
         </div>
       </div>

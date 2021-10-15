@@ -8,12 +8,18 @@ _.breadcrumbs = [{
   name: content.title,
   link: `/receita/${slug}`
 }]
-//if (!content.sections || !content.sections.length) {
+console.log(content)
+if (!content.sections || !content.sections.length) {
   content.sections = [
     { type: 'breadcrumbs' },
-    { type: 'page-title' }
+    { type: 'page-title' },
+    { type: 'receitas-post' }
   ]
-//} 
+} else if (!content.sections.find(({ type }) => type === 'receitas-post')) {
+  content.sections.push({ type: 'receitas-post' })
+}
 %>
 
 <%- await include('@/view') %>
+
+

@@ -1,3 +1,64 @@
-<div class="recipe-post">
-  aaaaaaaaa
+<div class="receitas-post">
+  <% 
+    const { slug, content } = await _.resolveRoute()
+    const receita = _.cms(`receita/${slug}`)
+  %>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <img src="<%= receita.imagem %>" class="img-responsive"/>
+      </div>
+      <div class="col-12 col-md-5 offset-md-1">
+        <h1 class="receita-name"><%= receita.title %></h1>
+        <div class="receita-grid d-flex align-items-center justify-content-between">
+          <div class="item d-flex">
+            <div class="ico"></div>
+            <div>
+              <b>Tempo de Preparo</b>
+              <div><%= receita.tempo_de_preparo %></div>
+            </div>
+          </div>
+          <div class="item d-flex">
+            <div class="ico"></div>
+            <div>
+              <b>Dificuldade</b>
+              <div><%= receita.dificuldade %></div>
+            </div>
+          </div>
+          <div class="item d-flex">
+            <div class="ico"></div>
+            <div>
+              <b>Serve até</b>
+              <div><%= receita.serve_ate %></div>
+            </div>
+          </div>
+        </div>
+        <div class="receita-ingredientes">
+          <strong>Ingredientes</strong>
+          <div>
+            <%- receita.ingredientes %>
+          </div>
+        </div>
+        <div class="receita-comprar">
+          <button type="button">Comprar itens da receita</button>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="receita-preparo">
+            <h2>Modo de Preparo</h2>
+            <div>
+              <%- receita.preparo %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- await include('@/sections/inc/md-content') %>
+  
 </div>
