@@ -10,7 +10,7 @@ export default ({ baseDir, sections, grids, routes }) => ({
         label: 'Categoria Principal',
         name: 'slug',
         widget: 'select',
-        options: state.routes
+        options: routes
           .filter(({ resource, name }) => resource === 'categories')
           .map(({ name, path }) => ({
             label: name,
@@ -33,7 +33,7 @@ export default ({ baseDir, sections, grids, routes }) => ({
                 label: 'Categoria',
                 name: 'slug',
                 widget: 'select',
-                options: state.routes
+                options: routes
                   .filter(({ resource, name }) => resource === 'categories')
                   .map(({ name, path }) => ({
                     label: name,
@@ -71,7 +71,7 @@ export default ({ baseDir, sections, grids, routes }) => ({
                 label: 'Item',
                 name: 'grid',
                 widget: 'select',
-                options: state.grids
+                options: grids
                   .map(({ grid_id, title }) => ({
                     label: title,
                     value: grid_id

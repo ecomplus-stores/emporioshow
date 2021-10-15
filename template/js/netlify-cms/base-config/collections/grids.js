@@ -10,7 +10,7 @@ export default ({ baseDir, sections, grids }) => ({
         label: 'Identificação do grid',
         name: 'title',
         widget: 'select',
-        options: state.grids
+        options: grids
           .map(({ grid_id, title }) => ({
             label: title,
             value: grid_id
