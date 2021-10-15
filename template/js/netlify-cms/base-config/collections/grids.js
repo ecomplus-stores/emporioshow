@@ -20,11 +20,13 @@ export default ({ baseDir, sections }) => ({
         label: 'Opções',
         name: 'options',
         widget: 'list',
+        required:false,
         fields: [
           {
             label: 'Nome da Opção',
             name: 'option',
             widget: 'object',
+            required:false,
             fields: [
               {
                 label: 'Nome da Opção',
