@@ -1,14 +1,10 @@
-<div class="receitas-post">
+<div id="receitas-post">
   <% 
     const { slug, content } = await _.resolveRoute()
     const receita = _.cms(`receita/${slug}`)
 
     const { sections } = receita
     console.log(sections)
-    
-    
-    
-    
   %>
   <div class="container">
     <div class="row">
@@ -19,21 +15,33 @@
         <h1 class="receita-name"><%= receita.title %></h1>
         <div class="receita-grid d-flex align-items-center justify-content-between">
           <div class="item d-flex">
-            <div class="ico"></div>
+            <div class="ico">              
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.6667 5H23.3333M20 16.6667V22.5L23.3333 25.8333M32.5 22.5C32.5 29.4036 26.9036 35 20 35C13.0964 35 7.5 29.4036 7.5 22.5C7.5 15.5964 13.0964 10 20 10C26.9036 10 32.5 15.5964 32.5 22.5Z" stroke="#AD1817" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>  
+            </div>
             <div>
               <b>Tempo de Preparo</b>
               <div><%= receita.tempo_de_preparo %></div>
             </div>
           </div>
           <div class="item d-flex">
-            <div class="ico"></div>
+            <div class="ico">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 28.3333C19 28.8856 19.4477 29.3333 20 29.3333C20.5523 29.3333 21 28.8856 21 28.3333H19ZM21 16.6667C21 16.1144 20.5523 15.6667 20 15.6667C19.4477 15.6667 19 16.1144 19 16.6667L21 16.6667ZM19 11.6833C19 12.2356 19.4477 12.6833 20 12.6833C20.5523 12.6833 21 12.2356 21 11.6833H19ZM21 11.6666C21 11.1143 20.5523 10.6666 20 10.6666C19.4477 10.6666 19 11.1143 19 11.6666H21ZM21 28.3333L21 16.6667L19 16.6667L19 28.3333H21ZM21 11.6833V11.6666H19V11.6833H21ZM34 20C34 27.732 27.732 34 20 34V36C28.8366 36 36 28.8366 36 20H34ZM20 34C12.268 34 6 27.732 6 20H4C4 28.8366 11.1634 36 20 36V34ZM6 20C6 12.268 12.268 6 20 6V4C11.1634 4 4 11.1634 4 20H6ZM20 6C27.732 6 34 12.268 34 20H36C36 11.1634 28.8366 4 20 4V6Z" fill="#AD1817"/>
+                </svg>
+            </div>
             <div>
               <b>Dificuldade</b>
               <div><%= receita.dificuldade %></div>
             </div>
           </div>
           <div class="item d-flex">
-            <div class="ico"></div>
+            <div class="ico">              
+                <svg width="39" height="26" viewBox="0 0 39 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29.3333 24.3333V22.6667C29.3333 18.9848 26.3486 16 22.6667 16H16C12.3181 16 9.33333 18.9848 9.33333 22.6667V24.3333M37.6667 24.3333V22.6667C37.6667 18.9848 34.6819 16 31 16H30.1667M1 24.3333V22.6667C1 18.9848 3.98477 16 7.66667 16H8.5M27.6667 11C30.4281 11 32.6667 8.76143 32.6667 6C32.6667 3.23858 30.4281 1 27.6667 1M11 11C8.23858 11 6 8.76143 6 6C6 3.23858 8.23858 1 11 1M24.3333 6C24.3333 8.76142 22.0948 11 19.3333 11C16.5719 11 14.3333 8.76142 14.3333 6C14.3333 3.23858 16.5719 1 19.3333 1C22.0948 1 24.3333 3.23858 24.3333 6Z" stroke="#AD1817" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
             <div>
               <b>Serve até</b>
               <div><%= receita.serve_ate %></div>
