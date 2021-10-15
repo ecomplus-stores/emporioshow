@@ -1,7 +1,7 @@
-export default state => ({
+export default ({ baseDir, sections, state }) => ({
     name: 'menu-config',
     label: 'Configuração do Menu',
-    folder: `${state.baseDir}content/menu-config`,
+    folder: `${baseDir}content/menu-config`,
     extension: 'json',
     create: true,
     slug: '{{slug}}',
