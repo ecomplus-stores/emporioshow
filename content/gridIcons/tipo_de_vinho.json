@@ -1,0 +1,12 @@
+{
+  "image": "/img/uploads/vinho_tinto.png",
+  "title": "tipo_de_vinho",
+  "options": [
+    {
+      "option": {
+        "name": "Tinto",
+        "image": "/img/uploads/vinho_tinto.png"
+      }
+    }
+  ]
+}
