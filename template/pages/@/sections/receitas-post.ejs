@@ -2,6 +2,13 @@
   <% 
     const { slug, content } = await _.resolveRoute()
     const receita = _.cms(`receita/${slug}`)
+
+    const { sections } = receita
+    console.log(sections)
+    
+    
+    
+    
   %>
   <div class="container">
     <div class="row">
@@ -59,6 +66,20 @@
       </div>
     </div>
   </div>
-  <%- await include('@/sections/inc/md-content') %>
+  <div class="container" id="receita-sections">
+  <%
   
+  if (Array.isArray(sections)) {
+    for (let i = 0; i < sections.length; i++) {
+      const opt = sections[i]
+      if (opt && opt.enabled !== false) {
+        %>
+        <%- await include(`@/sections/${opt.type}`, { _, opt }) %>
+        <%
+      }
+    }
+  }
+
+  %>  
+</div>
 </div>

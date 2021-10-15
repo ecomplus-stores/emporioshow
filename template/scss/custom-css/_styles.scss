@@ -538,3 +538,35 @@ margin:0 0 15px 0;
 }
 
 .img-responsive{max-width:100%}
+
+#receitas-list{}
+#receitas-list .card{
+    background:var(--cor3);
+    border-radius:6px;
+    border:0;
+    margin-bottom:30px;
+    cursor:pointer;
+}
+#receitas-list .card .card-body{
+    background:#fff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius:8px;
+    margin:-30px 20px 20px 20px;
+}
+#receitas-list .card .card-body .card-title{
+    font-family:"Lora";
+    font-size:16px;
+    color:#131313;
+    font-weight:bold;
+    text-transform:uppercase
+}
+#receitas-list .card .card-body .card-text{
+    font-size:12px;
+    font-family:"Lora";
+    color:#131313;
+    margin:0;
+    line-height:22px;
+}
+#receitas-list .card .card-body .card-text b{
+    text-transform:uppercase;    
+}

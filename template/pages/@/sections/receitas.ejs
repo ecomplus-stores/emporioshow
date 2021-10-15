@@ -2,7 +2,7 @@
 const posts = _.cms('receita')
 if (Array.isArray(posts) && posts.length) {
   %>
-    <div class="blog my-4 my-lg-5">
+    <div id="receitas-list" class="receitas my-4 my-lg-5">
       <div class="container">
         <div class="row">
           <% posts.forEach(slug => { %>
@@ -25,13 +25,13 @@ if (Array.isArray(posts) && posts.length) {
                     </a>
                   </h5>
                   <p class="card-text">
-                    <%= tempo_de_preparo %>
+                    <b>Preparo</b>: <%= tempo_de_preparo %>
                   </p>
                   <p class="card-text">
-                    <%= dificuldade %>
+                    <b>Dificuldade:</b> <%= dificuldade %>
                   </p>
                   <p class="card-text">
-                    <%= serve_ate %>
+                    <b>Porções:</b> <%= serve_ate %>
                   </p>
                 </div>
               </div>
