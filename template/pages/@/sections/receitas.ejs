@@ -1,0 +1,16 @@
+<%
+const posts = _.cms('receitas')
+if (Array.isArray(posts) && posts.length) {
+  %>
+    <div class="blog my-4 my-lg-5">
+      <div class="container">
+        <div class="row">
+          <% posts.forEach(slug => { %>
+            aaaaaa
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  <%
+}
+%>

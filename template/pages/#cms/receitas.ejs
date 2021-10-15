@@ -1,0 +1,19 @@
+<%
+const blogPage = _.cms('receitas')
+const { slug, content } = await _.resolveRoute()
+_.breadcrumbs = [{
+  name: blogPage.title,
+  link: `/receitas`
+}, {
+  name: content.title,
+  link: `/receita/${slug}`
+}]
+//if (!content.sections || !content.sections.length) {
+  content.sections = [
+    { type: 'breadcrumbs' },
+    { type: 'page-title' }
+  ]
+//} 
+%>
+
+<%- await include('@/view') %>

@@ -1,0 +1,18 @@
+{
+  "title": "Receitas",
+  "meta_title": "Receitas",
+  "meta_description": "Receitas",
+  "sections": [
+    {
+      "type": "breadcrumbs",
+      "enabled": true
+    },
+    {
+      "type": "page-title"
+    },
+    {
+      "type": "receitas",
+      "enabled": true
+    } 
+  ]
+}
