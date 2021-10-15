@@ -1,7 +1,7 @@
 export default ({ baseDir, sections }) => ({
-    name: 'recipe-receitas',
-    label: 'Receitas',
-    folder: `${baseDir}content/recipes`,
+    name: 'gridIcons',
+    label: 'Ícones de Características',
+    folder: `${baseDir}content/gridIcons`,
     extension: 'json',
     create: true,
     slug: '{{slug}}',
