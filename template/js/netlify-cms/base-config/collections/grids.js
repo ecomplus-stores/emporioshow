@@ -1,4 +1,4 @@
-export default ({ baseDir, sections }) => ({
+export default ({ baseDir, sections, grids }) => ({
     name: 'gridIcons',
     label: 'Ícones de Características',
     folder: `${baseDir}content/gridIcons`,

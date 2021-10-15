@@ -4,7 +4,7 @@
     const receita = _.cms(`receita/${slug}`)
 
     const { sections } = receita
-    console.log(sections)
+    
   %>
   <div class="container">
     <div class="row">
@@ -51,7 +51,7 @@
         <div class="receita-ingredientes">
           <strong>Ingredientes</strong>
           <div>
-            <%- receita.ingredientes %>
+            <%= receita.ingredientes %>
           </div>
         </div>
         <div class="receita-comprar">

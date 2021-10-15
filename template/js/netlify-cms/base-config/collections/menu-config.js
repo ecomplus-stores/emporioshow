@@ -1,4 +1,4 @@
-export default ({ baseDir, sections }) => ({
+export default ({ baseDir, sections, grids, routes }) => ({
     name: 'menu-config',
     label: 'Configuração do Menu',
     folder: `${baseDir}content/menu-config`,
