@@ -12,6 +12,11 @@ export default ({ baseDir, sections }) => ({
         widget: 'string'
       },  
       {
+        label: 'Ícone Padrão',
+        name: 'image',
+        widget: 'image'
+      },
+      {
         label: 'Opções',
         name: 'options',
         widget: 'list',
@@ -23,12 +28,12 @@ export default ({ baseDir, sections }) => ({
             fields: [
               {
                 label: 'Nome da Opção',
-                name: 'option_name',
+                name: 'name',
                 widget: 'string'          
               },
               {
                 label: 'Ícone',
-                name: 'imagem',
+                name: 'image',
                 widget: 'image'
               }
             ]
