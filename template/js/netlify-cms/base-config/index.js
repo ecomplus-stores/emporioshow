@@ -8,6 +8,7 @@ import getWidgets from '@ecomplus/storefront-template/template/js/netlify-cms/ba
 
 //ALPIX CUSTOM MODULES
 import getRecipesPosts from './collections/recipes-posts'
+import getGrids from './collections/grids'
 
 export default options => {
   console.log('custom cms config')
