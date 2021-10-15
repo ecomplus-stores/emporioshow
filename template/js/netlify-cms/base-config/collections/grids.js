@@ -7,10 +7,15 @@ export default ({ baseDir, sections }) => ({
     slug: '{{slug}}',
     fields: [
       {
-        label: 'ID do grid',
+        label: 'Identificação do grid',
         name: 'title',
-        widget: 'string'
-      },  
+        widget: 'select',
+        options: state.grids
+          .map(({ grid_id, title }) => ({
+            label: title,
+            value: grid_id
+          }))
+      },      
       {
         label: 'Ícone Padrão',
         name: 'image',
