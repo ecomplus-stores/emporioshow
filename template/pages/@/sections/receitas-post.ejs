@@ -51,11 +51,11 @@
         <div class="receita-ingredientes">
           <strong>Ingredientes</strong>
           <div>
-            <%= receita.ingredientes %>
+            <%- _.md.render(receita.ingredientes) %>            
           </div>
         </div>
         <div class="receita-comprar">
-          <button type="button">Comprar itens da receita</button>  
+          <button type="button" onclick="document.querySelector('#receita-sections').scrollIntoView({ behavior: 'smooth' });">Comprar itens da receita</button>  
         </div>
       </div>
     </div>
@@ -67,27 +67,27 @@
           <div class="receita-preparo">
             <h2>Modo de Preparo</h2>
             <div>
-              <%- receita.preparo %>
+              <%- _.md.render(receita.preparo) %>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="container" id="receita-sections">
-  <%
+  <div id="receita-sections">
+    <%
   
-  if (Array.isArray(sections)) {
-    for (let i = 0; i < sections.length; i++) {
-      const opt = sections[i]
-      if (opt && opt.enabled !== false) {
-        %>
-        <%- await include(`@/sections/${opt.type}`, { _, opt }) %>
-        <%
+    if (Array.isArray(sections)) {
+      for (let i = 0; i < sections.length; i++) {
+        const opt = sections[i]
+        if (opt && opt.enabled !== false) {
+          %>
+          <%- await include(`@/sections/${opt.type}`, { _, opt }) %>
+          <%
+        }
       }
     }
-  }
-
-  %>  
+  
+    %>  
 </div>
 </div>

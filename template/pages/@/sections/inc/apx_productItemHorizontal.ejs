@@ -1,0 +1,86 @@
+<%
+const itemData = {}
+let itemDataFields = ['_id', 'sku', 'slug', 'quantity']
+if (Array.isArray(_.itemDataFields)) {
+  itemDataFields = itemDataFields.concat(_.itemDataFields)
+}
+itemDataFields.forEach(field => itemData[field] = opt.item[field])
+itemData.name = _.ecomUtils.name(opt.item)
+itemData.price = _.ecomUtils.price(opt.item)
+
+const imgObj = _.ecomUtils.img(opt.item)
+if (imgObj) {
+  itemData.pictures = [{
+    _id: _.ecomUtils.randomObjectId(),
+    normal: imgObj
+  }]
+}
+%>
+
+<article class="product-item apx_productItemHorizontal" data-product="<%= JSON.stringify(itemData) %>">
+  <div
+    class="product-card"
+    data-product-id="<%= itemData._id %>"
+    data-sku="<%= itemData.sku %>"
+  >
+    <div class="row align-items-start justify-content-start">
+      <div class="col-3">
+        <a
+          href="/<%= itemData.slug %>"
+          class="product-card__link"
+          title="<%= itemData.name %>"
+        >
+      
+          <div class="product-card__pictures">
+            <% if (imgObj) { %>
+              <picture class="product-card__picture">
+                <img
+                  data-src="<%= imgObj.url %>"
+                  alt="<%= imgObj.alt %>"
+                  class="lozad-delay fade"
+                  <% if (imgObj.url.startsWith('https://ecoms1.com/')) { %>
+                    crossorigin="anonymous"
+                  <% } %>
+                >
+              </picture>
+            <% } %>
+          </div>
+        </a>
+      </div>
+      <div class="col-9 justify-content-start">
+        <a
+          href="/<%= itemData.slug %>"
+          class="product-card__link"
+          title="<%= itemData.name %>"
+        >
+        <div data-slot="title">
+            <h3 class="product-card__name">
+              <%= itemData.name %>
+            </h3>
+          </div>
+        </a>
+
+        <div class="product-card__prices prices">
+          <strong class="prices__value">
+            <% if (opt.item.available && opt.item.visible && _.ecomUtils.inStock(opt.item)) { %>
+              <%= _.ecomUtils.formatMoney(itemData.price) %>
+            <% } else { %>
+              --
+            <% } %>
+          </strong>
+        </div>
+
+        <div class="product-card__buy fade"><button type="button" class="btn btn-primary btn-block"><!----> <i class="fas fa-shopping-bag mr-1"></i>
+          Comprar
+        </button></div>
+        <%- await include('@/helpers/widgets-append', {
+          _, opt, field: 'productCardSlots'
+        }) %>
+      </div>
+    </div>
+  </div>
+
+  <%- await include('@/helpers/widgets-append', {
+    _, opt, field: 'productItemAppend'
+  }) %>
+</article>

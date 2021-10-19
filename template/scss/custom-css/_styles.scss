@@ -5,7 +5,7 @@
     --cor1: #AD1817;
     --cor2: #8A0403;
     --cor3: #FECC16;
-    --cor4: #131313;
+    --cor4: #000;
     --cor5: #898989;
     --p:16px;
     --menu:14px;
@@ -67,6 +67,17 @@ p{
 body .header__logo{max-width:unset!important;max-height:unset!important;}
 .header__container{margin:0 auto;}
 .header{background:var(--cor2);padding:15px 0 0 0;border:0;}
+
+.header .header__buttons .btn .badge{
+    background: var(--cor1);
+    color: var(--cor3);
+    font-size: 10px;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    line-height: 16px;
+    padding: 0;
+}
 
 .header__nav{
 margin-top:15px;
@@ -186,7 +197,8 @@ body{max-width:unset!important;overflow-y:auto!important;overflow-x:hidden!impor
 .products-carousel__title{
 
 }
-.products-carousel__title{
+.products-carousel__title,
+#receitas-post .receita-preparo h2{
     position: relative;
     width: fit-content;
     padding: 0rem 0 .5rem 0!important;
@@ -194,7 +206,8 @@ body{max-width:unset!important;overflow-y:auto!important;overflow-x:hidden!impor
 }
 .products-carousel__title:before{display:none;}
 .products-carousel__title > * > small:after,
-.products-carousel__title > * > b:after{
+.products-carousel__title > * > b:after,
+#receitas-post .receita-preparo h2:after{
     content: "";
     width: 100vw;
     height: 3px;
@@ -219,7 +232,8 @@ body{max-width:unset!important;overflow-y:auto!important;overflow-x:hidden!impor
 .products-carousel__title span > b,
 .products-carousel__title a > b{font-size:49px;color:var(--cor4);display:block;position:relative;padding-bottom:.5rem;}
 .products-carousel__title span > small,
-.products-carousel__title a > small{
+.products-carousel__title a > small,
+#receitas-post .receita-preparo h2{
     padding-bottom:.5rem;
     position:relative;
     font-size: 31px;
@@ -441,16 +455,51 @@ margin:0 0 15px 0;
 }
 
 #page-products #product.product{}
+// #page-products #product.product .product__name{font-size:25px;text-transform:uppercase;line-height:32px;color:var(--cor4);font-weight:bold;}
+// #page-products #product.product .product__sku{color:var(--cor5);font-size:11px;line-height:24px;}
+// #page-products #product.product .prices__installments > small:first-child,
+// #page-products #product.product .prices__compare small{display:none;}
+// #page-products #product.product .prices__compare s{font-size:20px;line-height:26px;color:var(--cor4)}
+// #page-products #product.product .prices__value{font-size:35px;line-height:45px;color:var(--cor4)}
+// #page-products #product.product .prices__installments,
+// #page-products #product.product .prices__discount{font-size:12px;line-height:24px;font-family:'Montserrat';}
+// #page-products #product.product .prices__discount:before{content:"ou "}
+// #page-products #product.product .prices__discount > span{
+//     color: #fff;
+//     font-size: 18px;
+//     background: var(--cor1);
+//     padding: 3px 5px;
+//     display: inline-block;
+//     margin: 5px 3px;
+// }
+// #page-products #product.product .prices__discount-label{font-size:0;}
+// #page-products #product.product .prices__discount-label:before{content:"via PIX ou boleto";font-size:12px;}
+
+// #page-products #product.product .product__buy button{
+//     background: #03A678;
+//     border-radius: 3px;
+//     padding:0 2rem;
+//     border:0;
+//     min-width:270px;
+// }
+// #page-products #product.product .product__buy button span{
+//     font-size: 21px;
+//     line-height: 50px;
+//     text-transform:uppercase;
+//     font-weight:bold;
+// }
+
 #page-products #product.product .product__name{font-size:25px;text-transform:uppercase;line-height:32px;color:var(--cor4);font-weight:bold;}
 #page-products #product.product .product__sku{color:var(--cor5);font-size:11px;line-height:24px;}
-#page-products #product.product .prices__installments > small:first-child,
-#page-products #product.product .prices__compare small{display:none;}
-#page-products #product.product .prices__compare s{font-size:20px;line-height:26px;color:var(--cor4)}
-#page-products #product.product .prices__value{font-size:35px;line-height:45px;color:var(--cor4)}
-#page-products #product.product .prices__installments,
-#page-products #product.product .prices__discount{font-size:12px;line-height:24px;font-family:'Montserrat';}
-#page-products #product.product .prices__discount:before{content:"ou "}
-#page-products #product.product .prices__discount > span{
+
+#product-actions .prices__installments > small:first-child,
+#product-actions .prices__compare small{display:none;}
+#product-actions .prices__compare s{font-size:20px;line-height:26px;color:var(--cor4)}
+#product-actions .prices__value{font-size:35px;line-height:45px;color:var(--cor4)}
+#product-actions .prices__installments,
+#product-actions .prices__discount{font-size:12px;line-height:24px;font-family:'Montserrat';}
+#product-actions .prices__discount:before{content:"ou "}
+#product-actions .prices__discount > span{
     color: #fff;
     font-size: 18px;
     background: var(--cor1);
@@ -458,22 +507,25 @@ margin:0 0 15px 0;
     display: inline-block;
     margin: 5px 3px;
 }
-#page-products #product.product .prices__discount-label{font-size:0;}
-#page-products #product.product .prices__discount-label:before{content:"via PIX ou boleto";font-size:12px;}
+#product-actions .prices__discount-label{font-size:0;}
+#product-actions .prices__discount-label:before{content:"via PIX ou boleto";font-size:12px;}
 
-#page-products #product.product .product__buy button{
+#product-actions .product__buy button{
     background: #03A678;
     border-radius: 3px;
     padding:0 2rem;
     border:0;
     min-width:270px;
 }
-#page-products #product.product .product__buy button span{
+.apx_buyTogether #product-actions .product__buy button,
+#product-actions .product__buy button span{
     font-size: 21px;
     line-height: 50px;
     text-transform:uppercase;
     font-weight:bold;
+    color:#fff;
 }
+
 #page-products #product.product .product__buy button span i{display:none;}
 #page-products #product.product .shipping-calculator{border-top:1px solid #f8f8f8;margin-top:.5rem;padding-top:1rem;}
 #page-products #product.product .shipping-calculator [for=shipping-calculator-zip]{
@@ -556,14 +608,14 @@ margin:0 0 15px 0;
 #receitas-list .card .card-body .card-title{
     font-family:"Lora";
     font-size:16px;
-    color:#131313;
+    color:#000000;
     font-weight:bold;
     text-transform:uppercase
 }
 #receitas-list .card .card-body .card-text{
     font-size:12px;
     font-family:"Lora";
-    color:#131313;
+    color:#000000;
     margin:0;
     line-height:22px;
 }
@@ -587,11 +639,131 @@ margin:0 0 15px 0;
 #receitas-post .receita-grid .item{gap:5px;}
 #receitas-post .receita-grid .item > div > b{font-weight:bold;font-size:12px;font-family:"Montserrat";text-transform:uppercase;}
 #receitas-post .receita-grid .item > div > div{font-size:11px;font-weight:normal;font-family:"Montserrat"; text-transform:uppercase;}
-#receitas-post .receita-ingredientes{}
+#receitas-post .receita-ingredientes{
+    margin: 1rem 0;
+    border-bottom: 1px solid #f8f8f8;
+    padding: 0 0 1rem 0;
+}
+#receitas-post .receita-ingredientes > div,
+#receitas-post .receita-preparo > div *{font-family:"Montserrat";font-size:15px;line-height:28px;}
+#receitas-post .receita-ingredientes ul,
+#receitas-post .receita-ingredientes ol,
+#receitas-post .receita-preparo > div ul,
+#receitas-post .receita-preparo > div ol{margin:0;padding-left:20px;color:#7b7b7b}
 #receitas-post .receita-ingredientes > strong{color:var(--cor2);font-family:"Montserrat";font-size:15px;margin-bottom:1rem;display:block;}
-#receitas-post .receita-comprar{}
-#receitas-post .receita-comprar button{}
+#receitas-post .receita-comprar{display:block;width:100%;padding-top:.5rem;}
+#receitas-post .receita-comprar button{
+    background:#666;
+    text-transform:uppercase;
+    border-radius:5px;
+    font-size:21px;
+    text-align:center;
+    display:block;
+    color:#fff;
+    padding:10px;
+    border:0;
+    width:100%;
+    font-weight:600;
+}
 
-#receitas-post .bg{}
-#receitas-post .receita-preparo{}
+#receitas-post .bg{
+    background:#f8f8f8;
+    margin:5rem 0;
+    padding:3rem 0;
+}
+
 #receitas-post #receita-sections{}
+#receitas-post .receita-preparo h2{margin-top:0;text-transform:uppercase;margin-bottom:2rem;}
+
+#receitas-post .receita-ingredientes li,
+#receitas-post .receita-preparo li{
+    margin:5px 0;
+}
+
+#receitas-post .receita-preparo li{line-height:36px;}
+
+/* apx_productItemHorizontal */
+.apx_productItemHorizontal{}
+.apx_productItemHorizontal .product-card__pictures{height:100%;margin:0!important}
+.apx_productItemHorizontal .product-card__picture{width:100%;}
+.apx_productItemHorizontal .product-card__picture,
+.apx_productItemHorizontal .product-card__picture img{
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    margin:0 auto;
+}
+.apx_productItemHorizontal .product-card__name{text-align:left;color:var(--cor4)}
+// .apx_productItemHorizontal .product-card .col-9.justify-content-start *{text-align:left}
+.apx_productItemHorizontal .product-card__buy{opacity:1!important}
+.apx_productItemHorizontal .product-card__buy button,
+.apx_productItemHorizontal .product-card__prices{justify-content: flex-start;margin-left:0;margin-right:auto;}
+
+.d-flex.prices__align{flex-wrap:wrap;}
+
+.apx_buyTogether-buy{
+    background:#f9f9f9;
+    border-radius:5px;
+    padding:2rem;
+    position: sticky;
+    top: 180px;
+}
+.apx_buyTogether #product-actions .product__buy button{width:100%;}
+.apx_buyTogether #product-actions .product__buy{
+    margin:1rem 0 0 0;
+    width:100%;
+}
+.apx_buyTogether{margin:5rem 0;}
+.apx_buyTogether h4{margin-top:0!important}
+
+.egs_filter{
+    position: sticky;
+    top: 170px;
+}
+.egs_filter .egs_filter-title{
+    font-size:31px;
+    font-weight:bold;
+    position:relative;
+    display:block;
+    width:100%;
+    text-transform:uppercase;
+    color:#000;
+    margin-bottom:2rem;
+    padding-bottom:.5rem;
+}
+.egs_filter .egs_filter-title:after{
+    content: "";
+    width: 100vw;
+    height: 3px;
+    background: var(--cor1);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.egs_filter .egs_filter-options_title{font-size:16px;font-weight:bold;text-transform:uppercase;color:#000;font-family:"Montserrat"}
+.egs_filter .egs_filter-options-list{list-style-type:none;padding:0;margin:0 0 2rem 0;}
+.egs_filter .egs_filter-options-list label{font-family:"Montserrat";font-size:14px;font-weight:400;}
+.egs_filter .egs_filter-options-list label input{margin:3px 0 0 0;vertical-align:middle;position:absolute;opacity:0;}
+.egs_filter .egs_filter-options-list label input + i{
+    height:10px;
+    width:10px;
+    border:1px solid #000;
+    display:inline-block;margin:-2px 10px 0 0;vertical-align:middle;
+}
+.egs_filter .egs_filter-options-list label input:checked + i{
+    background:var(--cor3)
+}
+
+.egs_filter .egs_filter-clear{
+    margin: -1rem 0 2rem 0;
+    display: block;
+    background: transparent;
+    color: var(--cor2);
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid var(--cor2);
+    padding: 5px 10px;
+    font-family: "Montserrat";
+    border-radius: 3px;
+}

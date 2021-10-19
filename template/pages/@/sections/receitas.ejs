@@ -2,12 +2,88 @@
 const posts = _.cms('receita')
 if (Array.isArray(posts) && posts.length) {
   %>
-    <div id="receitas-list" class="receitas my-4 my-lg-5">
+    <% if(_.pageName == "receitas"){ %>
+      <div class="container">
+        <div class="row">        
+          <div class="col-md-2">
+            <div id="receitas-filter" class="egs_filter">
+              <div class="row">
+                <div class="col-12">
+                  <strong class="egs_filter-title">Filtros</strong>
+                  <button type="button" class="egs_filter-clear">Limpar Filtros</button>
+                    <% 
+                      function convertToSlug2(Text)
+                      {
+                          return Text
+                            .toString()
+                            .trim()
+                            .toLowerCase()
+                            .replace(/\s+/g, "_")
+                            .replace(/[^\w\-]+/g, "")
+                            .replace(/\-\-+/g, "_")
+                            .replace(/^-+/, "")
+                            .replace(/-+$/, "")
+                      }
+
+                      function convertToSlug(str){
+                        str = str.replace(/^\s+|\s+$/g, '')
+                        str = str.toLowerCase()
+                      
+
+                        var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;"
+                        var to   = "aaaaeeeeiiiioooouuuunc------"
+                        for (var i=0, l=from.length ; i < l ; i++) {
+                            str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+                        }
+                    
+                        str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+                            .replace(/\s+/g, '_') // collapse whitespace and replace by -
+                            .replace(/-+/g, '_'); // collapse dashes
+                        
+                        return str;
+                      }
+                      const allPostInfo = []
+                      const filtros = []
+                      posts.forEach(slug => { 
+                        allPostInfo.push(_.cms(`receita/${slug}`))
+                      })
+
+                      filtros.push({title: "Tempo de Preparo", options:[...new Set(allPostInfo.map(item => item.tempo_de_preparo))]}) 
+                      filtros.push({title: "Dificuldade", options:[...new Set(allPostInfo.map(item => item.dificuldade))]}) 
+                      filtros.push({title: "Serve Até", options:[...new Set(allPostInfo.map(item => item.serve_ate))]}) 
+                      //console.log(filtros)
+                      
+                      filtros.forEach(item => { 
+                        %>
+                        <h4 class="egs_filter-options_title">
+                          <%= item.title %> 
+                        </h4>
+                        <ul class="egs_filter-options-list">
+                          <%
+                            item.options.forEach(item_ => {
+                              %>
+                              <li><label for=""><input type="radio" name="<%= convertToSlug(item.title) %>" value="<%= item_ %>"><i></i><%= item_ %></label></li>
+                              <%
+                            })
+                          %>
+                        </ul>
+                        <%
+                      })
+                    %>                  
+                </div>
+              </div>
+            </div>
+          </div>
+    <% } %>
+    <div id="receitas-list" class="receitas <%= _.pageName == 'receitas' ? 'col-md-9 offset-md-1 col-12' : 'my-4 my-lg-5' %>">
       <div class="container">
         <div class="row">
           <% posts.forEach(slug => { %>
-            <% const { title, imagem, tempo_de_preparo, dificuldade, serve_ate } = _.cms(`receita/${slug}`) %>
-            <div class="col col-md-6 col-lg-4">
+            <% const { title, imagem, tempo_de_preparo, dificuldade, serve_ate } = _.cms(`receita/${slug}`) 
+              let dataFilter = {tempo_de_preparo, dificuldade, serve_ate }
+            
+            %>
+            <div class="col col-md-6 col-lg-4" data-filter="<%=  JSON.stringify(dataFilter) %>">
               <div class="card">
                 <% if (imagem) { %>
                   <a href="/receitas/<%= slug %>">
@@ -40,6 +116,11 @@ if (Array.isArray(posts) && posts.length) {
         </div>
       </div>
     </div>
+
+    <% if(_.pageName == "receitas"){ %>
+      </div>
+    </div>
+    <% } %>
   <%
 }
 %>

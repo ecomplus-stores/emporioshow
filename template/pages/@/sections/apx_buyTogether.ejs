@@ -1,3 +1,71 @@
-<div class="apx_buyTogether">
-  aaa
-</div>
+<%
+if (Array.isArray(opt.products) && opt.products.length) {
+  const search = new _.EcomSearch()
+  await search.setProductIds(opt.products).fetch(true)
+  const items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+  %>
+  <section class="apx_buyTogether">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="products-carousel__title">
+            <span>
+              <%- opt.title %>
+              <small><%- opt.subtitle %></small>
+            </span> 
+          </h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-12">
+          <div class="row">
+          <% 
+          let apx_buyTogetherTotal = 0
+
+          for (let i = 0; i < items.length; i++) { %>
+            <% 
+            apx_buyTogetherTotal = apx_buyTogetherTotal + items[i].price
+            %>
+            <% if (items[i].available && items[i].visible && _.ecomUtils.inStock(items[i])) { %>
+            <div class="col-12 col-md-6 mb-4">
+              <%- await include('@/sections/inc/apx_productItemHorizontal', {
+                _, opt: { item: items[i] }
+              }) %>
+            </div>
+            <% } %>
+          <% } %>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="apx_buyTogether-buy" id="product-actions">
+            <div class="prices prices--literal prices--big">
+              <strong class="prices__value">
+                  <%= _.ecomUtils.formatMoney(apx_buyTogetherTotal) %>
+              </strong>
+              <span>
+                <div class="prices__installments">
+                  <small> Até </small> 6x <small> De </small>
+                  <span> <%= _.ecomUtils.formatMoney(apx_buyTogetherTotal/6) %> </span>
+                  <small> Sem juros </small>
+                </div>
+                <div class="prices__discount">
+                  <span> <%= _.ecomUtils.formatMoney(apx_buyTogetherTotal * 0.95) %> </span>
+                  <small class="prices__discount-label"> via Boleto bancário </small>
+                </div>
+              </span>
+            </div>
+            <div class="price"></div>
+            <div class="installments"></div>
+            <div class="discount"></div>
+            <div class="product__buy">
+              <button type="button" class="">Comprar Todos</button>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>    
+  </section>
+<% } %>
+
+
+

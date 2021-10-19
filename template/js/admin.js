@@ -29,8 +29,8 @@ new EcomRouter().list()
       })
 
       .finally(() => {
-        console.log('alpix')
-        console.log(state)
+        //console.log('alpix')
+        //console.log(state)
         if (window.PKG_BASE_DIR === undefined) {
           window.PKG_BASE_DIR = ''
         }
