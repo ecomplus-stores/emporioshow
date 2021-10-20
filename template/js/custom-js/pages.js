@@ -1,3 +1,4 @@
+document.write('<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"><\/script>')
 $(document).ready(function(){
     // $('.header__search-input').keyup(function(){
     //     $('body .search__input').val($(this).val()).[0].dispatchEvent(new Event('input'));
@@ -61,7 +62,8 @@ $(document).ready(function(){
             }).catch(console.error)
         }else{
             dropdownDataGrids(gridInfo);
-        }           
+        }
+        dropdownUpdateLink($(this));
     });
 
     $('#search-engine-snap, #search-engine-load').wrap('<div class="container"></div>').wrap('<div class="row"></div>').wrap('<div class="col-md-9 col-12 offset-md-3"></div>');
@@ -71,17 +73,85 @@ $(document).ready(function(){
         let img = $('.hero-banner > img').attr('data-src');        
         $('.hero-banner').css('background-image','url('+ img +')');
     }
+    $('#clubeshow .trigger').click(function(e){
+        $('#clubeshow').toggleClass('visible')
+    })
+    $('#clubeshow form').submit(function(e){
+        e.preventDefault();
+        let cpf = $(this).find('[name="cpf"]').val();
+        pmarket.consultaPonto(cpf);
+    })
 });
 
+const pmarket = [];
+pmarket.instancia = 'http://livedemo.pontomarket.com.br/cgi-bin/webworks/bin/sharkview_api_v1';
+pmarket.id = "alpix";
+pmarket.token = "t3st3Integracao";
+
+pmarket.consultaPonto = function(cpf){
+    console.log(cpf);
+    //let url = 'http://' + pmarket.instancia + '/cgi-bin/webworks/bin/sharkview_api_v1?id='+ pmarket.id +'&token='+ pmarket.token +'&cmd=get_points&cpf='+ cpf;
+    
+    // axios.get(url, axiosConfig)
+    // .then(function(response){
+    //     console.log(response)
+    // })
+    let data = {
+        id: pmarket.id,
+        cpf: cpf,
+        token: pmarket.token,
+        cmd: 'get_points'
+    }
+    $.ajax({
+        type:"POST",
+        url: pmarket.instancia,
+        dataType: "json",
+        data: data,
+        success: function (data) {
+          console.log(data)
+          alert(data);
+        }
+      });
+}
+
+pmarket.solicitaResgate = function(oObj){
+    console.log(oObj);
+}
 function dropdownDataGrids(oObj){
+    console.log(oObj)
     $(oObj.data.options).each(function(k,item){
         let option = $('<li></li>');
-        option.append('<a href="#'+ item._id +'">'+ item.text +'</a>');
+        option.append('<a href="?'+ oObj.data.grid_id +'='+ item.text +'">'+ item.text +'</a>');
         $('[data-grids="'+ oObj.data._id +'"]').append(option);
+    });
+}
+function dropdownUpdateLink(oObj){
+    let link = oObj.closest('.egs_dropdown').find('span > a').attr('href');
+    oObj.find('.egs_dropdownMenu-filters a').each(function(){
+        let current = $(this).attr('href');
+        $(this).attr('href',link+current);
     })
 }
 function scrollToElement(oObj){
     document.querySelector(oObj).scrollIntoView({ 
         behavior: 'smooth' 
-    });      
+    });         
 }
+
+function convertToSlug(str){
+    str = str.replace(/^\s+|\s+$/g, '')
+    str = str.toLowerCase()
+  
+
+    var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;"
+    var to   = "aaaaeeeeiiiioooouuuunc------"
+    for (var i=0, l=from.length ; i < l ; i++) {
+        str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+    }
+
+    str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+        .replace(/\s+/g, '_') // collapse whitespace and replace by -
+        .replace(/-+/g, '_'); // collapse dashes
+    
+    return str;
+  }
