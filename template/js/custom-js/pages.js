@@ -89,16 +89,9 @@ pmarket.id = "alpix";
 pmarket.token = "t3st3Integracao";
 
 pmarket.consultaPonto = function(cpf){
-    console.log(cpf);
-    //let url = 'http://' + pmarket.instancia + '/cgi-bin/webworks/bin/sharkview_api_v1?id='+ pmarket.id +'&token='+ pmarket.token +'&cmd=get_points&cpf='+ cpf;
-    
-    // axios.get(url, axiosConfig)
-    // .then(function(response){
-    //     console.log(response)
-    // })
     let data = {
         id: pmarket.id,
-        cpf: cpf,
+        cpf: '43335443608',
         token: pmarket.token,
         cmd: 'get_points'
     }
@@ -111,7 +104,7 @@ pmarket.consultaPonto = function(cpf){
           console.log(data)
           alert(data);
         }
-      });
+    });
 }
 
 pmarket.solicitaResgate = function(oObj){

@@ -78,7 +78,7 @@ export default ({ baseDir, sections, state }) => ({
                 name: 'grid',
                 widget: 'select',
                 options: state.grids
-                  .map(({ grid_id, title }) => ({
+                  .map(({ _id, title }) => ({
                     label: title,
                     value: _id
                   }))

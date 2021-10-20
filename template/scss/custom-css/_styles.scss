@@ -165,7 +165,7 @@ margin-top:15px;
     z-index: 1;
     box-shadow: 5px 5px 5px rgba(0,0,0,.1);
     border-radius: 0;
-    width: 550px;
+    width: 635px;
     border-top: 4px solid #4f2209;
     margin-top: 15px;
 }
@@ -173,29 +173,40 @@ margin-top:15px;
 #header #instant-search .search__box.card .search-engine__results{}
 #header #instant-search .search__box.card .search-engine__results .search-engine__info h3{display:none;}
 #header #instant-search .search__box.card .search-engine__results .search-engine__retail{}
-#header #instant-search .search__box.card .search-engine__results .search-engine__retail > .row{display:block;}
-#header #instant-search .search__box.card .search-engine__results .search-engine__retail > .row > div{display:block;width:100%;max-width:100%;}
+#header #instant-search .search__box.card .search-engine__results .search-engine__retail > .row{
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+#header #instant-search .search__box.card .search-engine__results .search-engine__retail > .row > div{
+    flex: 0 0 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    padding: 0;
+}
 
 #header #instant-search .search__box.card .search-engine__results .search-engine__retail > .row > div .product-card .product-card__buy,
 #header #instant-search .search__box.card .search-engine__results .search-engine__retail > .row > div .product-card .product-card__offer-stamp{display:none}
 
 #header #instant-search .search__box.card .search-engine__results .search-engine__retail > .row > div .product-card section,
 #header #instant-search .search__box.card .search-engine__results .search-engine__retail > .row > div .product-card section .product-card__link{
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }
 #header #instant-search .search__box.card .search-engine__results .search-engine__retail > .row > div .product-card section .product-card__pictures{height:auto;}
 #header #instant-search .search__box.card .search-engine__results .search-engine__retail > .row > div .product-card section picture{max-width:100px;}
 #header #instant-search .search__box.card .search-engine__results .search-engine__retail > .row > div .product-card .product-card__name{
     padding:0 1rem;
     white-space: normal;
-    width: 350px;
+    width: 250px;
     text-align: left;
 }
 #header #instant-search .search__box.card .search-engine .lead{font-size:14px;margin-top:.5rem}
 #header #instant-search .search__box.card .search-engine h4{font-size:18px;}
-#header #instant-search .search__box.card .search-engine__results .prices{text-align:right;}
+#header #instant-search .search__box.card .search-engine__results .prices{text-align:right;margin:0;}
 #header #instant-search .search__box.card .search-engine__results .prices > *{margin:0;display:block;text-align:right;}
+#header #instant-search .search__box.card .search-engine__results .prices > *:last-child{display:none}
 
 #alpix .search__footer{
     font-size: 12px;
@@ -1013,4 +1024,15 @@ body .search-engine__aside .custom-checkbox{padding:0}
     border-radius: 30px;
     border: 0;
     outline:none!important;
+}
+#search-bar .search-engine > .row > div:first-child,
+#search-bar .search-engine .search-engine__aside{display:none!important}
+#search-bar .search-engine > .row > div:nth-child(2){width:100%;flex:0 0 100%;max-width:100%;margin:0}
+#search-bar .search-engine > .row > div:nth-child(2) .product-card{padding:0;margin-bottom:2rem;box-shadow:unset!important;border:0!important;}
+#search-bar .search-engine > .row > div:nth-child(2) .product-card .product-card__pictures{width:100px;height:100px;margin:0;}
+#search-bar .search-engine > .row > div:nth-child(2) .product-card .product-card__pictures img{max-height:100px;max-width:100%;}
+#search-bar .search-engine > .row > div:nth-child(2) .product-card .product-card__rating{display:none!important}
+#search-bar .search__body{
+    min-height: unset;
+    max-height: calc(100vh - 250px);
 }
