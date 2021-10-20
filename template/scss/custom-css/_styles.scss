@@ -11,6 +11,27 @@
     --menu:14px;
 }
 
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f8f8f8;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border:3px solid #f8f8f8;
+    border-radius:5px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
 
 body,
 p,
@@ -97,7 +118,7 @@ margin-top:15px;
     border-radius: 3px 3px 0 0;
     transition:unset;
 }
-.header__nav > ul > li > span > a:hover{
+.header__nav > ul > li:hover > span > a{
     color:var(--cor2);
     background:#fff;
 }
@@ -720,7 +741,8 @@ margin:0 0 15px 0;
     position: sticky;
     top: 170px;
 }
-.egs_filter .egs_filter-title{
+.egs_filter .egs_filter-title,
+.search-engine__aside .filters-title{
     font-size:31px;
     font-weight:bold;
     position:relative;
@@ -731,7 +753,8 @@ margin:0 0 15px 0;
     margin-bottom:2rem;
     padding-bottom:.5rem;
 }
-.egs_filter .egs_filter-title:after{
+.egs_filter .egs_filter-title:after,
+.search-engine__aside .filters-title:after{
     content: "";
     width: 100vw;
     height: 3px;
@@ -740,18 +763,28 @@ margin:0 0 15px 0;
     bottom: 0;
     right: 0;
 }
-.egs_filter .egs_filter-options_title{font-size:16px;font-weight:bold;text-transform:uppercase;color:#000;font-family:"Montserrat"}
+.egs_filter .egs_filter-options_title,
+body .search-engine__aside .search-engine__filter > button{font-size:16px;font-weight:bold;text-transform:uppercase;color:#000;font-family:"Montserrat"}
 .egs_filter .egs_filter-options-list{list-style-type:none;padding:0;margin:0 0 2rem 0;}
-.egs_filter .egs_filter-options-list label{font-family:"Montserrat";font-size:14px;font-weight:400;}
+.egs_filter .egs_filter-options-list label,
+.search-engine__filter .custom-control-label{font-family:"Montserrat";font-size:14px;font-weight:400;}
 .egs_filter .egs_filter-options-list label input{margin:3px 0 0 0;vertical-align:middle;position:absolute;opacity:0;}
-.egs_filter .egs_filter-options-list label input + i{
+.custom-checkbox .custom-control-input:checked~.custom-control-label:after{display:none;}
+.egs_filter .egs_filter-options-list label input + i,
+body .custom-checkbox .custom-control-label:before{
     height:10px;
     width:10px;
     border:1px solid #000;
     display:inline-block;margin:-2px 10px 0 0;vertical-align:middle;
+    border-radius:0;
+    position: relative;
+    top: auto;
+    left: auto;
 }
-.egs_filter .egs_filter-options-list label input:checked + i{
-    background:var(--cor3)
+.egs_filter .egs_filter-options-list label input:checked + i,
+body .custom-control-input:not(:disabled):active~.custom-control-label:before,
+.custom-control-input:checked~.custom-control-label:before{
+    background:var(--cor3)!important
 }
 
 .egs_filter .egs_filter-clear{
@@ -766,4 +799,130 @@ margin:0 0 15px 0;
     padding: 5px 10px;
     font-family: "Montserrat";
     border-radius: 3px;
+}
+// filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.egs_dropdown:hover .egs_dropdownMenu{display:block;}
+.egs_dropdownMenu{
+    position: absolute;
+    width: 100%;
+    background: #fff;    
+    padding: 2rem;
+    display:none;
+}
+.egs_dropdownMenu .egs_dropdownMenu-categories + .egs_dropdownMenu-filters{
+    border-top: 1px solid var(--cor1);
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+}
+.egs_dropdownMenu .egs_dropdownMenu-categories{justify-content:center;align-items:flex-end}
+.egs_dropdownMenu .egs_dropdownMenu-categories a{}
+.egs_dropdownMenu .egs_dropdownMenu-categories a .egs_dropdownMenu-image{margin-bottom:1rem;}
+.egs_dropdownMenu .egs_dropdownMenu-categories a .egs_dropdowmMenu-image img{}
+
+.egs_dropdownMenu .egs_dropdownMenu-filters{justify-content:center;align-items:flex-start}
+.egs_dropdownMenu .egs_dropdownMenu-filters b,
+.egs_dropdownMenu .egs_dropdownMenu-categories a .egs_dropdownMenu-title{
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:700;
+    display:block;
+    margin-bottom:.3rem;
+    text-align:left;
+}
+.egs_dropdownMenu .egs_dropdownMenu-categories a .egs_dropdownMenu-title{font-size:14px;}
+.egs_dropdownMenu .egs_dropdownMenu-filters ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+.egs_dropdownMenu .egs_dropdownMenu-filters ul > li{text-align:left;margin-top:.2rem;}
+.egs_dropdownMenu .egs_dropdownMenu-filters ul > li > a{
+    font-size:12px;
+    text-transform:initial;
+    padding:0;
+}
+
+.egs_dropdown{position:initial}
+
+.egs_dropdownMenu:before{
+    content: "";
+    background: #fff;
+    width: 3000px;
+    height: 100%;
+    left: -50%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    box-shadow: 0 10px 20px #2e2e2e;
+}
+
+
+.header__nav a:hover{background:unset;color: var(--cor1);}
+
+body .search-engine__aside{
+    position:relative;
+    width:100%;
+    height:auto;
+    z-index:1;
+    border:0;
+}
+body .search-engine__aside .search-engine__filter>button{
+    padding-left:0;padding-right:0;
+    text-align:left;
+}
+body .search-engine__aside .search-engine__filter > button > i{display:none!important;}
+body .search-engine__aside .search-engine__filter > button + .collapse{
+    display:block!important;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+body .search-engine__aside .custom-checkbox{padding:0}
+
+.hero-banner{padding:3rem 0 4rem 0;background-size:cover;}
+.hero-banner,
+.hero-banner .page-title{
+    margin-top:0;
+    margin-bottom:0;
+}
+.hero-banner .page-title h1{
+    color:#fff;
+    font-size:49px;
+    font-weight:600;
+    text-transform:uppercase;
+}
+.hero-banner .page-title .page-title__short-description{
+    font-family:"Montserrat";
+    font-size:14px;
+    text-align:left;
+    color:#fff;
+    max-width:600px;
+    line-height:28px;
+    margin:1rem 0 0 0;
+}
+.page--categories .hero-banner img{display:none;}
+@media(min-width:990px){
+    body .search-engine__info,
+    body .search-engine__aside .card-header,
+    body .search-engine__aside .card-footer{display:none;}
+    body .search-engine__aside{
+        position: absolute;
+        padding: 0 1rem;
+        top: 0;
+        left: 0;
+    }
+    body .search-engine__aside .card-body{padding:0;}
+    // body .search-engine__aside .card-body,
+    // .page--categories .search-engine__retail{
+    //     padding: 0px;
+    //     border: 0px;
+    //     max-height: calc(100vh - 280px);
+    // }
+    .search-engine__aside-open{display:none;}
+
+    // body .search-engine__aside{
+    //     position: sticky;
+    //     top: 175px;
+    // }
 }

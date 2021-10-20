@@ -261,59 +261,18 @@ if (header.categories_list) {
     %>
     <div class="row">
       <% if (categories && categories.length) { %>
-        
         <div class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
           <nav class="header__nav<%= isCategoriesNavFull ? ' header__nav--full' : '' %>">
             <ul class="d-flex justify-content-between w-100 m-0">
-              <% categories.forEach(({ slug, name, _id }) => { 
-                const menuConfig = _.cms(`menu-config/${slug}`)
-                %>
-                <li class="<%- categoryParents[slug] ? 'dropdown' : '' %> <%- menuConfig.title != undefined ? 'egs_dropdown' : '' %>">
+              <% categories.forEach(({ slug, name, _id }) => { %>
+                <li class="<%- categoryParents[slug] ? 'dropdown' : '' %>">
                   <span>
                     <a href="/<%= slug %>">
                       <%= ` ${name} ` %> 
                     </a>
                     <%- categoryParents[slug] ? '<i class="dx-caret"></i>' : '' %>
                   </span>
-                  <% if(menuConfig.title != undefined){ %>
-                    <div class="egs_dropdownMenu">
-                      <div class="container">
-                        <% if (menuConfig.categories.length > 0) { %>
-                        <div class="row egs_dropdownMenu-categories">
-                          <% menuConfig.categories.forEach(item => {                             
-                              let item_info = categoryParents[slug].find(el => el.slug === item.category.slug)
-                          %>
-                            <div class="col-auto">
-                              <a href="/<%= item.category.slug %>">
-                                <div class="egs_dropdownMenu-image"><img src="<%= item.category.image %>"/></div>
-                                <strong class="egs_dropdownMenu-title"><%= item_info.name %></strong>
-                              </a>
-                            </div>
-                          <% }) %>
-                        </div>
-                        <% } %>
-                        <% if (menuConfig.filters.length > 0) { %>
-                        <div class="row egs_dropdownMenu-filters">
-                          <% menuConfig.filters.forEach(item => { 
-                            //console.log(item)
-                             %>
-                            <div class="col-auto">
-                              <div>
-                                <b>
-                                  <strong class="egs_dropdownMenu-title"><%= item.option.title %></strong>
-                                </b>
-                                <ul data-grids="<%= item.option.grid %>">
-                                  
-                                </ul>
-                              </div>
-                            </div>
-                          <% }) %>
-                        </div>
-                        <% } %>
-                      </div>
-                      
-                    </div>
-                    <% } else { %>
+                  <% if (categoryParents[slug]) { %>
                     <ul class="dropdown-menu row mx-0">
                       <li class="d-block d-md-none btn-back"><button type="button"><i class="fas fa-arrow-left mr-1"></i> Voltar</button></li>
                     <% categoryParents[slug].forEach(subcategory => { %>

@@ -80,7 +80,7 @@ export default ({ baseDir, sections, state }) => ({
                 options: state.grids
                   .map(({ grid_id, title }) => ({
                     label: title,
-                    value: grid_id
+                    value: _id
                   }))
               }              
             ]
