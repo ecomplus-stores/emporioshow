@@ -51,7 +51,7 @@ if(_.pageName == "home"){
 </script>
 <script src="<%= apx_content.token %>" onload="apx_instafeedLoad();"></script>
 </section>
-<section id="apx_newsletter" class="py-5 my-5">
+<section id="apx_newsletter" class="py-1 py-md-5 my-5">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-6 offset-md-3 text-center justify-content-center">
@@ -90,11 +90,11 @@ if(_.pageName == "home"){
     </svg>  
   </button>
 </div>
-<footer id="apx_footer" class="py-5">
+<footer id="apx_footer" class="py-md-5 py-3">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-3">
-        <div>
+      <div class="col-12 col-md-3 ">
+        <div class="mb-2 mb-md-0 d-block">
           <%- await include('@/layout/inc/logo', { _ }) %>
         </div>
         <div class="my-4">
@@ -102,7 +102,7 @@ if(_.pageName == "home"){
             <%- footer.description.text || _.settings.description %>
           </p>
         </div>
-        <div>
+        <div class="mb-5 mb-md-0">
           <h4>Atendimento Loja Virtual</h4>
           <p>
             Segunda a Sexta, das 9h às 17h<br>
@@ -171,7 +171,7 @@ if(_.pageName == "home"){
         </div>
         <hr>
         <div class="row">
-          <div class="col-12 col-md-7 apx_credits">
+          <div class="col-12 col-md-7 apx_credits mb-3 mb-md-0">
             <%- footer.credits %>
           </div>
           <div class="col-12 col-md-5">

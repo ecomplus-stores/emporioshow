@@ -109,7 +109,8 @@ margin-top:15px;
     margin: 0;
 }
 .header__nav > ul > li {}
-.header__nav > ul > li > span > a{
+.header__nav > ul > li > span > a,
+#accordion-menu .menu__list > a > span{
     background: unset;
     font-weight: 700;
     font-size: var(--menu);
@@ -124,7 +125,7 @@ margin-top:15px;
 }
 
 #free-shipping-btn{
-    display: flex!important;
+    // display: flex!important;
     align-items: center;
     white-space: nowrap;
     gap: 10px;
@@ -1035,4 +1036,75 @@ body .search-engine__aside .custom-checkbox{padding:0}
 #search-bar .search__body{
     min-height: unset;
     max-height: calc(100vh - 250px);
+}
+
+
+aside#menu{background: var(--cor2);}
+#accordion-menu .menu__list > a > span{text-transform:uppercase;}
+#accordion-menu .menu__list > a.menu__item{
+    border:0;
+    padding:5px 10px;
+}
+#accordion-menu .menu__btn--clone{color:var(--cor3)}
+#accordion-menu .menu__item:hover{background:var(--cor1)}
+#menu .menu__footer{display:none}
+
+.products-carousel .glide__arrow{
+    height:40px;
+    padding:0;
+}
+.products-carousel .glide__arrow svg{display:block;}
+.products-carousel .products-carousel__item{margin:0!important}
+
+@media(max-width:990px){
+    .header__buttons{gap:5px;padding-right:5px;}
+    .header__buttons svg{
+        height: 28px;
+        width: 28px;
+    }
+    #header.header{padding:5px}
+    body .header__logo{
+        height: 70px;
+        margin: 0 0 -22px 0;
+    }
+
+    #clubeshow{left:0}
+    #clubeshow>.trigger{
+        border-radius:0 10px 10px 0;
+        width:50px;height:50px;
+    }
+    #clubeshow>.trigger>svg{
+        height:38px;
+        width:38px;
+    }
+    #clubeshow>.triger>span{
+        top: -6px;
+        right: -6px;
+        font-size: 10px;
+        height: 16px;
+        width: 16px;
+        line-height: 17px;
+    }
+    
+    #apx_footer,
+    #apx_footer *{
+        text-align:center;
+        justify-content:center;
+    }
+
+    #apx_footer .footer__links{margin-bottom:50px;}
+    #apx_footer .footer__links li{line-height:initial;margin-bottom:10px;}
+    #apx_footer .footer__links li a{font-size:12px;}
+    #apx_footer h4{margin-bottom:10px;}
+
+    #apx_footer .header__logo{margin:0 auto}
+
+    #apx_newsletter h4{font-size:28px}
+    #apx_newsletter p,
+    #apx_newsletter h4 small{font-size:16px}
+    #apx_newsletter form input,
+    #apx_newsletter form button{font-size:14px;}
+    #apx_newsletter form button svg{width:16px;height:16px;}
+
+
 }

@@ -84,27 +84,16 @@ $(document).ready(function(){
 });
 
 const pmarket = [];
-pmarket.instancia = 'http://livedemo.pontomarket.com.br/cgi-bin/webworks/bin/sharkview_api_v1';
-pmarket.id = "alpix";
-pmarket.token = "t3st3Integracao";
-
 pmarket.consultaPonto = function(cpf){
-    let data = {
-        id: pmarket.id,
-        cpf: '43335443608',
-        token: pmarket.token,
-        cmd: 'get_points'
-    }
-    $.ajax({
-        type:"POST",
-        url: pmarket.instancia,
-        dataType: "json",
-        data: data,
-        success: function (data) {
-          console.log(data)
-          alert(data);
-        }
-    });
+    axios.post('https://us-central1-pontomarket-ecomplus.cloudfunctions.net/app/get/points', {
+        storeId : storefront.settings.store_id,
+        cpf: '43335443608'      
+    })
+    .then(function(response){
+        console.log(response)
+        
+    })
+    
 }
 
 pmarket.solicitaResgate = function(oObj){
