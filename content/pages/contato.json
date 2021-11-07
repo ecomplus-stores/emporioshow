@@ -13,6 +13,10 @@
     {
       "type": "extra-page",
       "enabled": true
+    },
+    {
+      "type": "custom-content",
+      "markdown": "Teste"
     }
   ]
 }
