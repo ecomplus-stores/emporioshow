@@ -8,6 +8,10 @@
       "enabled": true
     },
     {
+      "type": "apx_bannerTitle",
+      "image": "/img/uploads/nest-blog-banner.jpg"
+    },
+    {
       "type": "page-title"
     },
     {
