@@ -35,7 +35,8 @@ export default options => {
         {
           label: 'Imagem em Destaque',
           name: 'image',
-          widget: 'image'
+          widget: 'image',
+          required: false,
         } 
       ]
     },
