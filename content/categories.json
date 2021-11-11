@@ -5,6 +5,9 @@
       "enabled": false
     },
     {
+      "type": "apx_bannerTitle"
+    },
+    {
       "type": "page-title"
     },
     {
