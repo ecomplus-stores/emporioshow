@@ -434,9 +434,14 @@ margin:0 0 15px 0;
 }
 
 //instagram
-.apx_instafeed a{position:relative;display:block;}
+.apx_instafeed a{position:relative;display:block;overflow:hidden;}
 .apx_instafeed a:hover img{opacity:.5}
-.apx_instafeed a img{max-width:100%;transition:all .2s;}
+.apx_instafeed a img{
+    max-width: 100%;
+    transition: all .2s;
+    object-fit: cover;
+    min-height: 100%;
+}
 .apx_instafeed a:hover span{opacity:1}
 .apx_instafeed a span{
     padding: 2rem;
@@ -892,12 +897,23 @@ body .search-engine__aside .search-engine__filter > button + .collapse{
 
 body .search-engine__aside .custom-checkbox{padding:0}
 
-.hero-banner{padding:3rem 0 4rem 0;background-size:cover;}
-.hero-banner,
+.hero-banner{background-size:cover;padding:4rem 0;position:relative;margin:0 0 2rem 0;}
+.hero-banner .mask{
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
 .hero-banner .page-title{
     margin-top:0;
     margin-bottom:0;
+    background-size:cover;
+    // width: 100vw;position:relative;max-width: 100vw;
+     
 }
+.hero-banner .page-title{position:relative;z-index:2}
 .hero-banner .page-title h1{
     color:#fff;
     font-size:49px;
@@ -1112,4 +1128,20 @@ aside#menu{background: var(--cor2);}
     .products-carousel{padding:0 15px;}
 
 
+
+
 }
+.gallery .glide{padding-bottom:50px;margin-bottom:50px;}
+.gallery .glide__bullets{bottom:0}
+.gallery .glide__bullet{
+    width:75px;
+    height:6px;
+    border-radius:0;
+    border:0;
+    background:#F2F2F2
+}
+
+.gallery .glide__bullet.glide__bullet--active{
+    background:#AD1817
+}
+

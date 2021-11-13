@@ -8,13 +8,6 @@
       "type": "apx_bannerTitle"
     },
     {
-      "type": "page-title"
-    },
-    {
-      "type": "document-banner",
-      "enabled": true
-    },
-    {
       "type": "category-retail",
       "enabled": true,
       "sort": "sales"

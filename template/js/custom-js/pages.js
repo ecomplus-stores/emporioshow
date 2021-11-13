@@ -1,7 +1,28 @@
+
 document.write('<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"><\/script>')
+//const ecomUtils = require('@ecomplus/utils')
 $(document).ready(function(){
     // $('.header__search-input').keyup(function(){
     //     $('body .search__input').val($(this).val()).[0].dispatchEvent(new Event('input'));
+    // });
+    
+    // $('#apx_newsletter').submit(function(e){
+    //     e.preventDefault();
+    //     var form = $(this);
+    //     var url = form.attr('action');
+        
+    //     $.ajax({
+    //         type: "POST",
+    //         url: url,
+    //         data: form.serialize(), // serializes the form's elements.
+    //         success: function(data)
+    //         {
+    //             alert('Obrigado por se inscrever!');
+    //         }
+    //     });
+
+    //     $(this).find('[type="email"]').val('');
+
     // });
     $('body').click(function(e){
         if($(e.target).closest('.header__search').length == 0){
@@ -10,7 +31,7 @@ $(document).ready(function(){
     });
     $('.egs_filter-clear').click(function(){
         $('.egs_filter input:checked').each(function(){
-            console.log($(this).attr('name'));
+            //console.log($(this).attr('name'));
             $(this).prop('checked',false);
 
             $('#page-receitas .egs_filter input').trigger('change');
@@ -68,11 +89,11 @@ $(document).ready(function(){
 
     $('#search-engine-snap, #search-engine-load').wrap('<div class="container"></div>').wrap('<div class="row"></div>').wrap('<div class="col-md-9 col-12 offset-md-3"></div>');
     $('#search-engine-snap > article > .row > div').removeClass('col-lg-3');
-    if($('.hero-banner.category-banner').length > 0){
-        $('.page-title').prependTo('.hero-banner');
-        let img = $('.hero-banner > img').attr('data-src');        
-        $('.hero-banner').css('background-image','url('+ img +')');
-    }
+    // if($('.hero-banner.category-banner').length > 0){
+    //     $('.page-title').prependTo('.hero-banner');
+    //     let img = $('.hero-banner > img').attr('data-src');        
+    //     $('.hero-banner').css('background-image','url('+ img +')');
+    // }
     $('#clubeshow .trigger').click(function(e){
         $('#clubeshow').toggleClass('visible')
     })
@@ -136,4 +157,19 @@ function convertToSlug(str){
         .replace(/-+/g, '_'); // collapse dashes
     
     return str;
-  }
+}
+
+window.buyTogether = function(ids){    
+    ids.forEach(function(k,v){
+        k.commodity_type = 'physical';
+        k.price_effective_date = {};
+        ecomCart.addProduct(k);        
+    })
+}
+
+window.addItem = function(id){   
+    id.item.commodity_type = 'physical';
+    id.item.price_effective_date = {};
+    ecomCart.addProduct(id.item);
+}
+

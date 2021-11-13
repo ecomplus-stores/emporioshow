@@ -1,27 +1,38 @@
 <%
-const title = opt.title || _.state.title || _.state.name
+let title = ''
+if(['Blog','Receitas'].includes(title)){
+    title = opt.title || _.state.title 
+ }else{
+    title = opt.title || _.state.title || _.state.name
+ }
+let background = ''
+if(['Blog','Receitas'].includes(title)){
+    background = opt.image || ''
+}else{
+    background = opt.image || _.state.pictures != undefined ?  _.state.pictures[0].url : ''
+}
+
+
+
 if (title) {
   %>
-  <div class="page-title apx_bannerTitle container mt-4 mb-4 mb-lg-5">
-    <div class="page-title__head">
-      <% if (_.state.logo && _.state.logo.url) { %>
-        <img
-          class="page-title__logo"
-          src="<%= _.state.logo.url %>"
-          alt="<%= _.state.logo.alt %>"
-        >
-      <% } %>
-      <h1 class="my-0">
-        <%= title %>
-      </h1>
+  <div class="hero-banner p-0" style="background-color:#000;background-image:url(<%- background %>);">
+    <div class="mask">        
     </div>
-    <%
-    const description = opt.description || _.state.short_description
-    if (description) {
-      %>
-      <div class="page-title__short-description lead">
-        <%= description %>
-      </div>
-    <% } %>
-  </div>
+    <div class="page-title apx_bannerTitle container mt-4 mb-4 mb-lg-5" >
+        <div class="page-title__head">
+            <h1 class="my-0">
+                <%= title %>
+            </h1>
+        </div>
+        <%
+        const description = opt.description || _.state.short_description
+        if (description) {
+        %>
+        <div class="page-title__short-description lead">
+            <%= description %>
+        </div>
+        <% } %>
+    </div>
+    </div>
 <% } %>

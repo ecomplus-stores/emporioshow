@@ -4,11 +4,9 @@
   "meta_description": "Receitas",
   "sections": [
     {
-      "type": "breadcrumbs",
-      "enabled": true
-    },
-    {
-      "type": "page-title"
+      "type": "apx_bannerTitle",
+      "title": "Receitas",
+      "image": "/img/uploads/receitasbg.png"
     },
     {
       "type": "receitas",
