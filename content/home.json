@@ -38,7 +38,17 @@
       "limit": 12,
       "title": "É do Brasil! <small>Seleção de Nacionais</small><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>",
       "page": 1
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/banner-contato.jpg"
+        },
+        {
+          "img": "/img/uploads/banner-contato.jpg"
+        }
+      ]
     }
-    
   ]
 }
