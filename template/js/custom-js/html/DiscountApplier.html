@@ -1,11 +1,23 @@
 <div class="discount-applier">
-  <div v-if="getPontoMarket">       
+  <div v-if="getPontoMarket" id="pm-selectOption">       
       <template>
-      <label id="pm-title" class="pm__title">Clube Show [{{pontoMarketOptions.point_balance}}]</label>
+      <label id="pm-title" class="pm__title">Clube Show: <i>{{pontoMarketOptions.pm.point_balance}}</i> pontos</label>
       <ul id="pm-list" >
-        <li v-for="prize in pontoMarketOptions.prize_list">          
-            <input type="radio" @change="setPontoMarket" name="pm-prize" v-model="localPontoMarketCode" :value="prize.id_prize"/>
-            {{prize.name}}
+        <li v-for="prize in pontoMarketOptions.pm.prize_list" v-if="prize.prize_value > 0">          
+          <label>
+            <input 
+            type="radio" 
+            @change="setPontoMarket" 
+            name="pm-prize" 
+            v-model="localPontoMarketCode" 
+            :value="prize.id_prize" 
+            :key="prize.id_prize"
+            :id="prize.id_prize"
+            :prize_value="prize.prize_value"
+            :prize_value_type="prize.prize_value_type"
+            />
+            <span>{{prize.name}}</span>
+          </label>
         </li>
       </ul>        
     </template>

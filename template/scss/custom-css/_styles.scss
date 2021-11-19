@@ -1202,3 +1202,47 @@ aside#menu{background: var(--cor2);}
 #clubeshow_result > ul > li label + br + b i{font-style: normal;}
 #clubeshow_result > ul > li input{}
 
+#pm-selectOption {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+#pm-selectOption #pm-title{
+    background:var(--cor2);
+    color:#fff;
+    font-weight:bold;
+    display:block;
+    text-align:center;
+    padding:5px;
+    border-radius:3px;
+
+}
+#pm-selectOption #pm-title i{
+    color:var(--cor3);
+    font-style:normal;
+}
+#pm-selectOption ul{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    display:flex;
+    gap:5px;
+    flex-direction:column;
+}
+#pm-selectOption ul li label{
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+     margin:0;    
+}
+#pm-selectOption ul li{
+    padding:10px;
+    border-radius:5px;
+}
+#pm-selectOption ul li:nth-child(even){
+    background:#f2f2f2;    
+}
+#pm-selectOption ul li input:checked + span{font-weight:600;}
+#pm-selectOption ul li .points{}

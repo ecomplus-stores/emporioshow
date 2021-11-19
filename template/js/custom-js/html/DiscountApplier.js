@@ -53,7 +53,6 @@ export default {
       type: Boolean,
       default: true
     },
-    customer: Object,
     isFormAlwaysVisible: Boolean,
     isCouponApplied: Boolean,
     isAttentionWanted: Boolean,
@@ -86,7 +85,8 @@ export default {
       localPontoMarketCode: this.pontoMarketCode,
       localAmountTotal: null,
       isUpdateSheduled: false,
-      pontoMarketOptions : null      
+      pontoMarketOptions : null,
+      
     }
   },
 
@@ -120,34 +120,46 @@ export default {
   methods: {    
     getPontoMarket(){
       const customer = this.ecomPassport.getCustomer()
-      console.log(customer.doc_number)
       axios.post('https://us-central1-pontomarket-ecomplus.cloudfunctions.net/app/get/points', {
       storeId : storefront.settings.store_id,
       params : {
         customer:{
-            doc_number : '43335443608'
+          _id : customer._id,
+          doc_number : '43335443608'
         } 
       }
       })
       .then((response) => {
-        this.pontoMarketOptions = response.data.pm
+        this.pontoMarketOptions = response.data
+        this.localPontoMarketCode = response.data.fb.selected_prize_id || ''
+        if(this.localPontoMarketCode){
+          const data = {
+            pm_selected_prize_id: localPontoMarketCode
+          }
+          this.fetchDiscountOptions(data)
+        }
       })    
     },
     setPontoMarket(){
       const { localPontoMarketCode } = this
-      console.log(this.customer)
-      console.log(localPontoMarketCode)
+      const customer = this.ecomPassport.getCustomer()
       axios.post('https://us-central1-pontomarket-ecomplus.cloudfunctions.net/app/get/selectPrize', {
       storeId : storefront.settings.store_id,
       params : {
         prize_id : localPontoMarketCode,
         customer:{
-            doc_number : '43335443608'
+          _id : customer._id,
+          doc_number : '43335443608'
         } 
-      }
-       
+      }       
       })
       .then((response) => {
+        if(localPontoMarketCode){
+          const data = {
+            pm_selected_prize_id: localPontoMarketCode
+          }
+          this.fetchDiscountOptions(data)
+        }
         console.log(response)
       })    
     },
