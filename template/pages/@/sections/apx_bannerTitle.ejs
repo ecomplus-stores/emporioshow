@@ -1,7 +1,7 @@
 <%
 let title = ''
 if(['Blog','Receitas'].includes(title)){
-    title = opt.title || _.state.title 
+    title = opt.title || _.state.title || ''
  }else{
     title = opt.title || _.state.title || _.state.name
  }

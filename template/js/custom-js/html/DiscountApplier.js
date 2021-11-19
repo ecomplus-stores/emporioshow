@@ -134,7 +134,8 @@ export default {
         this.localPontoMarketCode = response.data.fb.selected_prize_id || ''
         if(this.localPontoMarketCode){
           const data = {
-            pm_selected_prize_id: localPontoMarketCode
+            pm_selected_prize_id: localPontoMarketCode,
+            storeId: storefront.settings.store_id
           }
           this.fetchDiscountOptions(data)
         }
