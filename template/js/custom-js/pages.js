@@ -108,13 +108,24 @@ const pmarket = [];
 pmarket.consultaPonto = function(cpf){
     axios.post('https://us-central1-pontomarket-ecomplus.cloudfunctions.net/app/get/points', {
         storeId : storefront.settings.store_id,
-        cpf: '43335443608'      
+        params : {
+            customer:{
+                doc_number : cpf
+            } 
+        }
     })
     .then(function(response){
-        console.log(response)
-        
-    })
-    
+        let data = response.data.pm;
+        let header = $('<div>Você possui <b>'+ data.point_balance +'</b> pontos</div>');
+        let list = $('<ul></ul>');
+        $.each(data.prize_list,function(key, prize){
+            list.append('<li><input type="radio" name="prize_option" value="'+ prize.prize_value +'"/><div><label>'+ prize.name+'<small>'+ prize.description +'</small></label><br><b>Pontos: <i>'+ prize.points_required +'</i></b><span></span></div></li>');
+        });
+        $('#clubeshow_result').empty();
+        $('#clubeshow_result').append(header);
+        $('#clubeshow_result').append(list);
+
+    })    
 }
 
 pmarket.solicitaResgate = function(oObj){
