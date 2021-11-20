@@ -157,7 +157,8 @@ export default {
       .then((response) => {
         if(localPontoMarketCode){
           const data = {
-            pm_selected_prize_id: localPontoMarketCode
+            pm_selected_prize_id: localPontoMarketCode,
+            storeId: storefront.settings.store_id
           }
           this.fetchDiscountOptions(data)
         }
