@@ -1555,3 +1555,56 @@ aside#menu{background: var(--cor2);}
 .product-card--small .product-card__name{font-size:14px;margin-bottom:15px;}
 .product-card--small .product-card__buy > button{line-height:30px;padding-top:3px;}
 body .cart .cart-item{border-top:0;}
+
+@media(max-width:990px){
+    body .search-engine__aside{
+        position: fixed;
+        width: 280px;
+        max-width: 100%;
+        height: 100%;
+        top: 0;
+        right: -100vw;
+        z-index: 1100;
+        border-radius: 0;
+        transition:right .3s;
+    }
+    body .search-engine__aside.active{right:0;}
+    body .search-engine__aside .filters-title{display:none}
+
+    body .search-engine__aside.active + #custom-backdrop{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: var(--dark);
+        width: 100%;
+        height: 100%;
+        opacity: .4;
+    cursor: pointer;
+    }
+
+    .hero-banner .page-title h1{
+        font-size:26px;
+        text-align:left;
+    }
+    .hero-banner .page-title .page-title__short-description{font-size:12px;line-height:20px;}
+    .hero-banner{padding:2rem 0;}
+
+    .category-retail .search-engine__retail{}
+    .category-retail .search-engine__retail > .row{}
+    // .category-retail .search-engine__retail > .row > div{padding-left:5px;padding-right:5px;}
+    .category-retail .search-engine__retail > .row > div .product-item{}
+    .category-retail .search-engine__retail > .row > div .product-item .product-card{padding:0;margin-bottom:45px;}
+    .category-retail .search-engine__retail > .row > div .product-item .product-card__pictures{}
+    .category-retail .search-engine__retail > .row > div .product-item .product-card__pictures,
+    .category-retail .search-engine__retail > .row > div .product-item .product-card__pictures img{max-height:150px;}
+    .category-retail .search-engine__retail > .row > div .product-item .product-card__prices{flex-direction:column;gap:0}
+    .category-retail .search-engine__retail > .row > div .product-item .product-card__name{font-size:14px;}
+    .category-retail .search-engine__retail > .row > div .product-item .product-card__buy button{
+        width:fit-content;
+        padding:0 15px;
+    }
+    .search-engine__selected{display:none;}
+    .category-retail .search-engine__info{margin:0 -15px}
+    // .category-retail .search-engine__retail > .row > div .product-item .product-card__prices *{font-size:14px;margin:0;}
+}

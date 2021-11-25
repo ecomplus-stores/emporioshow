@@ -2,6 +2,9 @@
 document.write('<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"><\/script>')
 //const ecomUtils = require('@ecomplus/utils')
 $(document).ready(function(){
+    $('body').on('click','.search-engine__aside-open, .search-engine__aside .card-header .close, .search-engine__toggles > button',function(){
+        $('body .search-engine__aside').toggleClass('active')
+    })
     // $('.header__search-input').keyup(function(){
     //     $('body .search__input').val($(this).val()).[0].dispatchEvent(new Event('input'));
     // });
