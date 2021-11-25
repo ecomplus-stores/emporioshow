@@ -52,10 +52,10 @@
     <div class="col-md-8">
   <% }  %>
     <div
-      class="glide"
+      class="glide <% if (opt.headless) { %><%}else{%>mini-photo<%}%>"
       data-wait-mutation="true"
       data-autoplay="<%= opt.autoplay %>"
-      data-per-view="<% if (opt.headless) { %>3<%}else{%>4<%}%>"
+      data-per-view="<% if (opt.headless) { %>3<%}else{%>5<%}%>"
       data-per-view-md="3"
       data-per-view-sm="2"
       data-per-view-xs="1"
