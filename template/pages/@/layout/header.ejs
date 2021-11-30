@@ -96,14 +96,24 @@ if (header.categories_list) {
     <div class="header__row row  align-items-center">
       <div class="col-auto p-0 d-lg-none">
         <button
-          class="btn header__toggler"
+          class="btn header__toggler d-block d-lg-none"
           type="button"
           onclick="toggleSidenav()"
           aria-label="Toggle side navigation"
         > 
-          <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.66667 0.916687H24.3333M1.66667 8.00002H24.3333M1.66667 15.0834H24.3333" stroke="#FECC16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          </svg> -->
+        </button>
+        <button
+          class="btn header__toggler d-none d-lg-block"
+          type="button"
+          onclick="toggleDesktopSidenav(this)"
+          aria-label="Toggle side navigation"
+        > 
+          <!-- <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.66667 0.916687H24.3333M1.66667 8.00002H24.3333M1.66667 15.0834H24.3333" stroke="#FECC16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> -->
         </button>
       </div>
 
@@ -226,6 +236,7 @@ if (header.categories_list) {
             </svg>
   
         </button>
+        <span class="info"></span>
         <div id="instant-search">
           <!--
             `InstantSearch` should be open on input focus:
