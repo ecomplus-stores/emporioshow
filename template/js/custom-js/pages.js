@@ -8,7 +8,10 @@ const observerMenu = new IntersectionObserver(
 );    
 observerMenu.observe(el); 
 $(document).ready(function(){
-      
+    if(ecomPassport.getCustomerName() == ''){
+        $('.logged_in').hide();
+        $('.logged_out').show();
+    }
 
     $('body').on('click','.search-engine__aside-open, .search-engine__aside .card-header .close, .search-engine__toggles > button',function(){
         $('body .search-engine__aside').toggleClass('active')
@@ -17,24 +20,27 @@ $(document).ready(function(){
     //     $('body .search__input').val($(this).val()).[0].dispatchEvent(new Event('input'));
     // });
     
-    // $('#apx_newsletter').submit(function(e){
-    //     e.preventDefault();
-    //     var form = $(this);
-    //     var url = form.attr('action');
-        
-    //     $.ajax({
-    //         type: "POST",
-    //         url: url,
-    //         data: form.serialize(), // serializes the form's elements.
-    //         success: function(data)
-    //         {
-    //             alert('Obrigado por se inscrever!');
-    //         }
-    //     });
+    $('#apx_newsletter form').submit(function(e){
+        e.preventDefault();
+        var form = $(this);
+        var url = form.attr('action');
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data){
+                if(data.erros.length == 0){
+                    alert('Obrigado por se inscrever!');
+                }else{
+                    alert('Ocorreu um problema ao se inscrever.\nVerifique o e-mail inserido ou tente novamente mais tarde');
+                }
+                
+            }
+        });
 
-    //     $(this).find('[type="email"]').val('');
+        $(this).find('[type="email"]').val('');
 
-    // });
+    });
     $('body').click(function(e){
         if($(e.target).closest('.header__search').length == 0){
             $('#instant-search .search__status .close').click();
