@@ -4,11 +4,9 @@
   "meta_description": "Blog",
   "sections": [
     {
-      "type": "breadcrumbs",
-      "enabled": true
-    },
-    {
-      "type": "page-title"
+      "type": "apx_bannerTitle",
+      "title": "Blog",
+      "image": "/img/uploads/nest-blog-banner.jpg"
     },
     {
       "type": "blog",

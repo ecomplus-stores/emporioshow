@@ -1,6 +1,11 @@
 <%
-const title = opt.title || _.state.title || _.state.name
-if (title) {
+const title = []
+if(opt.title){
+  title.push(opt.title || _.state.title || _.state.name)
+}else{
+  title.push(_.state.title)
+}
+if (title[0]) {
   %>
   <div class="page-title container mt-4 mb-4 mb-lg-5">
     <div class="page-title__head">
@@ -12,7 +17,7 @@ if (title) {
         >
       <% } %>
       <h1 class="my-0">
-        <%= title %>
+        <%= title[0] %>
       </h1>
     </div>
     <%

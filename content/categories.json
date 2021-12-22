@@ -5,11 +5,7 @@
       "enabled": false
     },
     {
-      "type": "page-title"
-    },
-    {
-      "type": "document-banner",
-      "enabled": true
+      "type": "apx_bannerTitle"
     },
     {
       "type": "category-retail",

@@ -45,7 +45,7 @@ if (mainCategories) {
       onclick="toggleSidenav()"
       aria-label="Toggle Side Navigation"
     >
-      <i class="fas fa-times"></i>
+      
     </button>
 
     <% for (const slug in categoryParents) { %>
@@ -88,6 +88,14 @@ if (mainCategories) {
           <% } %>
 
           <div class="menu__list">
+            <% if (category && category.slug) { %>
+              <strong>
+                <%= category.name %>
+              </strong>
+              <a href="/<%= category.slug %>" class="menu__item sub">
+                <span>Ver Todos</span>
+              </a>
+            <% } %>
             <% categoryParents[slug].forEach((subcategory, index) => { %>
               <% const hasSubmenu = Array.isArray(categoryParents[subcategory.slug]) %>
               <a
@@ -99,11 +107,13 @@ if (mainCategories) {
                   role="button"
                   aria-expanded="false"
                   aria-controls="<%= submenuId %>"
+                  class="menu__item principal"
                 <% } else { %>
                   href="/<%= subcategory.slug %>"
+                  class="menu__item sub"
                 <% } %>
                 id="c-<%= subcategory._id %>"
-                class="menu__item"
+                
               >
                 <% if (subcategory.icon) { %>
                   <span class="menu__item-icon">
@@ -120,13 +130,7 @@ if (mainCategories) {
                 </span>
               </a>
             <% }) %>
-          </div>
-
-          <% if (category && category.slug) { %>
-            <a href="/<%= category.slug %>" class="menu__link">
-              <%= _.dictionary('seeAll$1Category').replace('$1', category.name) %>
-            </a>
-          <% } %>
+          </div>          
         </div>
       <% } %>
     <% } %>

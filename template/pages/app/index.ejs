@@ -66,10 +66,10 @@ const logo = _.settings.logo
       </div>
     </div>
 
-    <div class="app__credits container">
+    <div class="app__credits container" style="display:flex;flex-direction:column;justify-content:center;gap:10px;">
       <div>
         <% if (footer.credits) { %>
-          <span><%= footer.credits %></span>
+          <span><%- footer.credits %></span>
         <% } else { %>
           <span class="app__credits-name">© <%= _.settings.name %> </span>
           <span class="app__credits-address"> - <%= contacts.address %> - </span>

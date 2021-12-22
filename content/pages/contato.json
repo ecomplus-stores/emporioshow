@@ -2,5 +2,21 @@
   "title": "Contato",
   "meta_title": "Contato",
   "meta_description": "Contato",
-  "body": "### Lorem ipsum dolor sit amet"
+  "body": "### Lorem ipsum dolor sit amet",
+  "sections": [
+    {
+      "type": "apx_bannerTitle",
+      "image": "/img/uploads/banner-contato.jpg",
+      "title": "Fale com a gente!",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
+    },
+    {
+      "type": "extra-page",
+      "enabled": true
+    },
+    {
+      "type": "custom-content",
+      "markdown": "Teste"
+    }
+  ]
 }

@@ -16,6 +16,31 @@ export default options => {
   
   options.sections = getSections(options).concat([
     {
+      label: '[ALPIX] - Cabeçalho com Bannner',
+      name: 'apx_bannerTitle',
+      widget: 'object',
+      fields: [
+        {
+          label: 'Título',
+          required: false,
+          name: 'title',
+          widget: 'string'
+        },
+        {
+          label: 'Descrição',
+          required: false,
+          name: 'description',
+          widget: 'text'
+        },
+        {
+          label: 'Imagem em Destaque',
+          name: 'image',
+          widget: 'image',
+          required: false,
+        } 
+      ]
+    },
+    {
       label: '[ALPIX] - Lista de Produtos A',
       name: 'apx_productList_A',
       widget: 'object',

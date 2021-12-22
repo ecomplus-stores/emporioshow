@@ -47,7 +47,7 @@ if (header.categories_list) {
 
 <div id="overlay" class="fade"></div>
 
-<div class="top-bar">
+<div class="top-bar d-none d-md-block">
   <div class="container">
     <div class="row align-items-center justify-content-between">
       <div class="col-auto">
@@ -96,17 +96,24 @@ if (header.categories_list) {
     <div class="header__row row  align-items-center">
       <div class="col-auto p-0 d-lg-none">
         <button
-          class="btn header__toggler"
+          class="btn header__toggler d-block d-lg-none"
           type="button"
           onclick="toggleSidenav()"
           aria-label="Toggle side navigation"
-        >
-          <i class="header__toggler-icon fas fa-bars"></i>
-          <% if (!categories.length) { %>
-            <span class="d-none d-lg-inline">
-              Menu
-            </span>
-          <% } %>
+        > 
+          <!-- <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.66667 0.916687H24.3333M1.66667 8.00002H24.3333M1.66667 15.0834H24.3333" stroke="#FECC16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> -->
+        </button>
+        <button
+          class="btn header__toggler d-none d-lg-block"
+          type="button"
+          onclick="toggleDesktopSidenav(this)"
+          aria-label="Toggle side navigation"
+        > 
+          <!-- <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.66667 0.916687H24.3333M1.66667 8.00002H24.3333M1.66667 15.0834H24.3333" stroke="#FECC16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> -->
         </button>
       </div>
 
@@ -133,11 +140,13 @@ if (header.categories_list) {
             aria-controls="search-bar"
             title="<%= _.dictionary('searchProducts') %>"
           >
-            <i class="fas fa-search"></i>
+            <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.8863 22.197C23.1792 22.4899 23.6541 22.4899 23.947 22.197C24.2399 21.9041 24.2399 21.4292 23.947 21.1363L22.8863 22.197ZM20.5 11.375C20.5 15.4481 17.1981 18.75 13.125 18.75V20.25C18.0265 20.25 22 16.2765 22 11.375H20.5ZM13.125 18.75C9.0519 18.75 5.75 15.4481 5.75 11.375H4.25C4.25 16.2765 8.22347 20.25 13.125 20.25V18.75ZM5.75 11.375C5.75 7.3019 9.0519 4 13.125 4V2.5C8.22347 2.5 4.25 6.47347 4.25 11.375H5.75ZM13.125 4C17.1981 4 20.5 7.3019 20.5 11.375H22C22 6.47347 18.0265 2.5 13.125 2.5V4ZM23.947 21.1363L19.4105 16.5998L18.3498 17.6605L22.8863 22.197L23.947 21.1363Z" fill="#FECC16"></path>
+            </svg>
           </button>
           
           <a
-            class="d-lg-inline d-none btn btn-lg"
+            class="d-md-flex d-none btn btn-lg"
             id="free-shipping-btn"
             type="button"           
           >            
@@ -161,7 +170,7 @@ if (header.categories_list) {
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M28.3327 29.75V26.9167C28.3327 23.7871 25.7956 21.25 22.666 21.25H11.3327C8.20307 21.25 5.66602 23.7871 5.66602 26.9167V29.75M22.666 9.91667C22.666 13.0463 20.129 15.5833 16.9993 15.5833C13.8697 15.5833 11.3327 13.0463 11.3327 9.91667C11.3327 6.78705 13.8697 4.25 16.9993 4.25C20.129 4.25 22.666 6.78705 22.666 9.91667Z" stroke="#FECC16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>  
-            <span data-user-name>
+            <span data-user-name class="d-none d-md-inline">
               <b>Entre</b> ou
              <b>Cadastre-se</b>
             </span>
@@ -227,6 +236,7 @@ if (header.categories_list) {
             </svg>
   
         </button>
+        <span class="info"></span>
         <div id="instant-search">
           <!--
             `InstantSearch` should be open on input focus:

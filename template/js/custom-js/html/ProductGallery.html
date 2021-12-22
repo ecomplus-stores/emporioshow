@@ -1,40 +1,4 @@
 <section class="gallery">
-  <div class="gallery__thumbs">
-    <div
-      v-if="videoSrc"
-      class="gallery__item gallery__item--video"
-      :class="{ 'gallery__item--selected': localPictures.length === activeIndex }"
-      @click="activeIndex = localPictures.length"
-    >
-      <i class="fas fa-play"></i>
-      <span>{{ i19video }}</span>
-    </div>
-
-    <div
-      v-for="(picture, i) in localPictures"
-      :key="'img-' + i"
-      class="gallery__item"
-      :class="{ 'gallery__item--selected': i === activeIndex }"
-      @click="activeIndex = i"
-    >
-      <a-picture
-        v-if="i < 4"
-        class="gallery__thumb"
-        :src="getImg(picture, null, 'small')"
-      />
-    </div>
-
-    <button
-      v-if="localPictures.length > 4"
-      type="button"
-      class="gallery__open btn btn-dark"
-      :title="i19openGallery"
-      @click.prevent="openZoom(4)"
-    >
-      +{{ localPictures.length - 4 }}
-    </button>
-  </div>
-
   <div class="gallery__stage">
     <div
       class="glide"
@@ -89,6 +53,26 @@
             </div>
           </li>
         </ul>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">        
+        <button 
+          v-for="(picture, i) in localPictures"
+          class="glide__bullet" 
+          v-bind:data-glide-dir="'=' + i">
+          
+        </button>        
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25 6.66671L11.6667 20L25 33.3334" stroke="#AD1817" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>  
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 33.3333L28.3333 20L15 6.66663" stroke="#AD1817" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>  
+        </button>
       </div>
     </div>
   </div>
