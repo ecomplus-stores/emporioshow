@@ -1249,12 +1249,13 @@ aside#menu{background: var(--cor2);}
     flex-direction: column;
     padding: 0!important;
     overflow-y: scroll;
-    max-height: calc(100vh - 300px);
-    padding-bottom: 15px!important;
+    max-height: 300px;
+    padding-bottom: 0px!important;
     margin-right:-10px;
 }
 #clubeshow_result > ul > li input{flex:0 0 20px;}
-#clubeshow_result > ul > li:nth-child(odd){}
+
+#clubeshow_result > ul > li:last-child{margin-bottom:0;}
 #clubeshow_result > ul > li{
     display:flex;
     justify-content:flex-start;

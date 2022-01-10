@@ -11,6 +11,9 @@ $(document).ready(function(){
     if(ecomPassport.getCustomerName() == ''){
         $('.logged_in').hide();
         $('.logged_out').show();
+    }else{
+        $('.logged_in').show();
+        $('.logged_out').hide();
     }
 
     $('body').on('click','.search-engine__aside-open, .search-engine__aside .card-header .close, .search-engine__toggles > button',function(){
@@ -133,15 +136,21 @@ pmarket.consultaPonto = function(cpf){
     })
     .then(function(response){
         let data = response.data.pm;
-        let header = $('<div>Você possui <b>'+ data.point_balance +'</b> pontos</div>');
-        let list = $('<ul></ul>');
-        $.each(data.prize_list,function(key, prize){
-            list.append('<li><input type="radio" name="prize_option" value="'+ prize.prize_value +'"/><div><label>'+ prize.name+'<small>'+ prize.description +'</small></label><br><b>Pontos: <i>'+ prize.points_required +'</i></b><span></span></div></li>');
-        });
-        $('#clubeshow_result').empty();
-        $('#clubeshow_result').append(header);
-        $('#clubeshow_result').append(list);
-
+        if(!data.status.error){
+            let header = $('<div>Você possui <b>'+ data.point_balance +'</b> pontos</div>');
+            let list = $('<ul></ul>');
+            $.each(data.prize_list,function(key, prize){
+                if(prize.prize_value > 0)
+                list.append('<li><input type="radio" name="prize_option" value="'+ prize.prize_value +'"/><div><label>'+ prize.name+'<small>'+ prize.description +'</small></label><br><b>Pontos: <i>'+ prize.points_required +'</i></b><span></span></div></li>');
+            });
+            $('#clubeshow_result').empty();
+            $('#clubeshow_result').append(header);
+            $('#clubeshow_result').append(list);
+        }else{
+            let header = $('<div><b>'+ data.status.error +' ou sem pontos</b></div>');
+            $('#clubeshow_result').empty();
+            $('#clubeshow_result').append(header);
+        }
     })    
 }
 
