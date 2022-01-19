@@ -309,8 +309,9 @@ if (header.categories_list) {
                           <% }) %>
                         </div>
                         <% } %>
-                        <% if (menuConfig.filters.length > 0) { %>
-                        <div class="row egs_dropdownMenu-filters">
+                        <% if (menuConfig.filters) { 
+                          %>
+                        <div class="row egs_dropdownMenu-filters <%= menuConfig.filters.length == 0 ? 'd-none' : ''%>">
                           <% menuConfig.filters.forEach(item => { 
                             //console.log(item)
                              %>

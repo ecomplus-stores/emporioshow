@@ -5,24 +5,46 @@
         <!-- <a href="#specs" name="specs">#</a> -->
         Características
       </p>
-      <table class="table table-striped">
-        <tbody>
-          <% for (const gridId in _.state.specifications) {
-            if (_.state.specifications[gridId]) {
-              %>
-              <tr>
-                <td class="text-muted">
-                  <%= _.ecomUtils.gridTitle(gridId, _.grids) %>
-                </td>
-                <td>
-                  <%= _.ecomUtils.specTextValue(_.state, gridId, _.grids) %>
-                </td>
-              </tr>
-              <%
-            }
-          } %>
-        </tbody>
-      </table>
+      <div class="row">
+        <% for (const gridId in _.state.specifications) {
+          if (_.state.specifications[gridId]) {
+
+            %>
+            <div class="col-6 col-md-3">
+              <div class="row align-items-center">
+                <div class="col-auto text-center">
+                  <% 
+                    let imageUrl = ""
+                    const gridIcon = _.cms(`gridIcons/${gridId}`)
+
+                    imageUrl = gridIcon.image 
+                    
+                    try{
+                      let specificImage = gridIcon.options.find(el => el.option.name == _.state.specifications[gridId][0].text).option.image
+                      if(specificImage != ""){
+                        imageUrl = specificImage
+                      }
+                    }catch(e){
+
+                    }
+                    
+                    
+                  
+                  %> 
+                  <img src="<%= imageUrl %>"/>
+                </div>
+                <div class="col-auto text-left">
+                  <strong class="text-uppercase"><%= _.ecomUtils.gridTitle(gridId, _.grids) %></strong><br>
+                  <span class="text-uppercase"><%= _.ecomUtils.specTextValue(_.state, gridId, _.grids) %></span>
+                </div>
+              </div>              
+            </div>
+            <%
+          }
+        } %>
+        
+      </div>
+      
     </div>
   </section>
 <% } %>

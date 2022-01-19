@@ -722,6 +722,7 @@ margin:0 0 15px 0;
 
 #receitas-post .receita-preparo li{line-height:36px;}
 
+.egs_dropdownMenu .egs_dropdownMenu-categories+.egs_dropdownMenu-filters:empty{display:none}
 /* apx_productItemHorizontal */
 .apx_productItemHorizontal{}
 .apx_productItemHorizontal .product-card__pictures{height:100%;margin:0!important}
@@ -772,6 +773,7 @@ margin:0 0 15px 0;
     margin-bottom:2rem;
     padding-bottom:.5rem;
 }
+.text-uppercase{text-transform:uppercase;}
 .egs_filter .egs_filter-title:after,
 .search-engine__aside .filters-title:after{
     content: "";
@@ -827,6 +829,7 @@ body .custom-control-input:not(:disabled):active~.custom-control-label:before,
     background: #fff;    
     padding: 2rem;
     display:none;
+    left:0
 }
 .egs_dropdownMenu .egs_dropdownMenu-categories + .egs_dropdownMenu-filters{
     border-top: 1px solid var(--cor1);
@@ -848,6 +851,7 @@ body .custom-control-input:not(:disabled):active~.custom-control-label:before,
     margin-bottom:.3rem;
     text-align:left;
 }
+.egs_dropdownMenu .egs_dropdownMenu-categories a .egs_dropdownMenu-title{text-align:center}
 .egs_dropdownMenu .egs_dropdownMenu-categories a .egs_dropdownMenu-title{font-size:14px;}
 .egs_dropdownMenu .egs_dropdownMenu-filters ul{
     list-style-type:none;
