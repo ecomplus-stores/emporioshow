@@ -1,0 +1,12 @@
+{
+  "title": "drinkeria",
+  "categories": [
+    {
+      "category": {
+        "slug": "licores",
+        "image": "/img/uploads/1641822863553-_amarula750mlemporioshow.png",
+        "name_to_replace": "Licores"
+      }
+    }
+  ]
+}
