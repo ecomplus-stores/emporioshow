@@ -1,4 +1,12 @@
 {
   "title": "6148ea72bf447b5f0e014a66",
-  "image": "/img/uploads/wine_bar_black_24dp.svg"
+  "image": "/img/uploads/image-9.png",
+  "options": [
+    {
+      "option": {
+        "name": "Vinho Tinto",
+        "image": "/img/uploads/vinho_tinto.png"
+      }
+    }
+  ]
 }
