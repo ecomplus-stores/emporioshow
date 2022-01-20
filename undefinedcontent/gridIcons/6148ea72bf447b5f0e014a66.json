@@ -7,6 +7,12 @@
         "name": "Vinho Tinto",
         "image": "/img/uploads/vinho_tinto.png"
       }
+    },
+    {
+      "option": {
+        "name": "Teor Alcoólico",
+        "image": "/img/uploads/teor_alcoolico.png"
+      }
     }
   ]
 }
