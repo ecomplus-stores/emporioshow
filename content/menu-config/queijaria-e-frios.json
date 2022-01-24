@@ -1,0 +1,47 @@
+{
+  "title": "queijaria-e-frios",
+  "categories": [
+    {
+      "category": {
+        "slug": "queijaria",
+        "image": "/img/uploads/download-1-1-.jpg"
+      }
+    },
+    {
+      "category": {
+        "slug": "laticinios",
+        "image": "/img/uploads/laticinios-1-.jpg"
+      }
+    },
+    {
+      "category": {
+        "slug": "charcutaria",
+        "image": "/img/uploads/design-sem-nome-5-2-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "frios",
+        "image": "/img/uploads/design-sem-nome-7-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "pates-e-pastas",
+        "image": "/img/uploads/design-sem-nome-8-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "kits-queijaria-e-frios",
+        "image": "/img/uploads/images-1-.jpg"
+      }
+    },
+    {
+      "category": {
+        "slug": "tabuas-de-frios",
+        "image": "/img/uploads/design-sem-nome-9-1-.png"
+      }
+    }
+  ]
+}
