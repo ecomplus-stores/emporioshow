@@ -18,6 +18,12 @@
         "slug": "vinhos-rose",
         "image": "/img/uploads/istockphoto-118958441-170667a-1-.jpg"
       }
+    },
+    {
+      "category": {
+        "slug": "espumantes",
+        "image": "/img/uploads/kk-1-.jpg"
+      }
     }
   ],
   "filters": [
