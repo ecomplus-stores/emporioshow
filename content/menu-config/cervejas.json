@@ -6,6 +6,12 @@
         "slug": "nacionais",
         "image": "/img/uploads/cerveja-farra-bier-lap-dance-lata-350-ml-600x600.jpg-1-.png"
       }
+    },
+    {
+      "category": {
+        "slug": "importadas",
+        "image": "/img/uploads/garrafa-de-cerveja-com-sem-rotulo-isolado-vidro-verde_184700-1610-1-.jpg"
+      }
     }
   ]
 }
