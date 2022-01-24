@@ -18,6 +18,12 @@
         "slug": "kits-vinhos-e-espumantes",
         "image": "/img/uploads/284-paulaner_kit_novo_logo-1-.jpg"
       }
+    },
+    {
+      "category": {
+        "slug": "chopp-de-vinho",
+        "image": "/img/uploads/pink-moon-1-.jpg"
+      }
     }
   ]
 }
