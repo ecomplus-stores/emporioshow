@@ -24,6 +24,30 @@
         "slug": "espumantes",
         "image": "/img/uploads/kk-1-.jpg"
       }
+    },
+    {
+      "category": {
+        "slug": "champagne",
+        "image": "/img/uploads/clcp-2-.jpg"
+      }
+    },
+    {
+      "category": {
+        "slug": "frisante",
+        "image": "/img/uploads/wrfewr-1-.jpg"
+      }
+    },
+    {
+      "category": {
+        "slug": "kits-vinhos-e-espumantes",
+        "image": "/img/uploads/cc6e85a42b7baa9262dab23dbe03e2c3-1-.jpg"
+      }
+    },
+    {
+      "category": {
+        "slug": "acessorios",
+        "image": "/img/uploads/289def69fccae9ec366d56a796ee2987-1-.jpg"
+      }
     }
   ],
   "filters": [
