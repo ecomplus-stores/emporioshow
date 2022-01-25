@@ -1,0 +1,29 @@
+{
+  "title": "padaria",
+  "categories": [
+    {
+      "category": {
+        "slug": "paes",
+        "image": "/img/uploads/design-sem-nome-51-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "bolos",
+        "image": "/img/uploads/design-sem-nome-52-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "canapes",
+        "image": "/img/uploads/design-sem-nome-53-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "biscoitos-e-torradas",
+        "image": "/img/uploads/design-sem-nome-54-1-.png"
+      }
+    }
+  ]
+}
