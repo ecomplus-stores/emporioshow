@@ -1,0 +1,35 @@
+{
+  "title": "doces",
+  "categories": [
+    {
+      "category": {
+        "slug": "chocolates",
+        "image": "/img/uploads/design-sem-nome-38-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "geleias-e-compotas",
+        "image": "/img/uploads/design-sem-nome-40-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "doce-de-leite",
+        "image": "/img/uploads/design-sem-nome-41-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "cremes",
+        "image": "/img/uploads/design-sem-nome-42-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "artesanais",
+        "image": "/img/uploads/design-sem-nome-43-1-.png"
+      }
+    }
+  ]
+}
