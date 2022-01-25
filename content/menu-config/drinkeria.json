@@ -4,8 +4,68 @@
     {
       "category": {
         "slug": "licores",
-        "image": "/img/uploads/licor.png",
+        "image": "/img/uploads/design-sem-nome-27-1-.png",
         "name_to_replace": ""
+      }
+    },
+    {
+      "category": {
+        "slug": "gin",
+        "image": "/img/uploads/design-sem-nome-24-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "vodkas",
+        "image": "/img/uploads/design-sem-nome-25-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "whiskies",
+        "image": "/img/uploads/design-sem-nome-26-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "cachacas",
+        "image": "/img/uploads/design-sem-nome-28-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "tequilas",
+        "image": "/img/uploads/design-sem-nome-29-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "rum",
+        "image": "/img/uploads/design-sem-nome-30-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "conhaque",
+        "image": "/img/uploads/design-sem-nome-31-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "sakes",
+        "image": "/img/uploads/design-sem-nome-32-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "xaropes",
+        "image": "/img/uploads/design-sem-nome-33-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "monte-seu-drink",
+        "image": "/img/uploads/design-sem-nome-35-1-.png"
       }
     }
   ],
