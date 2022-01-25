@@ -1,0 +1,83 @@
+{
+  "title": "mercearia",
+  "categories": [
+    {
+      "category": {
+        "slug": "massas",
+        "image": "/img/uploads/design-sem-nome-12-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "molhos",
+        "image": "/img/uploads/images-2-1-.jpg"
+      }
+    },
+    {
+      "category": {
+        "slug": "conservas",
+        "image": "/img/uploads/design-sem-nome-13-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "temperos",
+        "image": "/img/uploads/ce35839a4ef108615277044db405783f-1-.jpg"
+      }
+    },
+    {
+      "category": {
+        "slug": "graos",
+        "image": "/img/uploads/design-sem-nome-14-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "enlatados",
+        "image": "/img/uploads/design-sem-nome-15-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "azeites",
+        "image": "/img/uploads/design-sem-nome-16-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "vinagres",
+        "image": "/img/uploads/design-sem-nome-17-2-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "snacks",
+        "image": "/img/uploads/design-sem-nome-18-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "cafe",
+        "image": "/img/uploads/design-sem-nome-19-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "cha",
+        "image": "/img/uploads/design-sem-nome-20-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "cereais-farinhas-e-acucares",
+        "image": "/img/uploads/design-sem-nome-21-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "castanhas-e-frutas-secas",
+        "image": "/img/uploads/mixfrutasdesidratas-1-.png"
+      }
+    }
+  ]
+}
