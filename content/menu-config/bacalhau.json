@@ -1,0 +1,23 @@
+{
+  "title": "bacalhau",
+  "categories": [
+    {
+      "category": {
+        "slug": "lombo",
+        "image": "/img/uploads/design-sem-nome-55-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "file",
+        "image": "/img/uploads/design-sem-nome-56-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "bolinho",
+        "image": "/img/uploads/design-sem-nome-57-1-.png"
+      }
+    }
+  ]
+}
