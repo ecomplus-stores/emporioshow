@@ -1,0 +1,35 @@
+{
+  "title": "bebidas",
+  "categories": [
+    {
+      "category": {
+        "slug": "aguas",
+        "image": "/img/uploads/design-sem-nome-44-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "energetico",
+        "image": "/img/uploads/design-sem-nome-45-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "sucos",
+        "image": "/img/uploads/design-sem-nome-46-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "refrigerantes",
+        "image": "/img/uploads/design-sem-nome-47-1-.png"
+      }
+    },
+    {
+      "category": {
+        "slug": "cha-gelado",
+        "image": "/img/uploads/design-sem-nome-48-1-.png"
+      }
+    }
+  ]
+}
