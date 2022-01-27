@@ -13,6 +13,12 @@
         "name": "Branco",
         "image": "/img/uploads/wine_bar_black_24dp.svg"
       }
+    },
+    {
+      "option": {
+        "name": "Teste",
+        "image": "/img/uploads/calendar-outline.svg"
+      }
     }
   ]
 }
