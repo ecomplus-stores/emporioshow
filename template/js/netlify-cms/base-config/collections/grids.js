@@ -1,7 +1,7 @@
 export default ({ baseDir, sections, state }) => ({
     name: 'gridIcons',
     label: 'Ícones de Características',
-    folder: `${state.baseDir}content/gridIcons`,
+    folder: `${baseDir}content/gridIcons`,
     extension: 'json',
     create: true,
     slug: '{{slug}}',
