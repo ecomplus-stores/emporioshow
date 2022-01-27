@@ -7,6 +7,12 @@
         "name": "Tinto",
         "image": "/img/uploads/vinho_tinto.png"
       }
+    },
+    {
+      "option": {
+        "name": "Branco",
+        "image": "/img/uploads/wine_bar_black_24dp.svg"
+      }
     }
   ]
 }
