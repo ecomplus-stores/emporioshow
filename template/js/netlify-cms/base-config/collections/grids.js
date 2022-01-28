@@ -11,9 +11,9 @@ export default ({ baseDir, sections, state }) => ({
         name: 'title',
         widget: 'select',
         options: state.grids
-          .map(({ _id, title }) => ({
+          .map(({ grid_id, title }) => ({
             label: title,
-            value: _id
+            value: grid_id
           }))
       },      
       {
