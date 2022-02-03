@@ -43,5 +43,12 @@
         "image": "/img/uploads/design-sem-nome-9-1-.png"
       }
     }
+  ],
+  "filters": [
+    {
+      "option": {
+        "grid": "6148e6aebf447b5f0e014508"
+      }
+    }
   ]
 }
