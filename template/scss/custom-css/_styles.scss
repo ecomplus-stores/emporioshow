@@ -154,7 +154,15 @@ margin-top:15px;
 .header__buttons{gap:30px;}
 .header__buttons .btn{margin-left:0; padding:0;}
 
-
+@keyframes flickerAnimation { /* flame pulses */
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+.fa-microphone-slash{
+    opacity:1;  
+    animation: flickerAnimation 1s infinite;
+}
 .header__search{overflow:visible}
 #header #instant-search{}
 #header #instant-search > .backdrop{display:none;}
@@ -1357,7 +1365,7 @@ aside#menu{background: var(--cor2);}
     //     position: relative;
     //     top: unset;
     // }
-    #header{top:-1px;}
+    // #header{top:-1px;}
     .mini-photo .product-card{padding:15px}
     .mini-photo .product-card .product-card__pictures img,
     .mini-photo .product-card__pictures{max-height:150px}

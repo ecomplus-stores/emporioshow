@@ -1,12 +1,21 @@
 
 document.write('<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"><\/script>')
 //const ecomUtils = require('@ecomplus/utils')
-const el = document.querySelector("#header")
-const observerMenu = new IntersectionObserver( 
-([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
-{ threshold: [1] }
-);    
-observerMenu.observe(el); 
+// const el = document.querySelector("#header")
+// const observerMenu = new IntersectionObserver( 
+// ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
+// { threshold: [1] }
+// );    
+// observerMenu.observe(el);
+
+
+window.onscroll = function() {
+    if(window.pageYOffset > 1 && !$('#header').hasClass('is-pinned')){
+        $('#header').addClass('is-pinned');
+    }else if(window.pageYOffset < 1 && $('#header').hasClass('is-pinned')){
+        $('#header').removeClass('is-pinned');
+    }
+};
 $(document).ready(function(){
     if(ecomPassport.getCustomerName() == ''){
         $('.logged_in').hide();
