@@ -47,7 +47,8 @@
   "filters": [
     {
       "option": {
-        "grid": "6148e6aebf447b5f0e014508"
+        "grid": "6148e6aebf447b5f0e014508",
+        "title": "Tipo do Leite"
       }
     }
   ]
