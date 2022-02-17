@@ -28,9 +28,9 @@ $(document).ready(function(){
     $('body').on('click','.search-engine__aside-open, .search-engine__aside .card-header .close, .search-engine__toggles > button',function(){
         $('body .search-engine__aside').toggleClass('active')
     })
-    // $('.header__search-input').keyup(function(){
-    //     $('body .search__input').val($(this).val()).[0].dispatchEvent(new Event('input'));
-    // });
+    $('.header__search-input').keyup(function(){
+        $('body .search__input').val($(this).val())[0].dispatchEvent(new Event('input'));
+     });
     
     $('#apx_newsletter form').submit(function(e){
         e.preventDefault();
@@ -164,13 +164,16 @@ pmarket.consultaPonto = function(cpf){
 }
 
 pmarket.solicitaResgate = function(oObj){
-    console.log(oObj);
+    //console.log(oObj);
 }
 function dropdownDataGrids(oObj){
-    console.log(oObj)
+    //console.log(oObj)
+    let url = $('[data-grids="'+ oObj.data._id +'"]').closest('.egs_dropdown').find('.dx-caret').closest('span').find('a').attr('href');
+    //console.log(url)
     $(oObj.data.options).each(function(k,item){
         let option = $('<li></li>');
-        option.append('<a href="?'+ oObj.data.grid_id +'='+ item.text +'">'+ item.text +'</a>');
+        $()
+        option.append('<a href="'+ url+ '?'+ oObj.data.grid_id +'='+ item.text +'">'+ item.text +'</a>');
         $('[data-grids="'+ oObj.data._id +'"]').append(option);
     });
 }
@@ -236,7 +239,7 @@ if(SpeechRecognition) {
   console.log("Your Browser supports speech Recognition");
   
   const recognition = new SpeechRecognition();
-  recognition.continuous = true;
+  recognition.continuous = false;
   recognition.lang = "pt-BR";
 
   searchForm.insertAdjacentHTML("afterbegin", '<button type="button"><svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 10C13 13.3137 10.3137 16 7 16M7 16C3.68629 16 1 13.3137 1 10M7 16V19M7 19H10M7 19H4M7 13C5.34315 13 4 11.6569 4 10V4C4 2.34315 5.34315 1 7 1C8.65685 1 10 2.34315 10 4V10C10 11.6569 8.65685 13 7 13Z" stroke="#8A0403" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>');
@@ -246,8 +249,7 @@ if(SpeechRecognition) {
   const micIcon = micBtn.firstElementChild;
 
   micBtn.addEventListener("click", micBtnClick);
-  console.log('aiai')
-  function micBtnClick() {
+    function micBtnClick() {
     //if(micIcon.classList.contains("fa-microphone")) { // Start Voice Recognition
       recognition.start(); // First time you have to allow access to mic!
     //}
@@ -270,6 +272,7 @@ if(SpeechRecognition) {
     micIcon.classList.add("fa-microphone");
     searchFormInput.focus();
     console.log("Speech recognition service disconnected");
+    $('.header__search-input').trigger('keyup')
   }
 
   recognition.addEventListener("result", resultOfSpeechRecognition); // <=> recognition.onresult = function(event) {...} - Fires when you stop talking

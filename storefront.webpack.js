@@ -9,6 +9,7 @@ module.exports = () => ({
       './scss/ProductGallery.scss': path.resolve(__dirname, 'template/js/custom-js/html/ProductGallery.scss'),
       './base-config': path.resolve(__dirname, 'template/js/netlify-cms/base-config'),
       './html/SearchEngine.html': path.resolve(__dirname, 'template/js/custom-js/html/SearchEngine.html'),
+      './js/SearchEngine.js': path.resolve(__dirname, 'template/js/custom-js/html/SearchEngine.js'),
       './html/DiscountApplier.html': path.resolve(__dirname, 'template/js/custom-js/html/DiscountApplier.html'),
       './js/DiscountApplier.js': path.resolve(__dirname, 'template/js/custom-js/html/DiscountApplier.js')
     }
