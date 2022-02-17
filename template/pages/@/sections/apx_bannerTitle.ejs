@@ -3,7 +3,11 @@ const apx_title = [];
 let flag = opt ? true : false
 
 if(flag == true){
-    apx_title.push({title : (opt.title || _.state.title || _.state.name), background : (opt.image ||  (_.state.pictures ? _.state.pictures[0].url : ''))})
+    try{
+        apx_title.push({title : (opt.title || _.state.title || _.state.name), background : (opt.image ||  (_.state.pictures ? _.state.pictures[0].url : ''))})
+    }catch(e){
+        apx_title.push({title : (opt.title || _.state.title || _.state.name), background : ''})
+    }
 }
  
 if (apx_title[0].title) {
