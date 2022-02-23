@@ -5,7 +5,7 @@
         <!-- <a href="#specs" name="specs">#</a> -->
         Características
       </p>
-      <div class="row">
+      <div class="row gapper">
         <% for (const gridId in _.state.specifications) {
           if (_.state.specifications[gridId]) {
 
@@ -33,7 +33,7 @@
                   %> 
                   <img src="<%= imageUrl %>"/>
                 </div>
-                <div class="col-auto text-left">
+                <div class="col text-left">
                   <strong class="text-uppercase"><%= _.ecomUtils.gridTitle(gridId, _.grids) %></strong><br>
                   <span class="text-uppercase"><%= _.ecomUtils.specTextValue(_.state, gridId, _.grids) %></span>
                 </div>

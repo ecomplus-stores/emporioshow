@@ -1885,3 +1885,10 @@ body .cart .cart-item{border-top:0;}
     #header .search__count *{font-size:12px;}
 
 }
+
+#product-specs img{
+    max-height:30px;
+    max-width:100%;
+}
+#product-specs span.text-uppercase{font-size:14px}
+.gapper{gap:2rem 0;align-items:center}
