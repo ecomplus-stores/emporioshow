@@ -21,7 +21,8 @@
       "collection_id": "6148dcfdbf447b5f0e01341b:categories:Vinhos Tintos:/vinhos-tintos",
       "limit": 12,
       "title": "Seleção do mês <b>Vinhos Tintos</b>",
-      "page": 1
+      "page": 1,
+      "sort": "highest_price"
     },
     {
       "type": "banners-grid",
