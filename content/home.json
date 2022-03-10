@@ -22,7 +22,7 @@
       "limit": 12,
       "title": "Seleção do mês <b>Vinhos Tintos</b>",
       "page": 1,
-      "sort": "highest_price"
+      "sort": "sales"
     },
     {
       "type": "banners-grid",
