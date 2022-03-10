@@ -38,7 +38,8 @@
       "collection_id": "6148dcb5bf447b5f0e0133ac:categories:Drinkeria:/drinkeria",
       "limit": 12,
       "title": "Sugestões <small>Para o fim de semana</small>",
-      "page": 1
+      "page": 1,
+      "sort": "views"
     },
     {
       "type": "banners-grid",
