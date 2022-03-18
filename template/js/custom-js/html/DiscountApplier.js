@@ -119,6 +119,7 @@ export default {
 
   methods: {    
     getPontoMarket(){
+      console.log('teste')
       const customer = this.ecomPassport.getCustomer()
       axios.post('https://us-central1-pontomarket-ecomplus.cloudfunctions.net/app/get/points', {
       storeId : storefront.settings.store_id,
