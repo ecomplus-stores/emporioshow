@@ -119,20 +119,34 @@ export default {
 
   methods: {    
     getPontoMarket(){
-      console.log('teste')
+      //console.log('teste')
       const customer = this.ecomPassport.getCustomer()
       axios.post('https://us-central1-pontomarket-ecomplus.cloudfunctions.net/app/get/points', {
       storeId : storefront.settings.store_id,
       params : {
         customer:{
           _id : customer._id,
-          doc_number : '43335443608'
+          doc_number : customer.doc_number
+          //doc_number : '43335443608'
         } 
       }
       })
       .then((response) => {
+        response.data.pm.prize_list.push({
+          id_prize: -1,
+          name: 'Não desejo utilizar meus pontos',
+          points_required: 0,
+          prize_value: 0,
+          prize_value_type: 1
+
+        })
         this.pontoMarketOptions = response.data
+        //console.log(response.data)
+        
+        //console.log(this.pontoMarketOptions)
+        console.log(response)
         this.localPontoMarketCode = response.data.fb.selected_prize_id || ''
+        console.log(this.localPontoMarketCode)
         if(this.localPontoMarketCode){
           const data = {
             pm_selected_prize_id: localPontoMarketCode,
@@ -144,19 +158,24 @@ export default {
     },
     setPontoMarket(){
       const { localPontoMarketCode } = this
+      console.log(localPontoMarketCode)
       const customer = this.ecomPassport.getCustomer()
+      console.log(customer)
       axios.post('https://us-central1-pontomarket-ecomplus.cloudfunctions.net/app/get/selectPrize', {
       storeId : storefront.settings.store_id,
       params : {
         prize_id : localPontoMarketCode,
         customer:{
           _id : customer._id,
-          doc_number : '43335443608'
+          doc_number : customer.doc_number
+          //doc_number : '43335443608'
         } 
       }       
       })
       .then((response) => {
-        if(localPontoMarketCode){
+        console.log(response)
+        if(localPontoMarketCode != null){
+          //console.log('entrou')
           const data = {
             pm_selected_prize_id: localPontoMarketCode,
             storefrontId: storefront.settings.store_id
@@ -166,6 +185,29 @@ export default {
         console.log(response)
       })    
     },
+    // removePontoMarket(){
+    //   const { localPontoMarketCode } = this
+    //   const customer = this.ecomPassport.getCustomer()
+    //   console.log(customer)
+    //   axios.post('https://us-central1-pontomarket-ecomplus.cloudfunctions.net/app/get/removePrize', {
+    //   storeId : storefront.settings.store_id,
+    //   params : {
+    //     prize_id : localPontoMarketCode,
+    //     customer:{
+    //       _id : customer._id,
+    //       doc_number : customer.doc_number
+    //       //doc_number : '43335443608'
+    //     } 
+    //   }       
+    //   })
+    //   .then((response) => {
+    //     localPontoMarketCode = null
+    //     this.getPontoMarket()
+    //     //if(localPontoMarketCode){
+          
+    //     //}        
+    //   })    
+    // },
     fixAmount () {
       const amount = this.amount || {
         subtotal: this.ecomCart.data.subtotal

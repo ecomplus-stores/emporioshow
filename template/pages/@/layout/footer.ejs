@@ -101,14 +101,18 @@ if(_.pageName == "home"){
   <div class="content">
     <div class="logged_in">
       <button type="button" class="trigger">x</button>
-      <form action="">
+      <!-- <form action="">
         <label for="">Digite o seu CPF e consulte seus pontos</label>
         <div class="d-flex">
-          <input type="text" name="cpf" value="43335443608" placeholder="999.999.999.99">      
+          <input type="text" name="cpf" value="" placeholder="999.999.999.99">      
           <input type="submit" value="Pesquisar">
         </div>      
-      </form>
-      <div id="clubeshow_result"></div>
+      </form> -->
+      <div id="clubeshow_result">
+        <div class="loading_">
+          <div class="lds-facebook"><div></div><div></div><div></div></div>
+        </div>
+      </div>
     </div>
     <div class="logged_out">
       <button type="button" class="trigger">x</button>

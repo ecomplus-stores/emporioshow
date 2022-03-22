@@ -7,7 +7,9 @@ document.write('<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jque
 // { threshold: [1] }
 // );    
 // observerMenu.observe(el);
-
+function formatNumber(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+  }
 
 window.onscroll = function() {
     if(window.pageYOffset > 1 && !$('#header').hasClass('is-pinned')){
@@ -17,7 +19,7 @@ window.onscroll = function() {
     }
 };
 $(document).ready(function(){
-    if(ecomPassport.getCustomerName() == ''){
+    if(ecomPassport.getCustomerName() == '' || ecomPassport.getCustomer().doc_number == ''){
         $('.logged_in').hide();
         $('.logged_out').show();
     }else{
@@ -125,12 +127,15 @@ $(document).ready(function(){
     // }
     $('#clubeshow .trigger').click(function(e){
         $('#clubeshow').toggleClass('visible')
+        if(ecomPassport.getCustomer().doc_number){
+            pmarket.consultaPonto(ecomPassport.getCustomer().doc_number);    
+        }
     })
-    $('#clubeshow form').submit(function(e){
-        e.preventDefault();
-        let cpf = $(this).find('[name="cpf"]').val();
-        pmarket.consultaPonto(cpf);
-    })
+    // $('#clubeshow form').submit(function(e){
+    //     e.preventDefault();
+    //     let cpf = $(this).find('[name="cpf"]').val();
+    //     pmarket.consultaPonto(cpf);
+    // })
 });
 
 const pmarket = [];
@@ -139,14 +144,14 @@ pmarket.consultaPonto = function(cpf){
         storeId : storefront.settings.store_id,
         params : {
             customer:{
-                doc_number : cpf
+                doc_number : ecomPassport.getCustomer().doc_number
             } 
         }
     })
     .then(function(response){
         let data = response.data.pm;
         if(!data.status.error){
-            let header = $('<div>Você possui <b>'+ data.point_balance +'</b> pontos</div>');
+            let header = $('<div>Você possui <b>'+ formatNumber(Math.floor(data.point_balance)) +'</b> pontos</div>');
             let list = $('<ul></ul>');
             $.each(data.prize_list,function(key, prize){
                 if(prize.prize_value > 0)
