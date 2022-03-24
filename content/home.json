@@ -54,7 +54,7 @@
     },
     {
       "type": "collection-shelf",
-      "shuffle": true,
+      "shuffle": false,
       "collection_id": "6148dd42bf447b5f0e013492:categories:Nacionais:/nacionais",
       "headless": true,
       "limit": 12,
