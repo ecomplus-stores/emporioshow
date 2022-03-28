@@ -1964,7 +1964,19 @@ animation-delay: 0;
     height: 32px;
 }
 }
-
+body#page-search{
+    .search-engine__filter{display:none}
+    .search-engine__filter--Categories,
+    .search-engine__filter--pais,
+    .search-engine__filter--volume,
+    .search-engine__filter--regiao,
+    .search-engine__filter--classificacao,
+    .search-engine__filter--tipo-de-vinho,
+    .search-engine__filter--tipo-de-espumante,
+    .search-engine__filter--uva{
+        display:block
+    }
+}
 
 body#page-categories[class^="__vinhos"]{
     .search-engine__filter{display:none}
