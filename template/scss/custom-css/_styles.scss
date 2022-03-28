@@ -1929,39 +1929,105 @@ body .cart .cart-item{border-top:0;}
     background:transparent
 }
 .lds-facebook {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  .lds-facebook div {
-    display: inline-block;
+display: inline-block;
+position: relative;
+width: 80px;
+height: 80px;
+}
+.lds-facebook div {
+display: inline-block;
+position: absolute;
+left: 8px;
+width: 16px;
+background: var(--cor1);
+animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+left: 8px;
+animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+left: 32px;
+animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+left: 56px;
+animation-delay: 0;
+}
+@keyframes lds-facebook {
+0% {
+    top: 8px;
+    height: 64px;
+}
+50%, 100% {
+    top: 24px;
+    height: 32px;
+}
+}
+
+
+body#page-categories[class^="__vinhos"]{
+    .search-engine__filter{display:none}
+    .search-engine__filter--Categories,
+    .search-engine__filter--pais,
+    .search-engine__filter--volume,
+    .search-engine__filter--regiao,
+    .search-engine__filter--classificacao,
+    .search-engine__filter--tipo-de-vinho,
+    .search-engine__filter--tipo-de-espumante,
+    .search-engine__filter--uva{
+        display:block
+    }
+}
+
+body#page-categories[class^="__espumantes"]{
+    .search-engine__filter{display:none}
+    .search-engine__filter--Categories,
+    .search-engine__filter--pais,
+    .search-engine__filter--volume,
+    .search-engine__filter--regiao,
+    .search-engine__filter--classificacao,
+    .search-engine__filter--tipo-de-vinho,
+    .search-engine__filter--tipo-de-espumante,
+    .search-engine__filter--uva{
+        display:block
+    }
+}
+body#page-categories[class^="__champagne"]{
+    .search-engine__filter{display:none}
+    .search-engine__filter--Categories,
+    .search-engine__filter--pais,
+    .search-engine__filter--volume,
+    .search-engine__filter--regiao,
+    .search-engine__filter--classificacao,
+    .search-engine__filter--tipo-de-vinho,
+    .search-engine__filter--tipo-de-espumante,
+    .search-engine__filter--uva{
+        display:block
+    }
+}
+body#page-categories[class^="__frisante"]{
+    .search-engine__filter{display:none}
+    .search-engine__filter--Categories,
+    .search-engine__filter--pais,
+    .search-engine__filter--volume,
+    .search-engine__filter--regiao,
+    .search-engine__filter--classificacao,
+    .search-engine__filter--tipo-de-vinho,
+    .search-engine__filter--tipo-de-espumante,
+    .search-engine__filter--uva{
+        display:block
+    }
+}
+.search-engine__filter .custom-control-label{
+    padding-left:20px;
+    margin-bottom:10px;
+}
+body .custom-checkbox .custom-control-label:before {
     position: absolute;
-    left: 8px;
-    width: 16px;
-    background: var(--cor1);
-    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-  }
-  .lds-facebook div:nth-child(1) {
-    left: 8px;
-    animation-delay: -0.24s;
-  }
-  .lds-facebook div:nth-child(2) {
-    left: 32px;
-    animation-delay: -0.12s;
-  }
-  .lds-facebook div:nth-child(3) {
-    left: 56px;
-    animation-delay: 0;
-  }
-  @keyframes lds-facebook {
-    0% {
-      top: 8px;
-      height: 64px;
-    }
-    50%, 100% {
-      top: 24px;
-      height: 32px;
-    }
-  }
-  
+    top: 0;
+    left: 0;
+    margin: 5px 0;
+}
+
+#page-products .gallery .pswp img, #page-products .gallery  .pswp picture{max-height:unset!important}

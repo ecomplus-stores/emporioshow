@@ -9,7 +9,7 @@ document.write('<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jque
 // observerMenu.observe(el);
 function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
-  }
+}
 
 window.onscroll = function() {
     if(window.pageYOffset > 1 && !$('#header').hasClass('is-pinned')){
