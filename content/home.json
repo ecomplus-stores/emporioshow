@@ -7,10 +7,12 @@
       "autoplay": 9000,
       "slides": [
         {
-          "img": "/img/uploads/full banner.png",
+          "img": "/img/uploads/modelo-banner-site-novo-pascoa_prancheta-1.jpg",
           "alt": "Banner sample two",
           "start": "",
-          "end": ""
+          "end": "",
+          "mobile_img": "/img/uploads/modelo-banner-site-novo-pascoa-02.jpg",
+          "link": "https://emporioshow.netlify.app/bacalhau"
         }
       ],
       "full_width": true
