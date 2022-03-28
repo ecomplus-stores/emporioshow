@@ -13,6 +13,13 @@
           "end": "",
           "mobile_img": "/img/uploads/modelo-banner-site-novo-pascoa-02.jpg",
           "link": "https://emporioshow.netlify.app/bacalhau"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/modelo-banner-site-novo-pascoa-bolinho_prancheta-1.jpg",
+          "link": "https://emporioshow.netlify.app/bacalhau",
+          "mobile_img": "/img/uploads/modelo-banner-site-novo-pascoa-bolinho-02.jpg"
         }
       ],
       "full_width": true
