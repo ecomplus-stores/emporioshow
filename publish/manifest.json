@@ -1,0 +1,37 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.17cde238cc354563bf17fda6304909c2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.2a5a16c140e44b4e827839348a45d1b1.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.363061c82e2b731ffad44b784f5ce437.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.2a727855f39ca1d9cfc509db38fd4ee4.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.4ce420c5d5adf82ecec6f347e5079125.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "emporioshow",
+  "short_name": "emporioshow",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "emporioshow",
+  "background_color": "#ffffff",
+  "theme_color": "#222831"
+}
