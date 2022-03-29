@@ -32,7 +32,8 @@
           "start": "",
           "end": "",
           "img": "/img/uploads/modelo-banner-site-novo-chocolates_prancheta-1.jpg",
-          "mobile_img": "/img/uploads/modelo-banner-site-novo-chocolates-02.jpg"
+          "mobile_img": "/img/uploads/modelo-banner-site-novo-chocolates-02.jpg",
+          "link": "https://www.emporioshow.com.br/chocolates"
         }
       ],
       "full_width": true
