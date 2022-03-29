@@ -12,7 +12,7 @@
           "start": "",
           "end": "",
           "mobile_img": "/img/uploads/modelo-banner-site-novo-pascoa-02.jpg",
-          "link": "https://emporioshow.netlify.app/bacalhau"
+          "link": "https://www.emporioshow.com.br/bacalhau"
         },
         {
           "start": "",
@@ -22,10 +22,16 @@
           "mobile_img": "/img/uploads/modelo-banner-site-novo-pascoa-bolinho-02.jpg"
         },
         {
-          "start": "2022-03-28T19:12:13.484Z",
-          "end": "2022-03-28T19:12:13.505Z",
+          "start": "",
+          "end": "",
           "img": "/img/uploads/modelo-banner-site-novo-pascoa-azeite_prancheta-1.jpg",
           "mobile_img": "/img/uploads/modelo-banner-site-novo-pascoa-azeite-02.jpg"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/modelo-banner-site-novo-chocolates_prancheta-1.jpg",
+          "mobile_img": "/img/uploads/modelo-banner-site-novo-chocolates-02.jpg"
         }
       ],
       "full_width": true
