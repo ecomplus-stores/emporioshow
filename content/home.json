@@ -48,14 +48,6 @@
       "sort": "views"
     },
     {
-      "type": "banners-grid",
-      "banners": [
-        {
-          "img": "http://via.placeholder.com/1300x300"
-        }
-      ]
-    },
-    {
       "type": "collection-shelf",
       "shuffle": false,
       "collection_id": "6148dcb5bf447b5f0e0133ac:categories:Drinkeria:/drinkeria",
@@ -65,17 +57,6 @@
       "sort": "views"
     },
     {
-      "type": "banners-grid",
-      "banners": [
-        {
-          "img": "http://via.placeholder.com/635x300"
-        },
-        {
-          "img": "http://via.placeholder.com/635x300"
-        }
-      ]
-    },
-    {
       "type": "collection-shelf",
       "shuffle": false,
       "collection_id": "6148dd42bf447b5f0e013492:categories:Nacionais:/nacionais",
@@ -83,20 +64,6 @@
       "limit": 12,
       "title": "É do Brasil! <small>Seleção de Nacionais</small>",
       "page": 1
-    },
-    {
-      "type": "banners-grid",
-      "banners": [
-        {
-          "img": "http://via.placeholder.com/413x300"
-        },
-        {
-          "img": "http://via.placeholder.com/413x300"
-        },
-        {
-          "img": "http://via.placeholder.com/413x300"
-        }
-      ]
     }
   ]
 }
