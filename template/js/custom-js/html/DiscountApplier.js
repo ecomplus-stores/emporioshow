@@ -132,15 +132,18 @@ export default {
       }
       })
       .then((response) => {
-        response.data.pm.prize_list.push({
-          id_prize: -1,
-          name: 'Não desejo utilizar meus pontos',
-          points_required: 0,
-          prize_value: 0,
-          prize_value_type: 1
+        if(response.data.pm.prize_list){
+          response.data.pm.prize_list.push({
+            id_prize: -1,
+            name: 'Não desejo utilizar meus pontos',
+            points_required: 0,
+            prize_value: 0,
+            prize_value_type: 1
 
-        })
+          })
+        }
         this.pontoMarketOptions = response.data
+        console.log(this.pontoMarketOptions)
         //console.log(response.data)
         
         //console.log(this.pontoMarketOptions)
