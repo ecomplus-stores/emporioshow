@@ -48,16 +48,6 @@
       "sort": "views"
     },
     {
-      "type": "offers-timer",
-      "max_hours": 24,
-      "start": "2022-04-11T17:44:10.821Z",
-      "end": "2022-04-25T02:45:02.748Z",
-      "offers": [
-        "6204c54b7963422eeef7a856"
-      ],
-      "notes": ""
-    },
-    {
       "type": "collection-shelf",
       "shuffle": false,
       "collection_id": "6148dcb5bf447b5f0e0133ac:categories:Drinkeria:/drinkeria",
