@@ -75,6 +75,11 @@
       "limit": 12,
       "title": "É do Brasil! <small>Seleção de Nacionais</small>",
       "page": 1
+    },
+    {
+      "type": "dynamic-showcase",
+      "load_more": true,
+      "sort": "sales"
     }
   ]
 }
