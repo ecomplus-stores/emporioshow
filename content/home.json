@@ -73,7 +73,7 @@
       "page": 1,
       "sort": "sales",
       "title": "Os queridinhos do Empório.♥ <small>Seleção dos Mais Vendidos</small>",
-      "headless": true
+      "headless": false
     }
   ]
 }
