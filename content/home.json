@@ -72,7 +72,7 @@
       "limit": 12,
       "page": 1,
       "sort": "sales",
-      "title": "Os queridinhos do Empório.",
+      "title": "Os queridinhos do Empório. <small>Seleção dos Mais Vendidos</small>",
       "headless": true
     }
   ]
