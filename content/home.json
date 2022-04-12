@@ -67,9 +67,13 @@
       "page": 1
     },
     {
-      "type": "dynamic-showcase",
-      "load_more": false,
-      "sort": "sales"
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 1,
+      "sort": "sales",
+      "title": "Os queridinhos do Empório.",
+      "headless": true
     }
   ]
 }
