@@ -60,15 +60,6 @@
     {
       "type": "collection-shelf",
       "shuffle": false,
-      "collection_id": "6148dd42bf447b5f0e013492:categories:Nacionais:/nacionais",
-      "headless": true,
-      "limit": 12,
-      "title": "É do Brasil! <small>Seleção de Nacionais</small>",
-      "page": 1
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
       "limit": 12,
       "page": 1,
       "sort": "sales",
@@ -79,6 +70,15 @@
     {
       "type": "blog",
       "enabled": true
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "collection_id": "6148dd42bf447b5f0e013492:categories:Nacionais:/nacionais",
+      "headless": true,
+      "limit": 12,
+      "title": "É do Brasil! <small>Seleção de Nacionais</small>",
+      "page": 1
     }
   ]
 }
