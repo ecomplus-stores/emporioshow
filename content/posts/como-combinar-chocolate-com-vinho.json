@@ -10,7 +10,8 @@
       "shuffle": true,
       "limit": 12,
       "page": 1,
-      "collection_id": "6148e0d8bf447b5f0e013a81:categories:Chocolates:/chocolates"
+      "collection_id": "6148e0d8bf447b5f0e013a81:categories:Chocolates:/chocolates",
+      "sort": "views"
     },
     {
       "type": "collection-shelf",
