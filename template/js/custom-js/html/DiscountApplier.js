@@ -221,7 +221,9 @@ export default {
 
     parseDiscountOptions (listResult = []) {
       let extraDiscountValue = 0
+      let sumOfDiscounts = 0
       if (listResult.length) {
+        console.log(listResult)
         let discountRule, invalidCouponMsg
         listResult.forEach(appResult => {
           const { validated, error, response } = appResult
@@ -229,12 +231,14 @@ export default {
             const appDiscountRule = response.discount_rule
             if (appDiscountRule) {
               const discountRuleValue = appDiscountRule.extra_discount.value
-              if (!(extraDiscountValue > discountRuleValue)) {
+              sumOfDiscounts += discountRuleValue
+              if (discountRuleValue) {
                 extraDiscountValue = discountRuleValue
                 discountRule = {
                   app_id: appResult.app_id,
                   ...appDiscountRule
                 }
+                discountRule.extra_discount.value = sumOfDiscounts
               }
             } else if (response.invalid_coupon_message) {
               invalidCouponMsg = response.invalid_coupon_message
