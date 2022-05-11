@@ -7,16 +7,11 @@
       "autoplay": 9000,
       "slides": [
         {
-          "start": "2022-04-22T13:45:59.170Z",
-          "end": "2022-05-09T17:53:03.648Z",
-          "img": "/img/uploads/banner-desktop2.png",
-          "mobile_img": "/img/uploads/banner-mobile2.png"
-        },
-        {
-          "start": "2022-04-22T13:38:35.646Z",
-          "end": "2022-05-09T13:38:35.662Z",
-          "img": "/img/uploads/banner-desktop.png",
-          "mobile_img": "/img/uploads/banner-mobile.png"
+          "start": "2022-05-09T18:33:12.092Z",
+          "end": "2022-05-31T18:33:12.111Z",
+          "img": "/img/uploads/noivas-espumante_prancheta-1.jpg",
+          "mobile_img": "/img/uploads/noivas-espumante-02.jpg",
+          "link": "https://www.emporioshow.com.br/espumantes"
         }
       ],
       "full_width": true
