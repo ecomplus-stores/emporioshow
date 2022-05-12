@@ -143,19 +143,20 @@ export default {
           })
         }
         this.pontoMarketOptions = response.data
-        console.log(this.pontoMarketOptions)
+        //console.log(this.pontoMarketOptions)
         //console.log(response.data)
         
         //console.log(this.pontoMarketOptions)
-        console.log(response)
+        //console.log(response)
         this.localPontoMarketCode = response.data.fb.selected_prize_id || ''
-        console.log(this.localPontoMarketCode)
+        //console.log(this.localPontoMarketCode)
         if(this.localPontoMarketCode){
           const data = {
             pm_selected_prize_id: localPontoMarketCode,
             storeId: storefront.settings.store_id
           }
-          this.fetchDiscountOptions(data)
+          this.updateDiscount(true)
+          //this.fetchDiscountOptions(data)
         }
       })    
     },
@@ -171,21 +172,19 @@ export default {
         customer:{
           _id : customer._id,
           doc_number : customer.doc_number
-          //doc_number : '43335443608'
         } 
       }       
       })
       .then((response) => {
         console.log(response)
         if(localPontoMarketCode != null){
-          //console.log('entrou')
           const data = {
             pm_selected_prize_id: localPontoMarketCode,
             storefrontId: storefront.settings.store_id
           }
-          this.fetchDiscountOptions(data)
+          this.updateDiscount(true)
         }
-        console.log(response)
+        //console.log(response)
       })    
     },
     // removePontoMarket(){
@@ -221,20 +220,28 @@ export default {
 
     parseDiscountOptions (listResult = []) {
       let extraDiscountValue = 0
+      let sumOfDiscounts = 0
+      let bindFlags = []
       if (listResult.length) {
+        //console.log(listResult)
         let discountRule, invalidCouponMsg
         listResult.forEach(appResult => {
           const { validated, error, response } = appResult
           if (validated && !error) {
             const appDiscountRule = response.discount_rule
             if (appDiscountRule) {
+              console.log(appDiscountRule)
               const discountRuleValue = appDiscountRule.extra_discount.value
-              if (!(extraDiscountValue > discountRuleValue)) {
+              sumOfDiscounts += discountRuleValue
+              bindFlags = bindFlags.concat(appDiscountRule.extra_discount.flags)
+              if (discountRuleValue) {
                 extraDiscountValue = discountRuleValue
                 discountRule = {
                   app_id: appResult.app_id,
                   ...appDiscountRule
                 }
+                discountRule.extra_discount.value = sumOfDiscounts
+                discountRule.extra_discount.flags = bindFlags
               }
             } else if (response.invalid_coupon_message) {
               invalidCouponMsg = response.invalid_coupon_message
@@ -245,12 +252,25 @@ export default {
           }
         })
         if (extraDiscountValue) {
-          if (this.localCouponCode) {
-            this.$emit('update:coupon-code', this.localCouponCode)
-            this.alertText = this.i19couponAppliedMsg
-          } else {
-            this.alertText = this.i19campaignAppliedMsg
+          let msgAlert = ""
+          console.log(discountRule)
+          if(discountRule.extra_discount.flags.includes('clube-show')){
+            //msgAlert = msgAlert + "- Pontos Clube Show foram aplicados"
           }
+          //console.log('1 - ' + msgAlert)
+          if (this.localCouponCode) {
+            if(discountRule.extra_discount.flags.includes('COUPON') || !discountRule.extra_discount.flags.includes('clube-show')){
+              this.$emit('update:coupon-code', this.localCouponCode)              
+              msgAlert = msgAlert != "" ? msgAlert + '<br> - ' + this.i19couponAppliedMsg : this.i19couponAppliedMsg
+            }
+            //console.log('2 - ' + msgAlert)
+          } else {
+            msgAlert = msgAlert != "" ? msgAlert + '<br> - ' + this.i19campaignAppliedMsg : this.i19campaignAppliedMsg
+            //console.log('3 - ' + msgAlert)
+          }
+          //console.log('4 - ' + msgAlert)
+          //this.alertText = ""
+          this.alertText = msgAlert
           this.$emit('set-discount-rule', discountRule)
           this.alertVariant = 'info'
         } else {
@@ -267,6 +287,8 @@ export default {
 
     fetchDiscountOptions (data = {}) {
       this.isLoading = true
+      data.pm_selected_prize_id = this.localPontoMarketCode,
+      data.storefrontId = storefront.settings.store_id
       if (this.ecomPassport.checkLogin()) {
         const customer = this.ecomPassport.getCustomer()
         data.customer = {

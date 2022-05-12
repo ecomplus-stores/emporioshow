@@ -1,5 +1,5 @@
 <div class="discount-applier">
-  <div v-if="pontoMarketOptions.pm.prize_list !== null" id="pm-selectOption">       
+  <div v-if="pontoMarketOptions.pm.prize_list !== null && pontoMarketOptions.pm.status.value != 1" id="pm-selectOption">       
       <template >
       <label id="pm-title" class="pm__title">Clube Show: <i>{{Math.floor(pontoMarketOptions.pm.point_balance).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}}</i> pontos</label>
       <small>Que podem ser trocados por:</small>
@@ -118,6 +118,7 @@
     :variant="alertVariant"
     @dismiss="alertText = null"
   >
+  <!-- <span v-html="alertText"></span> -->
     {{ alertText }}
   </a-alert>
 </div>
