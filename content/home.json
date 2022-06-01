@@ -7,18 +7,25 @@
       "autoplay": 9000,
       "slides": [
         {
+          "start": "2022-06-01T13:22:47.433Z",
+          "end": "2022-06-13T13:14:44.964Z",
+          "img": "/img/uploads/namorados_prancheta-1-1-.jpg",
+          "mobile_img": "/img/uploads/namorados-02-3-.jpg",
+          "link": ""
+        },
+        {
+          "start": "2022-06-01T13:14:49.204Z",
+          "end": "2022-06-13T13:14:49.219Z",
+          "link": "https://www.emporioshow.com.br/queijaria",
+          "img": "/img/uploads/fondue_prancheta-1.jpg",
+          "mobile_img": "/img/uploads/fondue-02.jpg"
+        },
+        {
           "start": "2022-05-31T14:56:47.795Z",
           "end": "2022-07-01T14:56:47.814Z",
           "img": "/img/uploads/vinho-promo_prancheta-1.jpg",
           "link": "https://www.emporioshow.com.br/vinho-tinto-frances-chateau-beau-buisson-bordeaux-750ml",
           "mobile_img": "/img/uploads/vinho-promo-02.jpg"
-        },
-        {
-          "start": "2022-05-09T18:33:12.092Z",
-          "end": "2022-05-31T18:33:12.111Z",
-          "img": "/img/uploads/noivas-espumante_prancheta-1.jpg",
-          "mobile_img": "/img/uploads/noivas-espumante-02.jpg",
-          "link": "https://www.emporioshow.com.br/espumantes"
         }
       ],
       "full_width": true
