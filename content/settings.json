@@ -8,17 +8,19 @@
   },
   "bg_color": "#ffffff",
   "repository": "ecomplus-stores/emporioshow",
-  "logo": "/img/uploads/logo_emporio.png",
+  "logo": "/img/uploads/logo-png-03.png",
   "name": "emporioshow",
   "short_name": "emporioshow",
   "lang": "pt_br",
   "currency": "BRL",
   "mini_logo": "",
-  "favicon": "/img/uploads/logo-emporio-com-fundo-transparente.png",
+  "font_family": "_",
+  "favicon": "/img/uploads/logo-png-03.png",
+  "icons_font": "_",
   "country_code": "BR",
   "secondary_color": "#393e46",
-  "icon": "/img/uploads/logo-emporio-com-fundo-transparente.png",
+  "icon": "/img/uploads/logo-png-03.png",
   "store_id": 4053,
   "description": "emporioshow",
-  "large_icon": "/img/uploads/logo-emporio-com-fundo-transparente.png"
+  "large_icon": "/img/uploads/logo-png-03.png"
 }
