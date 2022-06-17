@@ -23,7 +23,8 @@
         {
           "start": "2022-06-17T17:38:34.801Z",
           "end": "2022-06-17T17:38:34.851Z",
-          "img": "/img/uploads/etiqueta-vermelha_prancheta-1.jpg"
+          "img": "/img/uploads/etiqueta-vermelha_prancheta-1.jpg",
+          "mobile_img": "/img/uploads/etiqueta-vermelha_prancheta-1.jpg"
         }
       ],
       "full_width": true
