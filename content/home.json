@@ -19,6 +19,11 @@
           "img": "/img/uploads/vinho-promo_prancheta-1.jpg",
           "link": "https://www.emporioshow.com.br/vinho-tinto-frances-chateau-beau-buisson-bordeaux-750ml",
           "mobile_img": "/img/uploads/vinho-promo-02.jpg"
+        },
+        {
+          "start": "2022-06-17T17:38:34.801Z",
+          "end": "2022-06-17T17:38:34.851Z",
+          "img": "/img/uploads/etiqueta-vermelha_prancheta-1.jpg"
         }
       ],
       "full_width": true
