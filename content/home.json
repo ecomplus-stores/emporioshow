@@ -12,6 +12,11 @@
           "link": "https://www.emporioshow.com.br/queijaria",
           "img": "/img/uploads/fondue_prancheta-1.jpg",
           "mobile_img": "/img/uploads/fondue-02.jpg"
+        },
+        {
+          "start": "2022-07-13T17:47:37.408Z",
+          "end": "2022-07-27T17:47:37.427Z",
+          "img": "/img/uploads/queijo-gouda-lejane_prancheta-1.jpg"
         }
       ],
       "full_width": true
