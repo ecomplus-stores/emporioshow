@@ -52,15 +52,6 @@
       "link": ""
     },
     {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "collection_id": "6148dd42bf447b5f0e013492:categories:Nacionais:/nacionais",
-      "headless": true,
-      "limit": 12,
-      "title": "É do Brasil! <small>Seleção de Nacionais</small>",
-      "page": 1
-    },
-    {
       "type": "blog",
       "enabled": true
     }
