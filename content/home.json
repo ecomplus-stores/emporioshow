@@ -24,6 +24,15 @@
     {
       "type": "collection-shelf",
       "shuffle": false,
+      "limit": 9,
+      "page": 1,
+      "sort": "offers",
+      "collection_id": null,
+      "title": "Nosso encarte"
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
       "collection_id": "6148dcfdbf447b5f0e01341b:categories:Vinhos Tintos:/vinhos-tintos",
       "limit": 12,
       "title": "Seleção do mês <b>Vinhos Tintos</b>",
