@@ -12,6 +12,11 @@
           "link": "https://www.emporioshow.com.br/queijaria",
           "img": "/img/uploads/fondue_prancheta-1.jpg",
           "mobile_img": "/img/uploads/fondue-02.jpg"
+        },
+        {
+          "start": "2022-07-22T11:28:51.259Z",
+          "end": "2022-07-22T11:28:51.275Z",
+          "img": "/img/uploads/banner-site_prancheta-1.png"
         }
       ],
       "full_width": true
