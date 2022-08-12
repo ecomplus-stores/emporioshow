@@ -7,9 +7,9 @@
       "autoplay": 9000,
       "slides": [
         {
-          "start": "2022-07-22T11:28:51.259Z",
-          "end": "2022-08-14T11:28:51.275Z",
-          "img": "/img/uploads/banner-site_prancheta-1.png",
+          "start": "2022-08-12T11:28:51.259Z",
+          "end": "2022-09-28T11:28:51.275Z",
+          "img": "/img/uploads/banner-site_prancheta-1.jpg",
           "link": "https://www.emporioshow.com.br/search?term=encartejulho"
         },
         {
@@ -18,11 +18,6 @@
           "link": "https://www.emporioshow.com.br/queijaria",
           "img": "/img/uploads/fondue_prancheta-1.jpg",
           "mobile_img": "/img/uploads/fondue-02.jpg"
-        },
-        {
-          "start": "2022-08-03T13:37:06.115Z",
-          "end": "2022-08-20T13:37:25.636Z",
-          "img": "/img/uploads/pringles_prancheta-1.png"
         }
       ],
       "full_width": true
