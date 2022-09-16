@@ -4,13 +4,14 @@
   "sections": [
     {
       "type": "banner-slider",
-      "autoplay": 9000,
+      "autoplay": 7000,
       "slides": [
         {
           "start": "",
           "end": "2022-10-02T16:05:55.315Z",
           "img": "/img/uploads/banner-site_prancheta-1.png",
-          "mobile_img": "/img/uploads/banner-site-02.png"
+          "mobile_img": "/img/uploads/banner-site-02.png",
+          "link": "https://www.emporioshow.com.br/search?term=encartesetembro"
         },
         {
           "start": "2022-09-14T03:00:00.000Z",
