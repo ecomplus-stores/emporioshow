@@ -19,6 +19,12 @@
           "img": "/img/uploads/prancheta-2.png",
           "mobile_img": "/img/uploads/prancheta-1.png",
           "link": "https://clubeshow.com.br/cgi-bin/bin/landing?p=6"
+        },
+        {
+          "start": "",
+          "end": "2022-10-02T16:05:55.315Z",
+          "img": "/img/uploads/banner-site_prancheta-1.png",
+          "mobile_img": "/img/uploads/banner-site-02.png"
         }
       ],
       "full_width": true
