@@ -7,6 +7,12 @@
       "autoplay": 9000,
       "slides": [
         {
+          "start": "",
+          "end": "2022-10-02T16:05:55.315Z",
+          "img": "/img/uploads/banner-site_prancheta-1.png",
+          "mobile_img": "/img/uploads/banner-site-02.png"
+        },
+        {
           "start": "2022-06-21T13:30:36.481Z",
           "end": "",
           "link": "https://www.emporioshow.com.br/queijaria",
@@ -22,9 +28,9 @@
         },
         {
           "start": "",
-          "end": "2022-10-02T16:05:55.315Z",
-          "img": "/img/uploads/banner-site_prancheta-1.png",
-          "mobile_img": "/img/uploads/banner-site-02.png"
+          "end": "2023-10-20T16:06:53.666Z",
+          "img": "/img/uploads/parcelamento_prancheta-1.png",
+          "mobile_img": "/img/uploads/parcelamento-02.png"
         }
       ],
       "full_width": true
