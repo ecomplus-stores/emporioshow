@@ -4,21 +4,27 @@
   "sections": [
     {
       "type": "banner-slider",
-      "autoplay": 9000,
+      "autoplay": 7000,
       "slides": [
         {
-          "start": "2022-05-31T14:56:47.795Z",
-          "end": "2022-07-01T14:56:47.814Z",
-          "img": "/img/uploads/vinho-promo_prancheta-1.jpg",
-          "link": "https://www.emporioshow.com.br/vinho-tinto-frances-chateau-beau-buisson-bordeaux-750ml",
-          "mobile_img": "/img/uploads/vinho-promo-02.jpg"
+          "start": "",
+          "end": "2022-10-02T16:05:55.315Z",
+          "img": "/img/uploads/banner-site_prancheta-1.png",
+          "mobile_img": "/img/uploads/banner-site-02.png",
+          "link": "https://www.emporioshow.com.br/search?term=encartesetembro"
         },
         {
-          "start": "2022-05-09T18:33:12.092Z",
-          "end": "2022-05-31T18:33:12.111Z",
-          "img": "/img/uploads/noivas-espumante_prancheta-1.jpg",
-          "mobile_img": "/img/uploads/noivas-espumante-02.jpg",
-          "link": "https://www.emporioshow.com.br/espumantes"
+          "start": "2022-09-14T03:00:00.000Z",
+          "end": "2022-09-29T03:00:00.000Z",
+          "img": "/img/uploads/prancheta-2.png",
+          "mobile_img": "/img/uploads/prancheta-1.png",
+          "link": "https://clubeshow.com.br/cgi-bin/bin/landing?p=6"
+        },
+        {
+          "start": "",
+          "end": "2023-10-20T16:06:53.666Z",
+          "img": "/img/uploads/parcelamento_prancheta-1.png",
+          "mobile_img": "/img/uploads/parcelamento-02.png"
         }
       ],
       "full_width": true
@@ -51,15 +57,6 @@
       "title": "Mais Vendidos <small>Os queridinhos do Empório</small>",
       "headless": false,
       "link": ""
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "collection_id": "6148dd42bf447b5f0e013492:categories:Nacionais:/nacionais",
-      "headless": true,
-      "limit": 12,
-      "title": "É do Brasil! <small>Seleção de Nacionais</small>",
-      "page": 1
     },
     {
       "type": "blog",
