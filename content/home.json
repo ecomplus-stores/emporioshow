@@ -32,6 +32,11 @@
           "end": "2023-10-20T16:06:53.666Z",
           "img": "/img/uploads/parcelamento_prancheta-1.png",
           "mobile_img": "/img/uploads/parcelamento-02.png"
+        },
+        {
+          "start": "",
+          "end": "2022-11-01T03:00:00.000Z",
+          "img": "/img/uploads/whatsapp-image-2022-10-11-at-16.03.04-1-.jpeg"
         }
       ],
       "full_width": true
@@ -68,6 +73,11 @@
     {
       "type": "blog",
       "enabled": true
+    },
+    {
+      "type": "banner-slider",
+      "autoplay": 9000,
+      "full_width": false
     }
   ]
 }
