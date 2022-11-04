@@ -62,15 +62,6 @@
       "title": "Mais Vendidos <small>Os queridinhos do Empório</small>",
       "headless": false,
       "link": ""
-    },
-    {
-      "type": "blog",
-      "enabled": true
-    },
-    {
-      "type": "banner-slider",
-      "autoplay": 9000,
-      "full_width": false
     }
   ]
 }
