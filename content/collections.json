@@ -15,10 +15,6 @@
       "type": "collection-retail",
       "enabled": true,
       "sort": "sales"
-    },
-    {
-      "type": "custom-html",
-      "html": "https://www.emporioshow.com.br/vinho-rose-portugues-putos-750ml\nhttps://www.emporioshow.com.br/vinho-branco-portugues-putos-750ml\nhttps://www.emporioshow.com.br/vinho-tinto-portugues-putos-750ml"
     }
   ]
 }
