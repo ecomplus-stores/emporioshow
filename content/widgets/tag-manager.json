@@ -4,7 +4,7 @@
   "desktopOnly": false,
   "enableCheckout": true,
   "options": {
-    "gtmContainerId": "GTM-MX9CJND",
+    "gtmContainerId": "GTM-M564T9W",
     "dataLayerVar": "dataLayer"
   },
   "headAppend": "src/append/head",
