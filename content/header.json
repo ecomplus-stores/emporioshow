@@ -1,6 +1,6 @@
 {
   "marketing_stripe": {
-    "text": "<img src='/img/uploads/whatsapp_small.svg'/><b>ATENDIMENTO:</b> (21) 98143-6911",
+    "text": "<img src='/img/uploads/whatsapp_small.svg'/><b>ATENDIMENTO:</b> (21)97962-3172",
     "link": "/promotion"
   },
   "contacts_stripe": {
@@ -22,5 +22,8 @@
     "random": 10,
     "full_width": false
   },
-  "search_input": true
+  "search_input": true,
+  "desktop_megamenu": true,
+  "alphabetical_order_submenu": true,
+  "full_width_submenu": true
 }
