@@ -332,6 +332,7 @@ if (header.categories_list) {
                     <% } else { %>
                     <ul class="dropdown-menu row mx-0">
                       <li class="d-block d-md-none btn-back"><button type="button"><i class="fas fa-arrow-left mr-1"></i> Voltar</button></li>
+                    <% if(categoryParents[slug]){ %>
                     <% categoryParents[slug].forEach(subcategory => { %>
                       <% const hasSubmenu = Array.isArray(categoryParents[subcategory.slug]) %>
                       <li class="col-12 col-md-auto pr-5 mr-5">
@@ -351,6 +352,7 @@ if (header.categories_list) {
                         <% } %>
                       </li>
                     <% }) %>
+                    <% } %>
                       <%                      
                         const itemMenu = categories.find( arr => arr._id === _id )                      
                         if (itemMenu && itemMenu.icon) {
