@@ -8,6 +8,13 @@
       "slides": [
         {
           "start": "",
+          "end": "2023-02-28T18:51:24.245Z",
+          "img": "/img/uploads/banner-site-emp.jpg",
+          "link": "https://www.emporioshow.com.br/presunto-cru-espanhol-em-laminas-rar-100gr",
+          "mobile_img": "/img/uploads/banner-mobile-emp.jpg"
+        },
+        {
+          "start": "",
           "end": "",
           "img": "/img/uploads/gin-melt_prancheta-1.jpg",
           "link": "https://www.emporioshow.com.br/search?term=aniversariocadeg"
@@ -17,13 +24,6 @@
           "end": "2023-10-20T16:06:53.666Z",
           "img": "/img/uploads/parcelamento_prancheta-1.png",
           "mobile_img": "/img/uploads/parcelamento-02.png"
-        },
-        {
-          "start": "",
-          "end": "2023-02-28T18:51:24.245Z",
-          "img": "/img/uploads/banner-site-emp.jpg",
-          "link": "https://www.emporioshow.com.br/presunto-cru-espanhol-em-laminas-rar-100gr",
-          "mobile_img": "/img/uploads/banner-mobile-emp.jpg"
         }
       ],
       "full_width": true
