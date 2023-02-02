@@ -56,7 +56,9 @@
       "shuffle": false,
       "limit": 12,
       "page": 1,
-      "collection_id": "63dab295b9e5be07784ef01b:collections:Seleção do Sommelier:/selecao-do-sommelier"
+      "collection_id": "63dab295b9e5be07784ef01b:collections:Seleção do Sommelier:/selecao-do-sommelier",
+      "sort": "views",
+      "title": "Seleção do Sommelier "
     }
   ]
 }
