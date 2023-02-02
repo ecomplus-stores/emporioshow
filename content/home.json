@@ -25,6 +25,16 @@
     {
       "type": "collection-shelf",
       "shuffle": false,
+      "limit": 12,
+      "page": 1,
+      "collection_id": "63dab295b9e5be07784ef01b:collections:Seleção do Sommelier:/selecao-do-sommelier",
+      "sort": "views",
+      "title": "Seleção do <b>Sommelier </b>",
+      "headless": true
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
       "collection_id": "6148dcfdbf447b5f0e01341b:categories:Vinhos Tintos:/vinhos-tintos",
       "limit": 12,
       "title": "Seleção do mês <b>Vinhos </b>",
@@ -50,16 +60,6 @@
       "title": "Mais Vendidos <small>Os queridinhos do Empório</small>",
       "headless": false,
       "link": ""
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 1,
-      "collection_id": "63dab295b9e5be07784ef01b:collections:Seleção do Sommelier:/selecao-do-sommelier",
-      "sort": "views",
-      "title": "Seleção do <b>Sommelier </b>",
-      "headless": true
     }
   ]
 }
