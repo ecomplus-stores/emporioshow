@@ -11,6 +11,11 @@
           "end": "2023-10-20T16:06:53.666Z",
           "img": "/img/uploads/parcelamento_prancheta-1.png",
           "mobile_img": "/img/uploads/parcelamento-02.png"
+        },
+        {
+          "start": "2023-03-05T03:00:00.000Z",
+          "end": "2023-04-19T03:00:00.000Z",
+          "img": "/img/uploads/banner-site-emp.jpg"
         }
       ],
       "full_width": true
