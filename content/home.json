@@ -17,6 +17,13 @@
           "end": "2023-04-19T03:00:00.000Z",
           "img": "/img/uploads/banner-site-emp.jpg",
           "link": "https://www.emporioshow.com.br/selecao-de-espumantes"
+        },
+        {
+          "start": "",
+          "end": "2023-03-05T03:00:00.000Z",
+          "img": "/img/uploads/jamon-haciendas-emporio.jpg",
+          "link": "https://www.emporioshow.com.br/kit-jamon-com-osso-hacienda-com-jamoneira",
+          "mobile_img": "/img/uploads/jamon-haciendas.jpg"
         }
       ],
       "full_width": true
