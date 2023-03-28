@@ -76,6 +76,16 @@ if (pathname) {
 <% if (url) { %>
   <link rel="canonical" href="<%= url %>">
 <% } %>
+<% if (path.indexOf('search') > -1) { %>
+  <meta name="kdt:page" content="search"> 
+<% } else if (resource === 'products') { %>
+  <meta name="kdt:page" content="product"> 
+  <meta name="kdt:product" content="sku=<%= _.state.sku %>, name=<%= _.state.name %>"> 
+<% } else if (resource === 'categories') { %>
+  <meta name="kdt:page" content="category"> 
+<% } else if (path === '/') { %>
+  <meta name="kdt:page" content="home"> 
+<% } %> %>
 
 <% if (!path.startsWith('/admin/')) { %>
   <link rel="preload" href="/storefront.css" as="style">
