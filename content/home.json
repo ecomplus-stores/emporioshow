@@ -8,6 +8,13 @@
       "slides": [
         {
           "start": "",
+          "end": "2023-04-15T03:00:00.000Z",
+          "img": "/img/uploads/banner-site-emp-1-.jpg",
+          "link": "https://www.emporioshow.com.br/chocolates",
+          "mobile_img": "/img/uploads/banner-mobile-emp.jpg"
+        },
+        {
+          "start": "",
           "end": "2023-04-05T03:00:00.000Z",
           "img": "/img/uploads/jamon-haciendas-emporio.jpg",
           "link": "https://www.emporioshow.com.br/kit-jamon-com-osso-hacienda-com-jamoneira",
@@ -24,13 +31,6 @@
           "end": "2023-04-19T03:00:00.000Z",
           "img": "/img/uploads/banner-site-emp.jpg",
           "link": "https://www.emporioshow.com.br/selecao-de-espumantes"
-        },
-        {
-          "start": "",
-          "end": "2023-04-15T03:00:00.000Z",
-          "img": "/img/uploads/banner-site-emp-1-.jpg",
-          "link": "https://www.emporioshow.com.br/chocolates",
-          "mobile_img": "/img/uploads/banner-mobile-emp.jpg"
         }
       ],
       "full_width": true
