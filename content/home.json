@@ -8,6 +8,12 @@
       "slides": [
         {
           "start": "",
+          "end": "",
+          "img": "/img/uploads/banner-site-emp-3-.jpg",
+          "link": "https://api.whatsapp.com/send?phone=5521966188874"
+        },
+        {
+          "start": "",
           "end": "2023-10-20T16:06:53.666Z",
           "img": "/img/uploads/parcelamento_prancheta-1.png",
           "mobile_img": "/img/uploads/parcelamento-02.png"
