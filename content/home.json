@@ -7,10 +7,11 @@
       "autoplay": 7000,
       "slides": [
         {
-          "start": "",
-          "end": "",
+          "start": "2023-05-05T15:42:49.943Z",
+          "end": "2023-12-29T15:42:51.468Z",
           "img": "/img/uploads/banner-site-emp-3-.jpg",
-          "link": "https://api.whatsapp.com/send?phone=5521966188874"
+          "link": "https://api.whatsapp.com/send?phone=5521966188874",
+          "mobile_img": "/img/uploads/banner-mobile-emp-1-.jpg"
         },
         {
           "start": "",
