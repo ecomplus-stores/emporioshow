@@ -24,6 +24,12 @@
           "end": "2023-04-19T03:00:00.000Z",
           "img": "/img/uploads/banner-site-emp.jpg",
           "link": "https://www.emporioshow.com.br/selecao-de-espumantes"
+        },
+        {
+          "start": "",
+          "end": "2023-07-01T11:00:34.096Z",
+          "img": "/img/uploads/banner-site-emp-2-.png",
+          "mobile_img": "/img/uploads/banner-mobile-emp.png"
         }
       ],
       "full_width": true
