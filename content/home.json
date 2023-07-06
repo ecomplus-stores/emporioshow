@@ -18,6 +18,13 @@
           "end": "2023-10-20T16:06:53.666Z",
           "img": "/img/uploads/parcelamento_prancheta-1.png",
           "mobile_img": "/img/uploads/parcelamento-02.png"
+        },
+        {
+          "start": "",
+          "end": "2023-08-01T03:00:00.000Z",
+          "img": "/img/uploads/banner-site-emp-3-.png",
+          "mobile_img": "/img/uploads/banner-mobile-emp-1-.png",
+          "link": "https://www.emporioshow.com.br/queijaria-e-frios"
         }
       ],
       "full_width": true
