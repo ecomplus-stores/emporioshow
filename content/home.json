@@ -7,6 +7,12 @@
       "autoplay": 7000,
       "slides": [
         {
+          "start": "",
+          "end": "2023-09-20T17:56:22.165Z",
+          "img": "/img/uploads/banner-site-emp-2-.png",
+          "mobile_img": "/img/uploads/banner-mobile-emp.png"
+        },
+        {
           "start": "2023-05-05T15:42:49.943Z",
           "end": "2023-12-29T15:42:51.468Z",
           "img": "/img/uploads/banner-site-emp-3-.jpg",
@@ -18,12 +24,6 @@
           "end": "2023-10-20T16:06:53.666Z",
           "img": "/img/uploads/parcelamento_prancheta-1.png",
           "mobile_img": "/img/uploads/parcelamento-02.png"
-        },
-        {
-          "start": "",
-          "end": "2023-09-20T17:56:22.165Z",
-          "img": "/img/uploads/banner-site-emp-2-.png",
-          "mobile_img": "/img/uploads/banner-mobile-emp.png"
         }
       ],
       "full_width": true
