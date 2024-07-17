@@ -8,9 +8,10 @@
       "slides": [
         {
           "start": "",
-          "end": "2024-09-18T16:06:53.666Z",
-          "img": "/img/uploads/parcelamento_prancheta-1.png",
-          "mobile_img": "/img/uploads/parcelamento-02.png"
+          "end": "2024-08-30T03:00:00.000Z",
+          "img": "/img/uploads/doce-vicosa.jpg",
+          "link": "https://www.emporioshow.com.br/search?term=docedeleitevi%C3%A7osa",
+          "mobile_img": "/img/uploads/banner-mobile-emp.jpg"
         },
         {
           "start": "",
@@ -19,10 +20,9 @@
         },
         {
           "start": "",
-          "end": "2024-08-30T03:00:00.000Z",
-          "img": "/img/uploads/doce-vicosa.jpg",
-          "link": "https://www.emporioshow.com.br/search?term=docedeleitevi%C3%A7osa",
-          "mobile_img": "/img/uploads/banner-mobile-emp.jpg"
+          "end": "2024-09-18T16:06:53.666Z",
+          "img": "/img/uploads/parcelamento_prancheta-1.png",
+          "mobile_img": "/img/uploads/parcelamento-02.png"
         }
       ],
       "full_width": true
