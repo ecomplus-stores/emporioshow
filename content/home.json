@@ -16,6 +16,13 @@
           "start": "",
           "end": "2024-09-20T03:00:00.000Z",
           "img": "/img/uploads/13.jpg"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/doce-vicosa.jpg",
+          "link": "https://www.emporioshow.com.br/search?term=docedeleitevi%C3%A7osa",
+          "mobile_img": "/img/uploads/banner-mobile-emp.jpg"
         }
       ],
       "full_width": true
