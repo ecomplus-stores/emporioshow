@@ -8,6 +8,13 @@
       "slides": [
         {
           "start": "",
+          "end": "2024-08-12T17:40:46.490Z",
+          "img": "/img/uploads/outlet-inverno.jpg",
+          "link": "https://www.emporioshow.com.br/vinhos-e-espumantes",
+          "mobile_img": "/img/uploads/banner-mobile-emp-1-.jpg"
+        },
+        {
+          "start": "",
           "end": "2024-08-30T03:00:00.000Z",
           "img": "/img/uploads/doce-vicosa.jpg",
           "link": "https://www.emporioshow.com.br/search?term=docedeleitevi%C3%A7osa",
@@ -23,13 +30,6 @@
           "end": "2024-09-18T16:06:53.666Z",
           "img": "/img/uploads/parcelamento_prancheta-1.png",
           "mobile_img": "/img/uploads/parcelamento-02.png"
-        },
-        {
-          "start": "",
-          "end": "2024-08-12T17:40:46.490Z",
-          "img": "/img/uploads/outlet-inverno.jpg",
-          "link": "https://www.emporioshow.com.br/vinhos-e-espumantes",
-          "mobile_img": "/img/uploads/banner-mobile-emp-1-.jpg"
         }
       ],
       "full_width": true
